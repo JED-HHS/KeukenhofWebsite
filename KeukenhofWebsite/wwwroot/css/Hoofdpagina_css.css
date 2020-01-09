@@ -1,0 +1,51 @@
+﻿body {
+  
+}
+
+.informatie_links {
+    position: absolute;
+    width: 233px;
+    height: 64px;
+    left: 48px;
+    top: 517px;
+}
+
+.text_links {
+    position: absolute;
+    height: 32px;
+    left: 48px;
+    right: 871px;
+    top: calc(50% - 32px/2 + 219px);
+    /* H4 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
+    /* Black */
+    color: #1F2325;
+}
+
+.text_link_links {
+    position: absolute;
+    height: 19px;
+    left: 48px;
+    right: 979px;
+    top: calc(50% - 19px/2 + 253.5px);
+    /* Label */
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    /* Dark Grey */
+    color: #36454E;
+}
+
+
