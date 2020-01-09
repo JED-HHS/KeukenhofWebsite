@@ -68,6 +68,45 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="innerFooter">
+                <div class="logoFooter">
+
+                </div>
+                <div class="socialsFooter">
+
+                </div>
+                <div class="adresOpeningstijdenFooter">
+                    <div class="adresFooter">
+
+                    </div>
+                    <div class="openingstijdenFooter">
+
+                    </div>
+                </div>
+                <div class="algemeneLinkjesFooter">
+                    <ul>
+                        <li><a href="#">Het Park</a></li>
+                        <li><a href="#">Praktisch</a></li>
+                        <li><a href="#">Groepen</a></li>
+                        <li><a href="#">Pers</a></li>
+                    </ul>
+                </div>
+                <div class="handigeLinkjesFooter">
+                    <ul>
+                        <li><a href="#">Bereikbaarheid</a></li>
+                        <li><a href="#">Evenementen</a></li>
+                        <li><a href="#">Veelgestelde vragen</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     @RenderSection("Scripts", required: false)
 </body>
