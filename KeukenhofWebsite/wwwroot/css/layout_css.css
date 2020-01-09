@@ -41,7 +41,6 @@
 
 .navbar-nav{
     float: right;
-    margin: auto;
 }
 
 p {
@@ -53,4 +52,9 @@ p {
 
 img {
     float: left;
+}
+
+.text:hover {
+    background-color: #000000;
+    color: black;
 }
