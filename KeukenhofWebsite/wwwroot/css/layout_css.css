@@ -56,3 +56,8 @@ p {
     margin-bottom: auto;
     font-family: sans-serif;
 }
+
+.text:hover {
+    background-color: #000000;
+    color: black;
+}
