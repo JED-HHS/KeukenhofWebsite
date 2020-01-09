@@ -1,5 +1,5 @@
-﻿body {
-}
+﻿
+
 
 .keyvisual {
     position: absolute;
@@ -10,6 +10,16 @@
     background: linear-gradient(180deg, rgba(35, 31, 32, 0) 0%, #231F20 100%);
     opacity: 0.4;
 }
+.titel {
+    /* H1 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 58px;
+    margin-top: 140px;
+    /* identical to box height, or 108% */
+}
 
 .plaatje {
     position: absolute;
@@ -18,7 +28,9 @@
     top: 0%;
     bottom: 0%;
     background: url(190422LLT8397.jpg);
+
 }
+
 
 .informatie_links {
     font-family: Source Sans Pro;
@@ -28,6 +40,7 @@
     height: 64px;
     left: 48px;
     top: 517px;
+    background: white;
 }
 
 .text_links {
@@ -52,13 +65,23 @@
     color: #36454E;
 }
 
+.pijl_link {
+    position: absolute;
+    left: 86.1%;
+    right: -55.53%;
+    top: 77.95%;
+    bottom: -33.84%;
+    /* Green Secundary */
+    background: url(arrow-right.svg);
+}
+
 
 .informatie_midden {
     font-family: Source Sans Pro;
     position: absolute;
-    width: 245px;
+    width: 233px;
     height: 64px;
-    left: 313px;
+    left: 281px;
     top: 517px;
     background: #ea6025;
 }
@@ -90,10 +113,11 @@
 .informatie_rechts {
     font-family: Source Sans Pro;
     position: absolute;
-    width: 189px;
+    width: 233px;
     height: 64px;
-    left: 590px;
+    left: 514px;
     top: 517px;
+    background: white;
 }
 
 .text_rechts {
