@@ -1,8 +1,28 @@
 ﻿body {
-  
+}
+
+.keyvisual {
+    position: absolute;
+    width: 1152px;
+    height: 628px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, rgba(35, 31, 32, 0) 0%, #231F20 100%);
+    opacity: 0.4;
+}
+
+.plaatje {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: url(190422LLT8397.jpg);
 }
 
 .informatie_links {
+    font-family: Source Sans Pro;
+    font-style: normal;
     position: absolute;
     width: 233px;
     height: 64px;
@@ -11,16 +31,8 @@
 }
 
 .text_links {
-    position: absolute;
-    height: 32px;
-    left: 48px;
-    right: 871px;
-    top: calc(50% - 32px/2 + 219px);
-    /* H4 */
-    font-family: Source Sans Pro;
-    font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 32px;
     /* identical to box height, or 133% */
     display: flex;
@@ -30,14 +42,6 @@
 }
 
 .text_link_links {
-    position: absolute;
-    height: 19px;
-    left: 48px;
-    right: 979px;
-    top: calc(50% - 19px/2 + 253.5px);
-    /* Label */
-    font-family: Avenir;
-    font-style: normal;
     font-weight: 800;
     font-size: 16px;
     line-height: 120%;
@@ -49,3 +53,70 @@
 }
 
 
+.informatie_midden {
+    font-family: Source Sans Pro;
+    position: absolute;
+    width: 245px;
+    height: 64px;
+    left: 313px;
+    top: 517px;
+    background: #ea6025;
+}
+
+.text_midden {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
+    /* White */
+    color: #FFFFFF;
+}
+
+.text_link_midden {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    /* White */
+    color: #FFFFFF;
+}
+
+.informatie_rechts {
+    font-family: Source Sans Pro;
+    position: absolute;
+    width: 189px;
+    height: 64px;
+    left: 590px;
+    top: 517px;
+}
+
+.text_rechts {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
+    /* Black */
+    color: #1F2325;
+}
+
+
+.text_link_rechts {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    /* Dark Grey */
+    color: #36454E;
+}

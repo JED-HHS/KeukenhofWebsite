@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿</style>
+<h1>Welcome to <span>scratchpad.io</span></h1><br>
+<h2>(a realtime html + css editor)</h2>
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -19,25 +23,37 @@
 <body>
 
     <div class="key_visual">
-        <div class="titel" ></div>
+        <div class="titel"></div>
+        <div class="plaatje">
+
+        </div>
         <div class="informatie">
             <div class="informatie_links">
-                
-                    <p1>Open 21 Maart - 10 Mei</p1>
-                    <p2>Ontdek het park</p2>
-          </div>
+                <div class="text_links">
+                    <p>Open 21 Maart - 10 Mei</p>
+                </div>
+                <div class="text_link_links">
+                    <p>Ontdek het park</p>
+                </div>
+                <div class="pijl_links">
+
+                </div>
+            </div>
             <div class="informatie_midden">
-               
-                    <p1>Kom vandaag nog lang</p1>
-                    <p2>Bekijk het park</p2>
-             
-              
+                <div class="text_midden">
+                    <p>Kom vandaag nog langs</p>
+                </div>
+                <div class="text_link_midden">
+                    <p>Bekijk het park</p>
+                </div>
+                <div class="pijl_midden">
+
                 </div>
             </div>
             <div class="informatie_rechts">
                 <div class="text_rechts">
                     <p>Wat is Keukenhof?</p>
-                </div>   
+                </div>
                 <div class="text_link_rechts">
                     <p>Bekijk video</p>
                 </div>
@@ -99,7 +115,7 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
-    
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
