@@ -1,5 +1,4 @@
 ﻿body {
-    font-family: Avenir;
 }
 
 .optie {
@@ -16,12 +15,10 @@
 
 .container {
     width: 100%;
-    float: right;
     color: white;
 }
 
 .text {
-    text-align: right;
     color: white;
     font-family: sans-serif;
 }
@@ -42,12 +39,9 @@
     color: white;
 }
 
-.nav:hover {
-    
-}
-
 .navbar-nav{
     float: right;
+    margin: auto;
 }
 
 p {
@@ -55,4 +49,8 @@ p {
     margin-top: auto;
     margin-bottom: auto;
     font-family: sans-serif;
+}
+
+img {
+    float: left;
 }
