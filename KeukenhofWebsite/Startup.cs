@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using KeukenhofWebsite.Models;
 
 namespace KeukenhofWebsite
 {
@@ -33,6 +35,9 @@ namespace KeukenhofWebsite
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<KeukenhofWebsiteContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("KeukenhofWebsiteContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +61,7 @@ namespace KeukenhofWebsite
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=tests}/{action=Index}/{id?}");
             });
         }
     }
