@@ -1,0 +1,38 @@
+﻿body {
+}
+.outerFooter {
+    position: absolute;
+    width: 1152px;
+    height: 269px;
+    left: 0px;
+    top: 3037px;
+    /* White */
+    background: #FFFFFF;
+}
+.innerFooter {
+    position: absolute;
+    width: 1081px;
+    height: 208px;
+    left: 32px;
+    top: 32px;
+}
+.logoFooter {
+    position: absolute;
+    left: 2.78%;
+    right: 83.77%;
+    top: 11.9%;
+    bottom: 68.03%;
+    background: url(image.png);
+    mix-blend-mode: darken;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+    .fa:hover {
+        opacity: 0.7;
+    }
