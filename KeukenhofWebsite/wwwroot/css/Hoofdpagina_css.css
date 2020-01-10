@@ -3,13 +3,25 @@
 
 .keyvisual {
     position: absolute;
-    width: 1152px;
+    width: 100%;
     height: 628px;
     left: 0px;
     top: 0px;
     background: linear-gradient(180deg, rgba(35, 31, 32, 0) 0%, #231F20 100%);
     opacity: 0.4;
     margin-top: 0px;
+}
+
+.plaatjes_deel {
+    position:absolute;
+    width: 100%;
+    height: 421px;
+    left: 0px;
+    top: 100%;
+    /* Orange Light */
+    background: #FBDFD3;
+   
+   
 }
 .titel {
     /* H1 */
@@ -86,7 +98,6 @@
     top: 65.95%;
     bottom: -33.84%;
     /* Green Secundary */
-    background: url(arrow-right.svg);
 }
 
 .pijl_midden {
@@ -96,16 +107,16 @@
     top: 65.95%;
     bottom: -33.84%;
     /* Green Secundary */
-    background: url(arrow-right.svg);
+    
 }
 .pijl_rechts {
     position: absolute;
     left: 60.1%;
     right: -55.53%;
     top: 65.95%;
-    bottom: -2.84%;
+    bottom: -33.84%;
     /* Green Secundary */
-    background: url(arrow-right.svg);
+   
 }
 
 
@@ -176,4 +187,214 @@
     align-items: center;
     /* Dark Grey */
     color: #36454E;
+}
+
+.plaatjes_titel {
+    position: absolute;
+    width: 600px;
+    height: 31px;
+    left: 32px;
+    top: 32px;
+    /* H3 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 31px;
+    /* identical to box height, or 97% */
+    display: flex;
+    align-items: center;
+    /* Black */
+    color: #1F2325;
+}
+
+.vakje1 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left: 56px;
+    top: 79px;
+    background-color:white;
+}
+
+.vakje2 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left: 360px;
+    top: 79px;
+    background-color: white;
+}
+
+.vakje3 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left:664px;
+    top: 79px;
+    background-color: white;
+}
+
+.vakje4 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left:968px;
+    top: 79px;
+    background-color: white;
+}
+
+.plaatje1 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/190422llt7020.jpg');
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    background-image: url('../images/190422llt7020.jpg');
+}
+.plaatje2 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    background-image: url("/images/190511llu8603.jpg");
+}
+.plaatje3 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    background-image: url('../images/190422llt7020.jpg');
+}
+.plaatje4 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    background-image: url("/images/190511llu8603.jpg");
+}
+
+.titel1 {
+    position: absolute;
+    left: 6.45%;
+    right: 39.92%;
+    top: 85.00%;
+    bottom: 5.81%;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    display: flex;
+    align-items: center;
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.titel2 {
+    position: absolute;
+    left: 6.45%;
+    right: 45.56%;
+    top: 85.00%;
+    bottom: 5.81%;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    display: flex;
+    align-items: center;
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.titel3 {
+    position: absolute;
+    left: 6.45%;
+    right: 54.84%;
+    top: 85.00%;
+    bottom: 5.81%;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    display: flex;
+    align-items: center;
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.titel4 {
+    position: absolute;
+    left: 6.45%;
+    right: 40.73%;
+    top: 85.00%;
+    bottom: 5.81%;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    display: flex;
+    align-items: center;
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.pijl1 {
+    position: absolute;
+    left: 85.1%;
+    right: -55.53%;
+    top: 85.00%;
+    bottom: -33.84%;
+    
+}
+.pijl2 {
+    position: absolute;
+    left: 85.1%;
+    right: -55.53%;
+    top: 85.00%;
+    bottom: -33.84%;
+    
+}
+.pijl3 {
+    position: absolute;
+    left: 85.1%;
+    right: -55.53%;
+    top: 85.00%;
+    bottom: -33.84%;
+    
+}
+.pijl4 {
+    position: absolute;
+    left: 85.1%;
+    right: -55.53%;
+    top: 85.00%;
+    bottom: -33.84%;
+   
 }
