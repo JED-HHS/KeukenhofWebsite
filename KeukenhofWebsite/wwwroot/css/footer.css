@@ -2,7 +2,7 @@
 }
 .outerFooter {
     position: absolute;
-    width: 1152px;
+    width: 100%;
     height: 269px;
     left: 0px;
     top: 3037px;
@@ -11,39 +11,65 @@
 }
 .innerFooter {
     position: absolute;
-    width: 1081px;
     height: 208px;
     left: 32px;
     top: 32px;
+    right: 39px;
+    width: 100%;
 }
 .logoFooter {
     position: absolute;
-    left: 2.78%;
-    right: 83.77%;
-    top: 11.9%;
-    bottom: 68.03%;
+    left: 0%;
+    width: 25%;
+    /*top: 0%;*/
+    height: auto;
     background: url(image.png);
     mix-blend-mode: darken;
 }
+.socialsFooter {
+    position: absolute;
+    left: 0px;
+    top: 182px;
+    bottom: 0px;
+    width: 25%;
+}
+
 .fa {
-    padding: 20px;
+    border-radius: 50px;
+    padding: 40px;
     font-size: 30px;
-    width: 50px;
+    
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
+    margin-left: 10px;
 }
-    .fa:hover {
-        opacity: 0.7;
-    }
-
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-instagram {
+    background: #2B7F68;
+    color: white;
+}
+.fa-youtube {
+    background: #2B7F68;
+    color: white;
+}
+.fa-facebook {
+    background: #2B7F68;
+    color: white;
+}
+.fa-twitter {
+    background: #2B7F68;
+    color: white;
+}
 .adresOpeningstijdenFooter {
-    /*position: absolute;*/
-    width: 247px;
+    position: absolute;
+    width: 25%;
     height: 100%;
-    left: 283px;
+    left: 25%;
 }
 .aot {
+    position: absolute;
     width: 100%;
     height: 28px;
 
@@ -56,6 +82,7 @@
     border-radius: 4px;
 }
 .aotxt {
+    position: absolute;
     width: 245px;
     height: 56px;
 
@@ -77,4 +104,22 @@
 }
 .aotxt-openingstijdenTekst {
     top: 152px;
+}
+.algemeneLinkjesFooter {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 50%;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    
+}
+.handigeLinkjesFooter{
+    position:absolute;
+    right: 0px;
+    width: 25%;
 }
