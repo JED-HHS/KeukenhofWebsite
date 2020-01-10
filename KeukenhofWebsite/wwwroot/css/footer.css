@@ -22,34 +22,43 @@
     position: absolute;
     width: 25%;
     height:100%;
-    left: 0px;
+    left: 0%;
 }
 .logoFooter {
     position: absolute;
-    margin-left: 0px;
+    margin-left: 0%;
     width: 100%;
-    /*top: 0%;*/
     height: auto;
     background: url(image.png);
     mix-blend-mode: darken;
 }
 .logoFooter img{
-    max-height: 70px;
+    max-height: 100px;
     object-fit:cover;
 }
 .socialsFooter {
     position: absolute;
-    left: 0px;
-    top: 182px;
+    height: 35%;
     bottom: 0px;
-    width: 25%;
+    width: 100%;
+
 }
 
 .fa {
-    border-radius: 50px;
-    padding: 40px;
-
+    border-radius: 50%;
+    width: 20%;
+    height: 95%;
     margin-left: 10px;
+    display: inline-block;
+}
+.fa img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    margin-top: 4.5%;
+    margin-left: -15.20%;
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
 }
 
 .fa:hover {
@@ -57,13 +66,18 @@
 }
 
 .fa-logo {
-    position: absolute;
-    left: 60.1%;
-    right: -55.53%;
-    top: 65.95%;
-    bottom: -33.84%;
-    /* White */
-
+    background: #2B7F68;
+    color: white;
+}
+.fa-twitter {
+    background: #2B7F68;
+    color: white;
+}
+.fa-facebook {
+    background: #2B7F68;
+    color: white;
+}
+.fa-youtube {
     background: #2B7F68;
     color: white;
 }
