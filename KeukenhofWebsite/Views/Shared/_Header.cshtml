@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keukenhof</title>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/layout_css.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+
+        <link rel="stylesheet" href="~/css/layout_css.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <div class="container">
+                        <img src="~/images/keukenhof_logo.png" alt="Keukenhof logo" width="200" height="90">
+                    </div>
+                </th>
+                <th>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a class="text" asp-area="" asp-controller="" asp-action="Park"><p>Het park</p></a></li>
+                            <li><a class="text" asp-area="" asp-controller="" asp-action="Praktisch"><p>Praktisch</p></a></li>
+                            <li><a class="text" asp-area="" asp-controller="" asp-action="FAQ"><p>Veelgestelde vragen</p></a></li>
+                            <li><a class="text" asp-area="" asp-controller="" asp-action="Bereikbaarheid"><p>Bereikbaarheid</p></a></li>
+                        </ul>
+                    </div>
+                </th>
+                <th>
+                    <div class="search">
+                        <a asp-area="" asp-controller="" asp-action="Zoek"><i class="fas fa-search" style="color: white; margin-left: 30px;"></i></a>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </nav>
+
+    @RenderBody()
+    <!--Footer-->
+</body>
+</html>
