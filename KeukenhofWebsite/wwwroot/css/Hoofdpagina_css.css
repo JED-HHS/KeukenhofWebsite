@@ -28,13 +28,14 @@
     position: absolute;
     left: 2.78%;
     right: 33.42%;
-    top: 54.2%;
-    bottom: 23.89%;
+    top: 65.2%;
+    bottom: 60.89%;
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
-    line-height: 750px;
+    margin-top:0px;
+  
     display: flex;
     align-items: center;
     z-index: 1;
@@ -212,7 +213,7 @@
     position: absolute;
     width: 248px;
     height: 310px;
-    left: 56px;
+    left: 105px;
     top: 79px;
     background-color:white;
 }
@@ -221,7 +222,7 @@
     position: absolute;
     width: 248px;
     height: 310px;
-    left: 360px;
+    left: 458px;
     top: 79px;
     background-color: white;
 }
@@ -230,7 +231,7 @@
     position: absolute;
     width: 248px;
     height: 310px;
-    left:664px;
+    left:811px;
     top: 79px;
     background-color: white;
 }
@@ -239,7 +240,7 @@
     position: absolute;
     width: 248px;
     height: 310px;
-    left:968px;
+    left:1164px;
     top: 79px;
     background-color: white;
 }
@@ -308,6 +309,24 @@
     /* Dark Grey */
     color: #36454E;
 }
+
+
+
+.vakje1:hover {
+        background-color: #ea6025;
+     
+    }
+.vakje2:hover {
+        background-color: #ea6025;
+    }
+
+.vakje3:hover {
+        background-color: #ea6025;
+}
+.vakje4:hover {
+        background-color: #ea6025;
+}
+
 
 .titel2 {
     position: absolute;
