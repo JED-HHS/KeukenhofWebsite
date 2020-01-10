@@ -1,4 +1,6 @@
-﻿body {
+﻿.container {
+    width: 100%;
+    color: white;
 }
 
 .text {
@@ -6,9 +8,24 @@
     font-family: sans-serif;
 }
 
+
 .navbar-inverse {
     color: white;
     border-color: white;
+}
+
+.navbar {
+    background-color: #ea6025;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    margin-left: 0px;
+    color: white;
+}
+
+.navbar-nav {
+    float: right;
 }
 
 p {
@@ -28,8 +45,7 @@ a:hover p {
     color: #fcae69;
 }
 
-.search{
+.search {
     font-size: 20px;
     color: white;
-    background: none;
 }
