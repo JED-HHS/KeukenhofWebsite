@@ -24,6 +24,12 @@ namespace KeukenhofWebsite.Controllers
             return View(await _context.test.ToListAsync());
         }
 
+        // GET: tests
+        public IActionResult _Contact()
+        {
+            return View();
+        }
+
         // GET: tests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
