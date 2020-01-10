@@ -15,6 +15,8 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
+    <link href="~/css/footer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -66,6 +68,79 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+    <div class="outerFooter">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="innerFooter">
+                <div class="firstFooterBlock">
+                <div class="logoFooter">
+                    <img src="~/images/logo.svg" alt="ASP.NET" class="img-responsive" style="width:500px;height:300px;" />
+                </div>
+                <div class="socialsFooter">
+                    
+                    <a href="https://www.instagram.com/visitkeukenhof/?hl=en" class="fa fa-logo">
+                        <img src="~/images/instagram.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+
+                    <a href="https://www.facebook.com/Visit-Keukenhof-626441381105826/?brand_redir=306547471635" class="fa fa-facebook">
+                        <img src="~/images/facebook.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+
+                    <a href="https://twitter.com/visitkeukenhof?lang=en" class="fa fa-twitter">
+                        <img src="~/images/twitter.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+
+                    <a href="https://www.youtube.com/channel/UCgI01qAKL2Smlat13n5bVWg" class="fa fa-youtube">
+                        <img src="~/images/youtube.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+                    </div>
+                </div>
+                <div class="adresOpeningstijdenFooter">
+                    
+                        <div class="aot aot-adresTitel">
+                            <p>Adres</p>
+                        </div>
+                        <div class="aotxt aotxt-adresTekst">
+                            <p>Stationsweg 166A</p>
+                            <p>2161 AM Lisse</p>
+                        </div>
+                    
+                    
+                        <div class="aot aot-openingstijdenTitel">
+                            <p>Openingstijden</p>
+                        </div>
+                        <div class="aotxt aotxt-openingstijdenTekst">
+                            <p>21 maart - 10 mei 2020,</p>
+                            <p>9:00-17:00u</p>
+                        </div>
+                    
+                </div>
+                <div class="algemeneLinkjesFooter">
+                    <ul>
+                        <li><a href="#">Het Park</a></li>
+                        <li><a href="#">Praktisch</a></li>
+                        <li><a href="#">Groepen</a></li>
+                        <li><a href="#">Pers</a></li>
+                    </ul>
+                </div>
+                <div class="handigeLinkjesFooter">
+                    <div class="handigeLinkjesTitel">
+                        <p>Meer handige links</p>
+                    </div>
+                    <div class="handigeLinkjesTekst">
+                        <ul>
+                            <li><a href="#">Bereikbaarheid</a></li>
+                            <li><a href="#">Evenementen</a></li>
+                            <li><a href="#">Veelgestelde vragen</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Statement</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     @RenderSection("Scripts", required: false)
 </body>
