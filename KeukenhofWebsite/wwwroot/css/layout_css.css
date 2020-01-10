@@ -4,7 +4,7 @@
 }
 
 .text {
-    color: white;
+    color: black;
     font-family: sans-serif;
 }
 
@@ -28,7 +28,7 @@
     float: right;
 }
 
-p {
+.tekst {
     color: white;
     margin-top: auto;
     margin-bottom: auto;
