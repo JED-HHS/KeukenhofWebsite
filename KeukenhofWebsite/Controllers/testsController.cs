@@ -24,6 +24,11 @@ namespace KeukenhofWebsite.Controllers
             return View(await _context.test.ToListAsync());
         }
 
+        public IActionResult _Hoofdpagina()
+        {
+            return View();
+        }
+
         // GET: tests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -53,6 +58,7 @@ namespace KeukenhofWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Create([Bind("Id")] test test)
         {
             if (ModelState.IsValid)
@@ -85,6 +91,7 @@ namespace KeukenhofWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Edit(int id, [Bind("Id")] test test)
         {
             if (id != test.Id)
