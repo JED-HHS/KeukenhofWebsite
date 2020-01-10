@@ -1,46 +1,14 @@
 ﻿body {
 }
 
-.optie {
-    color: white;
-}
-
-.top {
-    width: 100%;
-    height: 100%;
-    font-size: 100%;
-    background-color: #ea6025;
-
-}
-
-.container {
-    width: 100%;
-    color: white;
-}
-
 .text {
     color: white;
     font-family: sans-serif;
 }
 
-
 .navbar-inverse {
     color: white;
     border-color: white;
-}
-
-.navbar {
-    background-color: #ea6025;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    margin-left: 0px;
-    color: white;
-}
-
-.navbar-nav{
-    float: right;
 }
 
 p {
@@ -63,4 +31,5 @@ a:hover p {
 .search{
     font-size: 20px;
     color: white;
+    background: none;
 }
