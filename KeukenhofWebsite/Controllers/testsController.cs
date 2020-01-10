@@ -38,7 +38,7 @@ namespace KeukenhofWebsite.Controllers
             }
 
             var test = await _context.test
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (test == null)
             {
                 return NotFound();
@@ -58,7 +58,8 @@ namespace KeukenhofWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID")] test test)
+
+        public async Task<IActionResult> Create([Bind("Id")] test test)
         {
             if (ModelState.IsValid)
             {
@@ -90,9 +91,10 @@ namespace KeukenhofWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID")] test test)
+
+        public async Task<IActionResult> Edit(int id, [Bind("Id")] test test)
         {
-            if (id != test.ID)
+            if (id != test.Id)
             {
                 return NotFound();
             }
@@ -106,7 +108,7 @@ namespace KeukenhofWebsite.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!testExists(test.ID))
+                    if (!testExists(test.Id))
                     {
                         return NotFound();
                     }
@@ -129,7 +131,7 @@ namespace KeukenhofWebsite.Controllers
             }
 
             var test = await _context.test
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (test == null)
             {
                 return NotFound();
@@ -151,7 +153,7 @@ namespace KeukenhofWebsite.Controllers
 
         private bool testExists(int id)
         {
-            return _context.test.Any(e => e.ID == id);
+            return _context.test.Any(e => e.Id == id);
         }
     }
 }
