@@ -1,5 +1,6 @@
 ﻿body {
 }
+
 .outerFooter {
     position: absolute;
     width: 100%;
@@ -17,14 +18,24 @@
     right: 39px;
     width: 100%;
 }
+.firstFooterBlock{
+    position: absolute;
+    width: 25%;
+    height:100%;
+    left: 0px;
+}
 .logoFooter {
     position: absolute;
-    left: 0%;
-    width: 25%;
+    margin-left: 0px;
+    width: 100%;
     /*top: 0%;*/
     height: auto;
     background: url(image.png);
     mix-blend-mode: darken;
+}
+.logoFooter img{
+    max-height: 70px;
+    object-fit:cover;
 }
 .socialsFooter {
     position: absolute;
@@ -37,31 +48,27 @@
 .fa {
     border-radius: 50px;
     padding: 40px;
-    font-size: 30px;
-    
-    text-align: center;
-    text-decoration: none;
+
     margin-left: 10px;
 }
+
 .fa:hover {
     opacity: 0.7;
 }
-.fa-instagram {
+
+.fa-logo {
+    position: absolute;
+    left: 60.1%;
+    right: -55.53%;
+    top: 65.95%;
+    bottom: -33.84%;
+    /* White */
+
     background: #2B7F68;
     color: white;
 }
-.fa-youtube {
-    background: #2B7F68;
-    color: white;
-}
-.fa-facebook {
-    background: #2B7F68;
-    color: white;
-}
-.fa-twitter {
-    background: #2B7F68;
-    color: white;
-}
+
+
 .adresOpeningstijdenFooter {
     position: absolute;
     width: 25%;
@@ -122,4 +129,5 @@
     position:absolute;
     right: 0px;
     width: 25%;
+    height:100%;
 }
