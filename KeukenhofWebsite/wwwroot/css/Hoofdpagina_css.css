@@ -26,7 +26,7 @@
 .deel3 {
     position: absolute;
     width: 100%;
-    height: 421px;
+    height: 512px;
     left: 0px;
     top: 158%;
     /* Green Background */
@@ -259,12 +259,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/190422llt7020.jpg');
+    background-image: url('../images/Bus.png');
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 20%;
-    background-image: url('../images/190422llt7020.jpg');
+
 }
 .plaatje2 {
     position: absolute;
@@ -275,7 +275,7 @@
     right: 0%;
     top: 0%;
     bottom: 20%;
-    background-image: url("/images/190511llu8603.jpg");
+    background-image: url("/images/VrouwmetUil.png");
 }
 .plaatje3 {
     position: absolute;
@@ -432,4 +432,282 @@
     top: 85.00%;
     bottom: -33.84%;
    
+}
+
+.map_deel {
+    position: absolute;
+    left: 2.78%;
+    right: 51.39%;
+    top: 25%;
+    bottom: 6.25%;
+}
+
+
+
+.map {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    min-height:100%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background-image: url('../images/plattegrond keukenhof 2019.png');
+
+}
+
+.praktische_info {
+    position: absolute;
+    left: 2.78%;
+    right: 65.1%;
+    top: 6.25%;
+    bottom: 85.94%;
+    /* H2 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    /* identical to box height, or 100% */
+    /* Black */
+    color: #1F2325;
+}
+
+.onder_info {
+    position: absolute;
+    left: 2.78%;
+    right: 57.81%;
+    top: 14.84%;
+    bottom: 79.69%;
+    /* Paragraph */
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.meer_info {
+    position: absolute;
+    left: 75.61%;
+    right: 6.39%;
+    top: 14.06%;
+    bottom: 78.12%;
+}
+
+.meer_text {
+    position: absolute;
+    height: 19px;
+    left: 18px;
+    right: 43px;
+    top: 10px;
+    /* Label */
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.pijl_meer {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 6px;
+}
+
+.openingstijden {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 25%;
+    bottom: 60.16%;
+    background-color:white;
+}
+.openingstijden_text {
+    position: absolute;
+    width: 432px;
+    height: 28px;
+    left: 32px;
+    top: 24px;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.toegankelijkheid {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 42.97%;
+    bottom: 42.19%;
+    background-color: white;
+}
+.toegankelijkheid_text {
+    position: absolute;
+    width: 432px;
+    height: 28px;
+    left: 32px;
+    top: 24px;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.parkeren {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 60.94%;
+    bottom: 24.22%;
+    background-color: white;
+}
+
+.parkeren_text {
+    position: absolute;
+    width: 432px;
+    height: 28px;
+    left: 32px;
+    top: 24px;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.groepen {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 78.91%;
+    bottom: 6.25%;
+    background-color: white;
+}
+
+.groepen_text {
+    position: absolute;
+    width: 432px;
+    height: 28px;
+    left: 32px;
+    top: 24px;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    /* Dark Grey */
+    color: #36454E;
+}
+.openingstijden_chevron {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 24px;
+    top: calc(50% - 24px/2);
+}
+.toegankelijkheid_chevron {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 24px;
+    top: calc(50% - 24px/2);
+}
+.parkeren_chevron {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 24px;
+    top: calc(50% - 24px/2);
+}
+
+.groepen_chevron {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 24px;
+    top: calc(50% - 24px/2);
+}
+
+.download {
+    position: absolute;
+    left: 16.75%;
+    right: 55.36%;
+    top: 50.47%;
+    bottom: 36.72%;
+    z-index: 1;
+}
+.download_icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: calc(50% - 24px/2 - 0px);
+    z-index:1;
+}
+
+.download_text {
+    position: absolute;
+    height: 19px;
+    left: 45px;
+    right: 17px;
+    top: calc(50% - 19px/2 + 4px);
+    /* Label */
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    /* Dark Grey */
+    color: #36454E;
+    z-index: 1;
+}
+
+.button {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    /* White */
+    background: #FFFFFF;
+    /* Green Default */
+    border: 1.5px solid #00694C;
+    box-sizing: border-box;
+    border-radius: 27px;
+    z-index:1;
 }
