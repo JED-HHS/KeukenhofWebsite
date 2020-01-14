@@ -27,9 +27,50 @@
     <div class="questions">
         <div class="access">
             <h1 class="bereikbaarheid">Bereikbaarheid</h1>
-            <button class="collapsible">
-                <p class="coll_q">Hoe kan ik het beste naar Keukenhof reizen?</p><i class="fas fa-angle-down arrow"></i>
-            </button>
+
+            <div class="column">
+                <div class="row">
+                    <button type="button" class="collapsible">
+                        <p class="coll_q">Hoe kan ik het beste naar Keukenhof reizen?</p><i class="fas fa-angle-down arrow"></i>
+                    </button>
+                    <div class="coll_content">
+                        <p class="coll_a">Keukenhof is goed bereikbaar met zowel het openbaar vervoer. Bekijk hier de mogelijkheden. Ook met de auto is Keukenhof goed bereikbaar. Er is bij het park voldoende parkeergelegenheid. </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="collapsible">
+                        <p class="coll_q">Mag ik in het park fietsen?</p><i class="fas fa-angle-down arrow"></i>
+                    </button>
+                    <div class="coll_content">
+                        <p class="coll_a">Nee, Keukenhof is een echt wandelpark. Je kunt wel fietsen huren op het parkeerterrein bij de Hoofdentree om de omgeving per fiets te verkennen. </p>
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible">
+                    <p class="coll_q"></p>
+                </button>
+                <div class="coll_content">
+                    <p class="coll_a"></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>

@@ -1,7 +1,4 @@
-﻿body {
-}
-
-.faq_image {
+﻿.faq_image {
     position: absolute;
     width: 100%;
 }
@@ -36,22 +33,30 @@
     width: 100%;
     padding-left: 2.5%;
     padding-right: 2.5%;
+    padding-bottom: 15px;
+    display: inline-block;
 }
 
-.bereikbaarheid, .voorzieningen{
-      
-}
-
-.collapsible{
+.collapsible {
     background-color: white;
     cursor: pointer;
-    width: 48%;
     text-align: left;
     border: none;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.coll_q{
+.column{
+    float: left;
+    width: 58%;
+    padding-right: 2%;
+}
+
+.row{
+    width: 100%;
+}
+
+.coll_q, .coll_a{
     vertical-align: middle;
     display: inline-block;
     font-size: 17px;
@@ -68,4 +73,28 @@
     padding-bottom: 10px;
     font-size: 25px;
     color: #00694c;
+}
+
+.active arrow{
+    transform: rotate(90deg);
+}
+
+.active{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.coll_content {
+    background-color: white;
+    cursor: pointer;
+    width: 48%;
+    text-align: left;
+    border: none;
+    display: none;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 10px;
+    transition: max-height 0.2s ease-out;
 }
