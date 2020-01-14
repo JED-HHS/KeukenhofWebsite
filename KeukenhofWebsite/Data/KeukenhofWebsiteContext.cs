@@ -13,6 +13,6 @@ namespace KeukenhofWebsite.Models
         {
         }
 
-        public DbSet<KeukenhofWebsite.Models.test> test { get; set; }
+        public DbSet<KeukenhofWebsite.Models.Home> test { get; set; }
     }
 }

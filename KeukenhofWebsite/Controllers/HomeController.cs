@@ -9,22 +9,22 @@ using KeukenhofWebsite.Models;
 
 namespace KeukenhofWebsite.Controllers
 {
-    public class testsController : Controller
+    public class HomeController : Controller
     {
         private readonly KeukenhofWebsiteContext _context;
 
-        public testsController(KeukenhofWebsiteContext context)
+        public HomeController(KeukenhofWebsiteContext context)
         {
             _context = context;
         }
 
-        // GET: tests
+        // GET: Home
         public async Task<IActionResult> Index()
         {
             return View(await _context.test.ToListAsync());
         }
 
-        // GET: tests/Details/5
+        // GET: Home/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +32,39 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var test = await _context.test
+            var home = await _context.test
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (test == null)
+            if (home == null)
             {
                 return NotFound();
             }
 
-            return View(test);
+            return View(home);
         }
 
-        // GET: tests/Create
+        // GET: Home/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: tests/Create
+        // POST: Home/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] test test)
+        public async Task<IActionResult> Create([Bind("Id")] Home home)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(test);
+                _context.Add(home);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(test);
+            return View(home);
         }
 
-        // GET: tests/Edit/5
+        // GET: Home/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +72,22 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var test = await _context.test.FindAsync(id);
-            if (test == null)
+            var home = await _context.test.FindAsync(id);
+            if (home == null)
             {
                 return NotFound();
             }
-            return View(test);
+            return View(home);
         }
 
-        // POST: tests/Edit/5
+        // POST: Home/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] test test)
+        public async Task<IActionResult> Edit(int id, [Bind("Id")] Home home)
         {
-            if (id != test.Id)
+            if (id != home.Id)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace KeukenhofWebsite.Controllers
             {
                 try
                 {
-                    _context.Update(test);
+                    _context.Update(home);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!testExists(test.Id))
+                    if (!HomeExists(home.Id))
                     {
                         return NotFound();
                     }
@@ -112,10 +112,10 @@ namespace KeukenhofWebsite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(test);
+            return View(home);
         }
 
-        // GET: tests/Delete/5
+        // GET: Home/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,28 +123,28 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var test = await _context.test
+            var home = await _context.test
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (test == null)
+            if (home == null)
             {
                 return NotFound();
             }
 
-            return View(test);
+            return View(home);
         }
 
-        // POST: tests/Delete/5
+        // POST: Home/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var test = await _context.test.FindAsync(id);
-            _context.test.Remove(test);
+            var home = await _context.test.FindAsync(id);
+            _context.test.Remove(home);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool testExists(int id)
+        private bool HomeExists(int id)
         {
             return _context.test.Any(e => e.Id == id);
         }

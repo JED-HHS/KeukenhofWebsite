@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace KeukenhofWebsite.Models
 {
-    public class test
+    public class Home
     {
         public int Id { get; set; }
     }
