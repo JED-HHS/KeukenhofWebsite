@@ -7,6 +7,6 @@ namespace KeukenhofWebsite.Models
 {
     public class test
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
     }
 }
