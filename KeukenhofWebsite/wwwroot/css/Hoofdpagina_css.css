@@ -21,9 +21,18 @@
     /* Orange Light */
     background: #FBDFD3;
    
-   
 }
-.titel {
+
+.deel3 {
+    position: absolute;
+    width: 100%;
+    height: 421px;
+    left: 0px;
+    top: 158%;
+    /* Green Background */
+    background: #E1EBE9;
+}
+    .titel {
     /* H1 */
     position: absolute;
     left: 2.78%;
@@ -310,22 +319,29 @@
     color: #36454E;
 }
 
-
-
 .vakje1:hover {
-        background-color: #ea6025;
-     
-    }
+    background-color: #ea6025;
+}
+
 .vakje2:hover {
-        background-color: #ea6025;
-    }
+    background-color: #ea6025;
+}
 
 .vakje3:hover {
-        background-color: #ea6025;
+    background-color: #ea6025;
 }
+
 .vakje4:hover {
-        background-color: #ea6025;
+    background-color: #ea6025;
 }
+
+.vakjes:hover p {
+    color: white;
+    
+}
+
+
+
 
 
 .titel2 {
