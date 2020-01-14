@@ -9,11 +9,11 @@ using KeukenhofWebsite.Models;
 
 namespace KeukenhofWebsite.Controllers
 {
-    public class testsController : Controller
+    public class HomeController : Controller
     {
         private readonly KeukenhofWebsiteContext _context;
 
-        public testsController(KeukenhofWebsiteContext context)
+        public HomeController(KeukenhofWebsiteContext context)
         {
             _context = context;
         }
@@ -58,7 +58,7 @@ namespace KeukenhofWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] test test)
+        public async Task<IActionResult> Create([Bind("Id")] Home test)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace KeukenhofWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] test test)
+        public async Task<IActionResult> Edit(int id, [Bind("Id")] Home test)
         {
             if (id != test.Id)
             {
