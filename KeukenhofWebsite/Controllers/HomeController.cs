@@ -24,6 +24,11 @@ namespace KeukenhofWebsite.Controllers
             return View(await _context.test.ToListAsync());
         }
 
+        public IActionResult Zoekresultaten()
+        {
+            return View();
+        }
+
         // GET: Home/Details/5
         public async Task<IActionResult> Details(int? id)
         {

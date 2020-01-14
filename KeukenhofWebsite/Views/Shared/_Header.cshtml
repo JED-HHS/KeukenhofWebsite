@@ -21,7 +21,8 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
         <table style="width:100%">
             <tr>
                 <th>
@@ -45,7 +46,7 @@
                     </div>
                     <div id="modal" class="modal">
                         <div class="modal-content">
-                            <form asp-controller="Home" asp-action="Zoekresultaat">
+                            <form asp-controller="Home" asp-action="Zoekresultaten">
                                 <input type="text" name="query" placeholder="Typ uw zoekterm..."/>
                                 <input type="submit" name="submit" value="Zoek"/>
                                 <input class="close" type="submit" value="&times;"/>
@@ -56,6 +57,7 @@
             </tr>
         </table>
     </nav>
+        </header>
     <script>
         var modal = document.getElementById("modal");
         var button = document.getElementById("searchButton");
