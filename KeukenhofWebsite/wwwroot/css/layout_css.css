@@ -1,6 +1,11 @@
 ﻿body {
 }
 
+.container{
+    width: 100%;
+    color: white;
+}
+
 .text {
     color: white;
     font-family: sans-serif;

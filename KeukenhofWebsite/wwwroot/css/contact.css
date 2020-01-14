@@ -1,57 +1,9 @@
-﻿.containter{
-    position: relative;
+﻿body {
+    left: 0;
 }
 
-.afbeelding {
-    position: absolute;
-    height: auto;
-    background-position: center;
-    background-size: cover;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    background-image: url("/images/Contact-Tulpen.png");
-    background-repeat: no-repeat;
-    z-index: -1;
-    background-color: white !important;
-
-}
-
-.contact_text {
-    position: absolute;
-    background-position: center;
-    background-size: cover;
-    left: 0%;
-    right: 0%;
-    top: 80%;
-    bottom: 0%;
-    background-color: white !important;
-}
-
-h1 {
-    margin-top: 20px;
-    margin-left: 200px;
-    margin-bottom: 20px;
-    font-family: sans-serif;
-}
-
-.text {
-    background-color: white;
-}
-
-p1 {
-    float: left;
-    margin-left: 200px;
-    font-family: sans-serif;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-p2 {
-    float: right;
-    margin-right: 200px;
-    font-family: sans-serif;
-    font-size: 20px;
-    margin-bottom: 20px;
+.Links {
+    font-size: 1000px !important;
+    color: black !important;
+    float: left !important;
 }
