@@ -1,0 +1,71 @@
+﻿body {
+}
+
+.faq_image {
+    position: absolute;
+    width: 100%;
+}
+
+.faq_title {
+    font-size: 48px;
+    font-family: sans-serif;
+}
+
+.faq_info {
+    position: absolute;
+    top: 68%;
+    width: 80%;
+    right: 10%;
+    padding-top: 45px;
+}
+
+.open_text_left {
+    position: absolute;
+    font-size: 18px;
+}
+
+.open_text_right {
+    margin-left: 50%;
+    font-size: 18px;
+}
+
+.questions {
+    position: absolute;
+    top: 100%;
+    background-color: #e1ebe9;
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.bereikbaarheid, .voorzieningen{
+      
+}
+
+.collapsible{
+    background-color: white;
+    cursor: pointer;
+    width: 48%;
+    text-align: left;
+    border: none;
+    border-radius: 10px;
+}
+
+.coll_q{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 17px;
+    font-family: sans-serif;
+    padding-top: 11px;
+    padding-left: 11px;
+}
+
+.arrow {
+    float: right;
+    display: inline-block;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    color: #00694c;
+}
