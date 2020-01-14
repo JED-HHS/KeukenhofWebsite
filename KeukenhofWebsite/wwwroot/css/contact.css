@@ -1,9 +1,32 @@
-﻿body {
-    left: 0;
+﻿
+
+h1 {
+    margin-left: 250px;
+    padding-top: 550px;
+    font-family: sans-serif;
+    font-size: 48px;
+}
+.Links {
+    margin-left: 250px;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
 }
 
-.Links {
-    font-size: 1000px !important;
-    color: black !important;
-    float: left !important;
+.Rechts {
+    font-size:18px;
+    padding-left: 100px;
+    color: black;
+    margin-right: 500px;
+    font-family: sans-serif;
 }
+
+.LichtGroen {
+    background-color: #E1EBE9;
+}
+
+h2 {
+
+}
+
+
