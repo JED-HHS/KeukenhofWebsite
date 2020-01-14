@@ -24,6 +24,11 @@ namespace KeukenhofWebsite.Controllers
             return View(await _context.test.ToListAsync());
         }
 
+        public IActionResult PraktischeInformatie()
+        {
+            return View();
+        }
+
         public IActionResult _Hoofdpagina()
         {
             return View();
