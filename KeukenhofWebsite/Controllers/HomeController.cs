@@ -29,6 +29,11 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        public IActionResult Bereikbaarheid()
+        {
+            return View();
+        }
+
         // GET: tests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
