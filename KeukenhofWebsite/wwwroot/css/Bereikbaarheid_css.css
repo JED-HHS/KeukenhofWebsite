@@ -1,3 +1,32 @@
 ﻿.image{
     width: 100%;
 }
+
+.ber_title {
+    font-size: 48px;
+    font-family: sans-serif;
+}
+
+.top_info {
+    position: absolute;
+    top: 68%;
+    width: 80%;
+    right: 10%;
+    padding-top: 45px;
+}
+
+.open_text_left {
+    position: absolute;
+    font-size: 18px;
+    width: 45.5%;
+}
+
+.open_text_right {
+    margin-left: 50%;
+    font-size: 18px;
+}
+
+.ov{
+
+}
+
