@@ -2,23 +2,60 @@
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
-    <link href="~/css/praktischeInformatie.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/praktischeInformatie.css" rel="stylesheet" type="text/css" />    
 </head>
 
 <body>
     <img src="~/images/BloemenEnToeristen.png" alt="Bloemen met toeristen" style=" width:100%; height:auto;">
+    <div class="piTitel">
+        <h1>Praktische Informatie</h1>
+    </div>
+    
+    <div class="PTekst">
+        <div class="PLinks">
+            <p>In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
+        </div>
+        <div class="PRechts">
+            <p>In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
+        </div>
+    </div>
+    <div class="PFilmpje">
+        <a href="https://www.youtube.com/watch?v=jgdtoEfQfZA">Bekijk Video</a>
+    </div>
+    <div class="PScrollMenu">
+        <a href="#PPlattegrond" class="PMenuPlat">Plattegrond</a>
+        <a href="#PBereikbaarheid" class="PMenuBereik">Bereikbaarheid</a>
+        <a href="#PVoorziening" class="PMenuVoor">Voorziening</a>
+        <a href="#PGroepen" class="PMenuGroep">Groepen</a>
+    </div>
+    <div id="PPlattegrond">
+        <div class="PPTitel">
+            <h2>Praktische Informatie</h2>
+        </div>
+        <div class="PPOndertekst">
+            <p>Download de kaart of krijg er een bij de informatiebalie</p>
+        </div>
+        <div class="PPDownloadKaart">
+            <div class="PPDownloadTekst">
+                <div class="PPDownloadKnop">
+                    
+                </div>
+                <p>Download de kaart</p>
+            </div>
+        </div>
+    </div>
+    <div id="PBereikbaarheid">
 
-    <h1 class="piTitel">Praktische Informatie</h1>
+    </div>
+    <div id="PVoorziening">
 
-    <table>
-        <tr>
-            <td>
-                <p class="PLinks">In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
-            </td>
-            <td>
-                <p class="PRechts">In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
-            </td>
-        </tr>
-    </table>
-
+    </div>
+    <div id="PGroepen">
+        <div class="PGroepBeide">
+            <img src="~/images/PLATTEGROND Keukenhof 2019-2.png" alt="Bloemen met toeristen" style="width: 100%; height:86.21%">
+            <div class="PGroepTekst">
+                <p></p>
+            </div>
+        </div>
+    </div>
 </body>

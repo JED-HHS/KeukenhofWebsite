@@ -1,27 +1,242 @@
 ﻿.piTitel {
+    left: 10.94%;
+    width: 77.69%;
+    position: absolute;
+    height: 48px;
+    top: 518px;
     font-family: sans-serif;
+
+
+    /*font-size: 38px;*/
+
+
+
+    /*font-family: Source Sans Pro;*/
     font-style: normal;
     font-weight: 600;
-    font-size: 38px;
+    font-size: 48px;
     line-height: 48px;
-    margin-top: 20px;
-    margin-left: 20px;
-    color: black;
+    /* identical to box height, or 100% */
+    /* Black */
+    color: #1F2325;
+}
+
+.PTekst {
+    position: absolute;
+    left: 10.94%;
+    top: 582px;
+    right: 10.94%;
+    height: 56px;
+    font-family: sans-serif;
+    /*font-style: normal;
+    font-weight: 600;
+    font-size: 15px;*/
+
+    /*font-family: Avenir;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+    /* Dark Grey */
+    color: #36454E;
 }
 
 .PLinks {
-    font-family: sans-serif;
+    position: absolute;
+    width: 48.22%;
+    right: 0%;
+    /*font-family: sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
-    padding-left: 20px;
+    /*padding-left: 0px;*/
 }
 
 .PRechts {
-    font-family: sans-serif;
+    position: absolute;
+    width: 48.22%;
+    left: 0%;
+    /*font-family: sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
-    padding-left: 80px;
+    padding-left: 80px;*/
 }
-
+    .PFilmpje a {
+        position: absolute;
+        width: 13.19%;
+        height: 56px;
+        left: 10.94%;
+        top: 654px;
+        border: 1.5px solid #00694C;
+        box-sizing: border-box;
+        border-radius: 27px;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 28px;
+        padding-top: 14px;
+        /* identical to box height, or 156% */
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        /* Dark Grey */
+        color: #36454E;
+    }
+.PScrollMenu {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 742px;
+    height: 64px;
+    /* Dark Grey */
+    background: #36454E;
+}
+.PScrollMenu a {
+    /* Label */
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    /* White */
+    color: #FFFFFF;
+}
+.PMenuPlat {
+    position: absolute;
+    left: 2.6%;
+    right: 89.58%;
+    top: 37.5%;
+    bottom: 32.81%;
+}
+.PMenuBereik {
+    position: absolute;
+    left: 14.58%;
+    right: 75.52%;
+    top: 37.5%;
+    bottom: 32.81%;
+    /**/
+    opacity: 0.64;
+}
+.PMenuVoor {
+    position: absolute;
+    left: 28.65%;
+    right: 61.98%;
+    top: 37.5%;
+    bottom: 32.81%;
+    /**/
+    opacity: 0.64;
+}
+.PMenuGroep {
+    position: absolute;
+    left: 42.19%;
+    right: 52.08%;
+    top: 37.5%;
+    bottom: 32.81%;
+    /**/
+    opacity: 0.64;
+}
+#PPlattegrond {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 806px;
+    height: 559px;
+    /**/
+    background: #E1EBE9;
+}
+#PBereikbaarheid {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 1365px;
+    height: 421px;
+    /**/
+    background: #FBDFD3;
+}
+#PVoorziening {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 1768px;
+    height: 548px;
+    /**/
+    background: #E1EBE9;
+}
+#PGroepen {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 2316px;
+    height: 528px;
+    /**/
+    background: #FBDFD3;
+}
+.PPTitel {
+    position: absolute;
+    left: 2.78%;
+    right: 65.1%;
+    top: 4.11%;
+    bottom: 88.73%;
+    /* H2 */
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    /* identical to box height, or 100% */
+    /* Black */
+    color: #1F2325;
+}
+.PPOndertekst {
+    position: absolute;
+    left: 2.78%;
+    right: 57.81%;
+    top: 11.99%;
+    bottom: 83.01%;
+    /* Paragraph */
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+    /* Dark Grey */
+    color: #36454E;
+}
+.PPDownloadKaart {
+    position: absolute;
+    left: 2.78%;
+    right: 51.39%;
+    top: 21.29%;
+    bottom: 15.74%;
+    background: url('/images/PLATTEGROND Keukenhof 2019.png');
+    opacity: 0.32;
+    border-radius: 4px;
+}
+.PPDownloadTekst {
+    position: absolute;
+    left: 30.49%;
+    right: 30.49%;
+    top: 156px;
+    bottom: 156px;
+    /* White */
+    background: #FFFFFF;
+    /* Green Default */
+    border: 1.5px solid #00694C;
+    box-sizing: border-box;
+    border-radius: 27px;
+    opacity: 1;
+}
+.PGroepBeide {
+    position: absolute;
+    left: 2.78%;
+    right: 2.78%;
+    top: 6.06%;
+    bottom: 6.06%;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
