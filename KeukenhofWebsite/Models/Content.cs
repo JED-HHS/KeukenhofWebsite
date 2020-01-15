@@ -7,6 +7,7 @@ namespace KeukenhofWebsite.Models
 {
     public class Content
     {
+        public int ContentId { get; set; }
         public string Tekst { get; set; }
 
     }

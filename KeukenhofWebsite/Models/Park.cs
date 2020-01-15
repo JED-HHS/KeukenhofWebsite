@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,7 +8,7 @@ namespace KeukenhofWebsite.Models
 {
     public class Park
     {
-        public string Naam { get; set; }
+        [Key] public string Naam { get; set; }
         public DateTime Openingsdag { get; set; }
         public DateTime Sluitingsdag { get; set; }
         public DateTime OpeningstijdenMaandag { get; set; }
