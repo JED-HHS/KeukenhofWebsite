@@ -26,7 +26,92 @@
     font-size: 18px;
 }
 
-.ov{
-
+.navigation {
+    position: absolute;
+    background-color: #36454e;
+    bottom: 0;
+    width: 100%;
+    padding-left: 10%;
 }
 
+.ber_nav {
+    display: inline-block;
+    color: white;
+    padding-right: 10%;
+    vertical-align: middle;
+    font-family: sans-serif;
+    padding-top: 1%;
+}
+
+.ov{
+    position: absolute;
+    top: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 10%;
+}
+
+.ov_info{
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.lines {
+    position: absolute;
+    top: 127%;
+    width: 100%;
+    background-color: #e1ebe9;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.plan_img{
+    width: 100%;
+    color: black;
+}
+
+.plan_img:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.download_button{
+    background-color: white;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+}
+
+.ber_link_text{
+    font-family: sans-serif;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.fa-download, .fa-arrow-right{
+    float: right;
+    vertical-align: middle;
+}
+
+.option {
+    position: absolute;
+    background-color: #fbdfd3;
+    width: 100%;
+    top: 199%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.eigen_vervoer{
+    position: absolute;
+    margin-left: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    top: 270%;
+}

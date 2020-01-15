@@ -24,14 +24,58 @@
         </div>
     </div>
 
-    <div class=""
+    <div class="navigation">
+        <a class="ber_nav" href="#ov"><p>Openbaar vervoer</p></a>
+        <a class="ber_nav" href="#eigen_vervoer"><p>Eigen vervoer</p></a>
+        <p class="ber_nav">Georganiseerde reis</p>
+    </div>
 
-    <div class="ov">
+    <div class="ov" id="ov">
         <h1 class="ov_title">
             Openbaar vervoer
         </h1>
+
+        <p class="ov_info">
+            Met het OV reis je snel en comfortabel naar Keukenhof. Reis eerst naar een van de vertreklocaties (departure locations) en neem vanaf daar de rechtstreekse bus 
+            Arriva naar Keukenhof. We adviseren om 9292 te raadplegen tot aan één van onderstaande stations die het dichts bij jou in de buurt. Bekijk hoe er het snelst gereisd
+            kan worden naar Keukenhof via de Arriva Reisplanner als u vanuit Amsterdam komt, raadpleeg anders 9292OV tot en met Amsterdam, Leiden of Haarlem.
+        </p>
     </div>
 
+    <div class="lines">
+        <img src="~/images/bus_plan.jpg" alt="bus_download_img" class="plan_img" />
+        <div class="download_button">
+            <a class="plan_img" href="~/images/ov_lines.pdf" download="">
+                <p class="ber_link_text">
+                    Download een overzicht met de verschillende bus-, trein-, tram- en metrolijnen.
+                    <i class="fas fa-download"></i>
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="option">
+        <img src="~/images/Keukenhof_ingang.png" alt="Ingang_img" class="plan_img" />
+        <div class="download_button">
+            <a class="plan_img" asp-controller="" asp-action="<!--IT NOG VULLEN!!!!!!!-->">
+                <p class="ber_link_text">
+                    Hoe kunt u het beste reizen?
+                    <i class="fas fa-arrow-right"></i>
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="eigen_vervoer" id="eigen_vervoer">
+        <h1 class="ov_title">
+            Eigen vervoer
+        </h1>
+
+        <p class="ov_info">
+            Op drukke dagen raden wij aan gebruik te maken van het Openbaar Vervoer, maar uiteraard kunt u ook met de auto, motor, fiets of scooter naar Keukenhof komen. Er zijn genoeg parkeerplekken voor alle vervoersmiddelen.
+            Keukenhof ligt tussen Amsterdam en Den Haag en is gemakkelijk te bereiken via de A4 (afslag Nieuw-Vennep) en de A44 (afslag 3 Lisse).
+        </p>
+    </div>
 
 </body>
 
