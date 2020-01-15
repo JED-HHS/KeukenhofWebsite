@@ -4,7 +4,7 @@
 }
 
 .header_text {
-    color: white;
+    color: #36454E;
     font-family: sans-serif;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .navbar {
-    background-color: #ea6025;
+    background-color: white;
     position: absolute;
     left: 0%;
     right: 0%;
@@ -28,7 +28,7 @@
 }
 
 .header_links {
-    color: white;
+    color: #36454E;
     margin-top: auto;
     margin-bottom: auto;
     font-family: sans-serif;
@@ -37,16 +37,17 @@
 }
 
 .header_logo {
+    padding-top: 10px;
     float: left;
 }
 
 a:hover .header_links {
-    color: #fcae69;
+    color: #36454E;
 }
 
 .header_search {
     font-size: 20px;
-    color: white;
+    color: #36454E;
 }
 
 #searchButton {
@@ -78,9 +79,6 @@ input[type=submit] {
     border-radius: 10px;
     border-width: 0px;
     padding: 5px 15px;
-}
-
-body {
 }
 
 .outerFooter {
