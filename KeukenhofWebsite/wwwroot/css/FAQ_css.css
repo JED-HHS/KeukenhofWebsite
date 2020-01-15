@@ -39,6 +39,7 @@
 
 .collapsible {
     background-color: white;
+    width: 100%;
     cursor: pointer;
     text-align: left;
     border: none;
@@ -46,14 +47,14 @@
     margin-bottom: 10px;
 }
 
-.column{
+.faq_col {
     float: left;
-    width: 58%;
-    padding-right: 2%;
+    width: 45.5%;
 }
 
-.row{
-    width: 100%;
+.col_right{
+    padding-left: 6.5%;
+    width: 52%;
 }
 
 .coll_q, .coll_a{
@@ -75,20 +76,22 @@
     color: #00694c;
 }
 
-.active arrow{
-    transform: rotate(90deg);
+.active .arrow{
+    transform: rotate(180deg);
 }
 
 .active{
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    margin-bottom: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
 }
 
 .coll_content {
     background-color: white;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
     cursor: pointer;
-    width: 48%;
+    width: 100%;
     text-align: left;
     border: none;
     display: none;
