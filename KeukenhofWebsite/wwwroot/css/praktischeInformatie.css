@@ -8,3 +8,20 @@
     margin-left: 20px;
     color: black;
 }
+
+.PLinks {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.PRechts {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 80px;
+}
+
