@@ -1,0 +1,934 @@
+﻿.keyvisual {
+    position: absolute;
+    width: 100%;
+    height: 628px;
+    left: 0px;
+    background: linear-gradient(180deg, rgba(35, 31, 32, 0) 0%, #231F20 100%);
+    opacity: 0.4;
+}
+
+.zoek_deel {
+    position:absolute;
+    width: 100%;
+    height: 421px;
+    left: 0px;
+    top: 100%;
+    background: #FBDFD3;
+   
+}
+
+.praktisch_deel {
+    position: absolute;
+    width: 100%;
+    height: 512px;
+    left: 0px;
+    top: 158%;
+    background: #E1EBE9;
+}
+
+
+.nieuws_deel {
+    position: absolute;
+    width: 100%;
+    height: 498px;
+    left: 0%;
+    top: 228%;
+    background: #FBDFD3;
+}
+.deel5 {
+    position: absolute;
+    width: 100%;
+    height: 528px;
+    left: 0px;
+    top: 296%;
+    background: #E1EBE9;
+}
+
+.insta6 {
+    position: absolute;
+    width: 100%;
+    height: 378px;
+    left: 0px;
+    top: 369%;
+    background: #FBDFD3;
+}
+
+
+.hoofd_titel {
+    position: absolute;
+    left: 2.78%;
+    right: 33.42%;
+    top: 65.2%;
+    bottom: 60.89%;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    margin-top:0px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    color: #FFFFFF;
+}
+.hoofd_plaatje {
+    position: absolute;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background-image: url("/images/190422LLT8397.jpg");
+    z-index: -1;
+}
+
+.scroll {
+    position: absolute;
+    width: 41px;
+    height: 19px;
+    left: 1400px;
+    top: 615px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.scroll_down {
+    position: absolute;
+    left: 1409px;
+    top: 640px;
+    color:red;
+    filter:invert(100%);
+}
+
+.informatie_pijlen {
+    position: absolute;
+    left: 60.1%;
+    right: -3.53%;
+    top: 65.95%;
+    bottom: -3.84%;
+    
+}
+.informatie_midden:hover{
+    text-decoration:none;
+}
+.informatie_rechts:hover {
+    text-decoration: none;
+}
+.informatie_links:hover {
+    text-decoration: none;
+}
+
+.informatie_text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #1F2325;
+}
+
+.informatie_text_midden {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+.link_text {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #1F2325;
+}
+
+.link_text_midden {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.informatie_links {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    position: absolute;
+    width: 233px;
+    height: 64px;
+    left: 48px;
+    top: 517px;
+    background: white;
+}
+
+.informatie_midden {
+    font-family: Source Sans Pro;
+    position: absolute;
+    width: 233px;
+    height: 64px;
+    left: 281px;
+    top: 517px;
+    background: #ea6025;
+}
+
+.informatie_rechts {
+    font-family: Source Sans Pro;
+    position: absolute;
+    width: 233px;
+    height: 64px;
+    left: 514px;
+    top: 517px;
+    background: white;
+}
+
+.zoek_titel {
+    position: absolute;
+    width: 600px;
+    height: 31px;
+    left: 32px;
+    top: 32px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    color: #1F2325;
+}
+
+.zoek_vakje1 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left: 105px;
+    top: 79px;
+    background-color:white;
+}
+
+.zoek_vakje2 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left: 458px;
+    top: 79px;
+    background-color: white;
+}
+
+.zoek_vakje3 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left:811px;
+    top: 79px;
+    background-color: white;
+}
+
+.zoek_vakje4 {
+    position: absolute;
+    width: 248px;
+    height: 310px;
+    left:1164px;
+    top: 79px;
+    background-color: white;
+}
+
+.zoek_plaatje1 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/Bus.png');
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+
+}
+.zoek_plaatje2 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    background-image: url("/images/VrouwmetUil.png");
+}
+.zoek_plaatje3 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    background-image: url('../images/190422llt7020.jpg');
+}
+.zoek_plaatje4 {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    background-image: url("/images/190511llu8603.jpg");
+}
+
+.zoek_vakje1:hover, .zoek_vakje2:hover, .zoek_vakje3:hover, .zoek_vakje4:hover {
+    background-color: #ea6025;
+}
+.zoek_vakjes:hover img{
+    filter:invert(100%);
+}
+.zoek_vakjes:hover p {
+    color: white;
+}
+
+.zoek_titels {
+    position: absolute;
+    left: 6.45%;
+    right: 39.92%;
+    top: 85.00%;
+    bottom: 5.81%;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #36454E;
+}
+
+zoek_pijlen {
+    position: absolute;
+    left: 85.1%;
+    right: -5.53%;
+    top: 85.00%;
+    bottom: -3.84%;
+}
+
+.map_deel {
+    position: absolute;
+    left: 2.78%;
+    right: 51.39%;
+    top: 25%;
+    bottom: 6.25%;
+}
+
+.map {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    min-height:100%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background-image: url('../images/plattegrond keukenhof 2019.png');
+
+}
+
+.praktisch_titel {
+    position: absolute;
+    left: 2.78%;
+    right: 65.1%;
+    top: 6.25%;
+    bottom: 85.94%;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    color: #1F2325;
+}
+
+.praktisch_ondertitel {
+    position: absolute;
+    left: 2.78%;
+    right: 57.81%;
+    top: 14.84%;
+    bottom: 79.69%;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #36454E;
+}
+
+.meer_info {
+    position: absolute;
+    left: 75.61%;
+    right: 6.39%;
+    top: 14.06%;
+    bottom: 78.12%;
+}
+
+.meer_text {
+    position: absolute;
+    height: 19px;
+    left: 18px;
+    right: 43px;
+    top: 10px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #36454E;
+}
+
+.pijl_meer {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 6px;
+}
+.praktisch_kopjes {
+    position: absolute;
+    width: 432px;
+    height: 28px;
+    left: 32px;
+    top: 24px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #36454E;
+}
+
+.openingstijden {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 25%;
+    bottom: 60.16%;
+    background-color:white;
+}
+
+.toegankelijkheid {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 42.97%;
+    bottom: 42.19%;
+    background-color: white;
+}
+
+.parkeren {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 60.94%;
+    bottom: 24.22%;
+    background-color: white;
+}
+
+.groepen {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 78.91%;
+    bottom: 6.25%;
+    background-color: white;
+}
+
+.praktische_chevrons {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 24px;
+    top: calc(50% - 24px/2);
+}
+
+.download {
+    position: absolute;
+    left: 16.75%;
+    right: 55.36%;
+    top: 50.47%;
+    bottom: 36.72%;
+    z-index: 1;
+}
+.download_icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: calc(50% - 24px/2 - 0px);
+    z-index:1;
+}
+
+.download_text {
+    position: absolute;
+    height: 19px;
+    left: 45px;
+    right: 17px;
+    top: calc(50% - 19px/2 + 4px);
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #36454E;
+    z-index: 1;
+}
+
+.button {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #FFFFFF;
+    border: 1.5px solid #00694C;
+    box-sizing: border-box;
+    border-radius: 27px;
+}
+
+.nieuws {
+    position: absolute;
+    width: 127px;
+    height: 40px;
+    left: 32px;
+    top: 32px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    color: #1F2325;
+}
+
+.nieuws_artikel1 {
+    position: absolute;
+    width: 248px;
+    height: 370px;
+    left: 105px;
+    top: 96px;
+    background: #FFFFFF;
+}
+
+.nieuws_artikel2 {
+    position: absolute;
+    width: 248px;
+    height: 370px;
+    left: 458px;
+    top: 96px;
+    background: #FFFFFF;
+}
+
+.nieuws_artikel3 {
+    position: absolute;
+    width: 248px;
+    height: 370px;
+    left: 811px;
+    top: 96px;
+    background: #FFFFFF;
+}
+
+.nieuws_artikel4 {
+    position: absolute;
+    width: 248px;
+    height: 370px;
+    left: 1164px;
+    top: 96px;
+    background: #FFFFFF;
+}
+
+.foto_nieuws1 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 51.89%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/191001llu9798.jpg');
+}
+
+.foto_nieuws2 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 51.89%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/191001llu9798 1.png');
+}
+
+.foto_nieuws3 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 51.89%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/190511llu8485.jpg');
+}
+
+.foto_nieuws4 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 51.89%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/191001llu9798.jpg');
+}
+
+.nieuwstag {
+    position: absolute;
+    width: 62px;
+    height: 30px;
+    left: 16px;
+    top: 16px;
+    opacity: 0.9;
+    background-color: white;
+    z-index: 1;
+}
+
+.nieuwstag_text {
+    position: absolute;
+    width: 47px;
+    height: 22px;
+    left: 8px;
+    top: 4px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1F2325;
+}
+
+.nieuws_datum {
+    position: absolute;
+    width: 205px;
+    height: 12px;
+    left: 16px;
+    top: 194px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #808E96;
+}
+
+.nieuws_titel {
+    position: absolute;
+    width: 216px;
+    height: 84px;
+    left: 16px;
+    top: 214px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #36454E;
+}
+
+.leesmeer_button {
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    left: 16px;
+    bottom: 16px;
+    background: #FFFFFF;
+    border: 1.5px solid #EA6025;
+    box-sizing: border-box;
+    border-radius: 27px;
+}
+
+.leesmeer_text {
+    position: absolute;
+    height: 19px;
+    left: 16px;
+    right: 16px;
+    top: calc(50% - 19px/2 + 0.5px);
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #36454E;
+}
+
+.bekijk_alles {
+    position: absolute;
+    height: 19px;
+    left: 18px;
+    right: 43px;
+    top: 10px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #36454E;
+}
+
+.bekijk {
+    position: absolute;
+    left: 80.61%;
+    right: 9.39%;
+    top: 6.06%;
+    bottom: 88.12%;
+}
+
+.bekijk_alles_pijl {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 16px;
+    top: 6px;
+}
+
+.deel5_binnenkant {
+    position: absolute;
+    left: 2.78%;
+    right: 2.78%;
+    bottom: 32px;
+    top: 32px;
+    background-color: white;
+}
+
+.deel5_text {
+    position: absolute;
+    left: 2.45%;
+    right: 39.92%;
+    top: 88.00%;
+    bottom: 5.81%;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #36454E;
+    z-index: 1;
+}
+
+.deel5_plaatje {
+    position: absolute;
+    width:100%;
+    height:auto;
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 18%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/190422llt7258.jpg');
+}
+
+.pijl_deel5 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 1360px;
+    top: 410px;
+    z-index: 1;
+}
+.deel5_binnenkant:hover {
+    background-color: #00694C;
+}
+.deel5_binnekant:hover img{
+    filter:invert(100%);
+}
+
+.deel5_binnenkant:hover p {
+    color:white;
+}
+
+.insta_button {
+    position: absolute;
+    left: 87.59%;
+    right: 1.39%;
+    top: 8.73%;
+    bottom: 80.69%;
+}
+
+.insta_titel {
+    position: absolute;
+    left: 2.78%;
+    right: 57.47%;
+    top: 8.47%;
+    bottom: 80.95%;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    color: #1F2325;
+}
+
+.insta_logo {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: calc(50% - 24px/2);
+}
+
+.insta_volg {
+    position: absolute;
+    height: 19px;
+    left: 45px;
+    right: 17px;
+    top: calc(50% - 19px/2 + 0.5px);
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #36454E;
+}
+
+.posts {
+    position: absolute;
+    width: 100%;
+    height: 249px;
+    top: 97px;
+}
+
+.insta_post1 {
+    position: absolute;
+    left: 2.78%;
+    right: 75.61%;
+    top: 0%;
+    bottom: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/schermafbeelding 2019-09-04 om 15.58.png');
+}
+
+.insta_post2 {
+    position: absolute;
+    left: 27.08%;
+    right: 51.39%;
+    top: 0%;
+    bottom: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/schermafbeelding 2019-10-02 om 15.49.png');
+}
+
+.insta_post3 {
+    position: absolute;
+    left: 51.39%;
+    right: 27.08%;
+    top: 0%;
+    bottom: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/schermafbeelding 2019-10-02 om 15.44.png');
+
+}
+
+.insta_post4 {
+    position: absolute;
+    left: 75.69%;
+    right: 2.78%;
+    top: 0%;
+    bottom: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/assets_uploads_gallery_event_photos_190405llu1703.png');
+   
+}
+
+.logo_post1 {
+    position: absolute;
+    left: 20.53%;
+    right: 77%;
+    top: 9.89%;
+    bottom: 59.52%;
+    z-index: 1;
+    filter: invert(100%);
+}
+.logo_post2 {
+    position: absolute;
+    left: 44.75%;
+    right: 52.78%;
+    top: 9.89%;
+    bottom: 59.52%;
+    z-index: 1;
+    filter: invert(100%);
+}
+.logo_post3 {
+    position: absolute;
+    left: 69.14%;
+    right: 28.39%;
+    top: 9.89%;
+    bottom: 59.52%;
+    z-index: 1;
+    filter: invert(100%);
+}
+.logo_post4 {
+    position: absolute;
+    left: 93.36%;
+    right: 4.17%;
+    top: 9.89%;
+    bottom: 59.52%;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+
+

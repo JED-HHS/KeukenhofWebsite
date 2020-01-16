@@ -1,13 +1,13 @@
-﻿body {
-}
-
-.container{
+﻿.container {
     width: 100%;
-    color: white;
+    height: 100%;
 }
 
 .text {
     color: white;
+
+.header_text {
+    color: #36454E;
     font-family: sans-serif;
 }
 
@@ -16,8 +16,22 @@
     border-color: white;
 }
 
-p {
+.navbar {
+    background-color: white;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    margin-left: 0px;
     color: white;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.header_links {
+    color: #36454E;
     margin-top: auto;
     margin-bottom: auto;
     font-family: sans-serif;
@@ -25,16 +39,205 @@ p {
     margin-left: 30px;
 }
 
-img {
+.header_logo {
+    padding-top: 10px;
     float: left;
 }
 
-a:hover p {
-    color: #fcae69;
+a:hover .header_links {
+    color: #36454E;
 }
 
-.search{
+.header_search {
     font-size: 20px;
+    color: #36454E;
+}
+
+#searchButton {
+    background-color: #ea6025;
+    border: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding-top: 100px;
+}
+
+.modal-content {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+input[type=text], select {
+    color: black;
+    border-width: 0px;
+    width: 90%;
+}
+
+input[type=submit] {
+    background-color: #ea6025;
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 5px 15px;
+}
+
+.outerFooter {
+    position: absolute;
+    width: 100%;
+    height: 269px;
+    left: 0px;
+    top: 3037px;
+    /* White */
+    background: #FFFFFF;
+}
+
+.innerFooter {
+    position: absolute;
+    height: 208px;
+    left: 32px;
+    top: 32px;
+    right: 39px;
+    width: 100%;
+}
+
+.firstFooterBlock {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 0%;
+}
+
+.logoFooter {
+    position: absolute;
+    margin-left: 0%;
+    width: 100%;
+    height: auto;
+    background: url(image.png);
+    mix-blend-mode: darken;
+}
+
+    .logoFooter img {
+        max-height: 100px;
+        object-fit: cover;
+    }
+
+.socialsFooter {
+    position: absolute;
+    height: 35%;
+    bottom: 0px;
+    width: 100%;
+}
+
+.fa {
+    border-radius: 50%;
+    width: 20%;
+    height: 95%;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+    .fa img {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        margin-top: 4.5%;
+        margin-left: -15.20%;
+        -webkit-filter: invert(100%); /* Safari/Chrome */
+        filter: invert(100%);
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+.fa-logo {
+    background: #2B7F68;
     color: white;
-    background: none;
+}
+
+.fa-twitter {
+    background: #2B7F68;
+    color: white;
+}
+
+.fa-facebook {
+    background: #2B7F68;
+    color: white;
+}
+
+.fa-youtube {
+    background: #2B7F68;
+    color: white;
+}
+
+
+.adresOpeningstijdenFooter {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 25%;
+}
+
+.aot {
+    position: absolute;
+    width: 100%;
+    height: 28px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #36454E;
+    border-radius: 4px;
+}
+
+.aotxt {
+    position: absolute;
+    width: 245px;
+    height: 56px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #36454E;
+}
+
+.aot-adresTitel {
+    top: 0px;
+}
+
+.aotxt-adresTekst {
+    top: 36px;
+}
+
+.aot-openingstijdenTitel {
+    top: 116px;
+}
+
+.aotxt-openingstijdenTekst {
+    top: 152px;
+}
+
+.algemeneLinkjesFooter {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 50%;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.handigeLinkjesFooter {
+    position: absolute;
+    right: 0px;
+    width: 25%;
+    height: 100%;
 }

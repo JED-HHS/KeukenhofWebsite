@@ -1,0 +1,179 @@
+﻿.image{
+    width: 100%;
+}
+
+.ber_title {
+    font-size: 48px;
+    font-family: sans-serif;
+}
+
+.top_info {
+    position: absolute;
+    top: 68%;
+    width: 80%;
+    right: 10%;
+    padding-top: 45px;
+}
+
+.open_text_left {
+    position: absolute;
+    font-size: 18px;
+    width: 45.5%;
+}
+
+.open_text_right {
+    margin-left: 50%;
+    font-size: 18px;
+}
+
+.navigation {
+    position: absolute;
+    background-color: #36454e;
+    bottom: 0;
+    width: 100%;
+    padding-left: 10%;
+}
+
+.ber_nav {
+    display: inline-block;
+    color: white;
+    padding-right: 10%;
+    vertical-align: middle;
+    font-family: sans-serif;
+    padding-top: 1%;
+}
+
+.ber_nav:hover{
+    text-decoration: none;
+}
+
+.ov{
+    position: absolute;
+    top: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 10%;
+}
+
+.ov_info{
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.lines {
+    position: absolute;
+    top: 127%;
+    width: 100%;
+    background-color: #e1ebe9;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.plan_img{
+    width: 100%;
+    color: black;
+}
+
+.plan_img:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.download_button{
+    background-color: white;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+}
+
+.ber_link_text{
+    font-family: sans-serif;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.fa-download, .fa-arrow-right{
+    float: right;
+    vertical-align: middle;
+}
+
+.option {
+    position: absolute;
+    background-color: #fbdfd3;
+    width: 100%;
+    top: 199%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.eigen_vervoer{
+    position: absolute;
+    margin-left: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    top: 270%;
+}
+
+.fiets {
+    position: absolute;
+    top: 293%;
+    background-color: #fbdfd3;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.coll{
+    width: 49%;
+    float: left;
+}
+
+.coll_left {
+    padding-right: 1%;
+}
+
+.coll_right{
+    position: relative;
+    padding-left: 1%;
+}
+
+.fiets_img{
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5%;
+}
+
+.row_bottom{
+    margin-bottom: 0;
+}
+
+.img_title{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.groups {
+    position: absolute;
+    top: 355%;
+    width: 100%;
+    background-color: #e1ebe9;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
