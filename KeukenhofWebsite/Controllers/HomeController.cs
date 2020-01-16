@@ -29,6 +29,18 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        // GET: tests
+        public IActionResult _Contact()
+        {
+            return View();
+        }
+
+
+        public IActionResult Bereikbaarheid()
+        {
+            return View();
+        }
+
         /* GET: tests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -54,7 +66,7 @@ namespace KeukenhofWebsite.Controllers
         }
 
         // POST: tests/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -86,7 +98,7 @@ namespace KeukenhofWebsite.Controllers
         }
 
         // POST: tests/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
