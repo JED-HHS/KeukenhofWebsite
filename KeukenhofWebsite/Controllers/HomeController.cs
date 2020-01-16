@@ -18,23 +18,24 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
-        // GET: tests
+        /* GET: tests
         public async Task<IActionResult> Index()
         {
             return View(await _context.test.ToListAsync());
-        }
+        }*/
 
         public IActionResult _Hoofdpagina()
         {
             return View();
         }
 
+
         public IActionResult Bereikbaarheid()
         {
             return View();
         }
-
-        // GET: tests/Details/5
+        
+        /* GET: tests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -157,6 +158,6 @@ namespace KeukenhofWebsite.Controllers
         private bool testExists(int id)
         {
             return _context.test.Any(e => e.Id == id);
-        }
+        }*/
     }
 }
