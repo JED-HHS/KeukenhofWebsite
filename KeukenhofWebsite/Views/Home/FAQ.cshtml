@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<KeukenhofWebsite.Models.QenA>
+
+@{
     ViewData["Title"] = "FAQ";
     Layout = "~/Views/Shared/_Header.cshtml";
 }
@@ -27,13 +29,39 @@
     <div class="questions">
         <div class="access">
             <h1 class="q&a">Vraag en antwoord</h1>
-
-            <div class="faq_col">
                 
+            <div class="faq_col">
+                @foreach (var Question in Model)
+                {
+                    @if (Question.AnswerId % 2 == 1)
+                    {
+                        <div class="row">
+                            <button type="button" class="collapsible">
+                                <p class="coll_q">@Question.Question</p><i class="fas fa-angle-down arrow"></i>
+                            </button>
+                            <div class="coll_content">
+                                <p class="coll_a">@Question.Answer</p>
+                            </div>
+                        </div>
+                    }
+                }
             </div>
             
             <div class="faq_col col_right">
-                
+                @foreach (var Question in Model)
+                {
+                    @if (Question.AnswerId % 2 == 0)
+                    {
+                        <div class="row">
+                            <button type="button" class="collapsible">
+                                <p class="coll_q">@Question.Question</p><i class="fas fa-angle-down arrow"></i>
+                            </button>
+                            <div class="coll_content">
+                                <p class="coll_a">@Question.Answer</p>
+                            </div>
+                        </div>
+                    }
+                }
             </div>
         </div>
     </div>

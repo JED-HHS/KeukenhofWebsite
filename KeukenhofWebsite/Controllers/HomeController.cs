@@ -33,11 +33,10 @@ namespace KeukenhofWebsite.Controllers
         {
             return View();
         }
-        
-        public IActionResult FAQ()
 
+        public IActionResult FAQ()
         {
-            return View();
+            return View(_context.QenA.ToList());
         }
 
         public IActionResult Bereikbaarheid()
