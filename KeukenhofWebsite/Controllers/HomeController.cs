@@ -29,12 +29,16 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
-        // GET: tests
         public IActionResult _Contact()
+        {
+            return View()
+        }
+        
+        public IActionResult FAQ()
+
         {
             return View();
         }
-
 
         public IActionResult Bereikbaarheid()
         {
