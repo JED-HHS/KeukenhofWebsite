@@ -8,21 +8,29 @@
 }
 
 .top_info {
-    position: absolute;
-    top: 68%;
-    width: 80%;
-    right: 10%;
-    padding-top: 45px;
+    padding-left: 10%;
+    top: 63%;
+    padding-right: 10%;
+}
+
+.ber-left {
+    float: left;
+    width: 48%;
+    padding-right: 2%;
+}
+
+.ber-right {
+    float: left;
+    width: 48%;
+    padding-left: 2%;
 }
 
 .open_text_left {
-    position: absolute;
+    position: relative;
     font-size: 18px;
-    width: 45.5%;
 }
 
 .open_text_right {
-    margin-left: 50%;
     font-size: 18px;
 }
 
@@ -48,8 +56,8 @@
 }
 
 .ov{
-    position: absolute;
-    top: 100%;
+    position:relative;
+    margin-top: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
     margin-left: 10%;
@@ -62,7 +70,6 @@
 }
 
 .lines {
-    position: absolute;
     top: 127%;
     width: 100%;
     background-color: #e1ebe9;
@@ -102,10 +109,8 @@
 }
 
 .option {
-    position: absolute;
     background-color: #fbdfd3;
     width: 100%;
-    top: 199%;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
@@ -113,7 +118,6 @@
 }
 
 .eigen_vervoer{
-    position: absolute;
     margin-left: 10%;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -121,8 +125,6 @@
 }
 
 .fiets {
-    position: absolute;
-    top: 293%;
     background-color: #fbdfd3;
     width: 100%;
     padding-left: 10%;
@@ -131,18 +133,19 @@
     padding-bottom: 2%;
 }
 
-.coll{
+.coll {
     width: 49%;
-    float: left;
+    
 }
 
 .coll_left {
     padding-right: 1%;
+
 }
 
 .coll_right{
-    position: relative;
     padding-left: 1%;
+    float: left;
 }
 
 .fiets_img{
@@ -150,6 +153,7 @@
 }
 
 .row {
+    float: left;
     width: 100%;
     background-color: white;
     border-radius: 10px;
@@ -168,7 +172,6 @@
 }
 
 .groups {
-    position: absolute;
     top: 355%;
     width: 100%;
     background-color: #e1ebe9;

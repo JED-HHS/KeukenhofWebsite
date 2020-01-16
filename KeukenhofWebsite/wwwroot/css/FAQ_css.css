@@ -1,5 +1,5 @@
 ﻿.faq_image {
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
@@ -8,27 +8,36 @@
     font-family: sans-serif;
 }
 
+.faq_open{
+    float: left;
+    width: 48%;
+    padding-right: 2%;
+}
+.faq_busy{
+    float: left;
+    width: 48%;
+    padding-left: 2%;
+}
+
 .faq_info {
-    position: absolute;
+    padding-left: 10%;
     top: 68%;
-    width: 80%;
-    right: 10%;
+    padding-right: 10%;
     padding-top: 45px;
+    padding-bottom: 8%;
 }
 
 .open_text_left {
-    position: absolute;
+    position: relative;
     font-size: 18px;
 }
 
 .open_text_right {
-    margin-left: 50%;
     font-size: 18px;
 }
 
 .questions {
-    position: absolute;
-    top: 100%;
+    top: 110%;
     background-color: #e1ebe9;
     width: 100%;
     padding-left: 2.5%;
