@@ -43,6 +43,10 @@
     padding-top: 1%;
 }
 
+.ber_nav:hover{
+    text-decoration: none;
+}
+
 .ov{
     position: absolute;
     top: 100%;
@@ -114,4 +118,62 @@
     padding-top: 1%;
     padding-bottom: 1%;
     top: 270%;
+}
+
+.fiets {
+    position: absolute;
+    top: 293%;
+    background-color: #fbdfd3;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.coll{
+    width: 49%;
+    float: left;
+}
+
+.coll_left {
+    padding-right: 1%;
+}
+
+.coll_right{
+    position: relative;
+    padding-left: 1%;
+}
+
+.fiets_img{
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5%;
+}
+
+.row_bottom{
+    margin-bottom: 0;
+}
+
+.img_title{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.groups {
+    position: absolute;
+    top: 355%;
+    width: 100%;
+    background-color: #e1ebe9;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
