@@ -31,7 +31,7 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult _Contact()
         {
-            return View()
+            return View();
         }
         
         public IActionResult FAQ()
