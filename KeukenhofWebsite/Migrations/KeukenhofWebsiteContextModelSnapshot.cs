@@ -19,6 +19,25 @@ namespace KeukenhofWebsite.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("KeukenhofWebsite.Models.Admin", b =>
+                {
+                    b.Property<int>("AdminId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<string>("MiddleName");
+
+                    b.Property<string>("Username");
+
+                    b.HasKey("AdminId");
+
+                    b.ToTable("Admin");
+                });
+
             modelBuilder.Entity("KeukenhofWebsite.Models.Content", b =>
                 {
                     b.Property<int>("ContentId")
