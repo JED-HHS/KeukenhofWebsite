@@ -31,13 +31,12 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult _Contact()
         {
-            return View()
-        }
-        
-        public IActionResult FAQ()
-
-        {
             return View();
+        }
+
+        public IActionResult FAQ()
+        {
+            return View(_context.QenA.ToList());
         }
 
         public IActionResult Bereikbaarheid()
