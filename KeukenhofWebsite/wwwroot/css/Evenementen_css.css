@@ -1,0 +1,12 @@
+﻿.evenementen_pagina {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    width: 100%;
+    height: 60%;
+    background: #FBDFD3;
+}
+
+.evenementen_plaatje {
+    background-image: url('../images/190422llt8032 1.png');
+}
