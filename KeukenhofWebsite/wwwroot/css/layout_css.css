@@ -3,6 +3,10 @@
     height: 100%;
 }
 
+.text {
+     color: white;
+}
+
 .header_text {
     color: #36454E;
     font-family: sans-serif;
@@ -238,4 +242,3 @@ input[type=submit] {
     width: 25%;
     height: 100%;
 }
-
