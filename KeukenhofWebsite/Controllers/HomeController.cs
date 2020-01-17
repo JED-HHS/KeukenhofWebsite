@@ -18,11 +18,11 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
-        // GET: tests
+        /* GET: tests
         public async Task<IActionResult> Index()
         {
             return View(await _context.test.ToListAsync());
-        }
+        }*/
 
         public IActionResult _Hoofdpagina()
         {
@@ -33,8 +33,33 @@ namespace KeukenhofWebsite.Controllers
         {
             return View();
         }
+        
+        public IActionResult _Contact()
+        {
+            return View();
+        }
 
-        // GET: tests/Details/5
+        public IActionResult Privacy_statement()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ()
+        {
+            return View(_context.QenA.ToList());
+        }
+
+        public IActionResult Bereikbaarheid()
+        {
+            return View();
+        }
+
+        public IActionResult Evenementen()
+        {
+            return View();
+        }
+
+        /* GET: tests/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -59,7 +84,7 @@ namespace KeukenhofWebsite.Controllers
         }
 
         // POST: tests/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -91,7 +116,7 @@ namespace KeukenhofWebsite.Controllers
         }
 
         // POST: tests/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -157,6 +182,6 @@ namespace KeukenhofWebsite.Controllers
         private bool testExists(int id)
         {
             return _context.test.Any(e => e.Id == id);
-        }
+        }*/
     }
 }

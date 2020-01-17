@@ -13,6 +13,8 @@ namespace KeukenhofWebsite.Models
         {
         }
 
-        public DbSet<KeukenhofWebsite.Models.Home> test { get; set; }
+        public DbSet<QenA> QenA { get; set; }
+        public DbSet<Content> Content { get; set; }
+        public DbSet<Park> Park { get; set; }
     }
 }

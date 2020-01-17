@@ -61,7 +61,7 @@ namespace KeukenhofWebsite
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=HetPark}/{id?}");
+                    template: "{controller=Home}/{action=Evenementen}/{id?}");
             });
         }
     }
