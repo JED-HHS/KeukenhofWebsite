@@ -29,6 +29,11 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        public IActionResult HetPark()
+        {
+            return View();
+        }
+        
         public IActionResult _Contact()
         {
             return View();
