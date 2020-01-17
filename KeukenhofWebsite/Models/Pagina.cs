@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace KeukenhofWebsite.Models
 {
-    public class Content
+    public class Pagina
     {
-        [Key]public int ContentId { get; set; }
+        [Key]public int PaginaId { get; set; }
         [Required]public string Titel { get; set; }
-        public string Tekst { get; set; }
-
+        public ICollection<Content> Contents { get; set; }
     }
 }
