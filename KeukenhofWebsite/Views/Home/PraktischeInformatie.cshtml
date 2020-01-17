@@ -2,60 +2,156 @@
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
-    <link href="~/css/praktischeInformatie.css" rel="stylesheet" type="text/css" />    
+    <link href="~/css/praktischeInformatie.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <img src="~/images/BloemenEnToeristen.png" alt="Bloemen met toeristen" style=" width:100%; height:auto;">
-    <div class="piTitel">
-        <h1>Praktische Informatie</h1>
-    </div>
-    
-    <div class="PTekst">
-        <div class="PLinks">
-            <p>In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
+
+    <div class="POpening">
+        <img src="~/images/BloemenEnToeristen.png" alt="Bloemen met toeristen" style=" width:100%; height:auto;">
+        <div class="piTitel">
+            <h1>Praktische Informatie</h1>
         </div>
-        <div class="PRechts">
-            <p>In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
+
+        <div class="PTekst">
+            <div class="PLinks">
+                <p>In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
+            </div>
+            <div class="PRechts">
+                <p>In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
+            </div>
+        </div>
+        <div class="PFilmpje">
+            <a href="https://www.youtube.com/watch?v=jgdtoEfQfZA">Bekijk Video</a>
         </div>
     </div>
-    <div class="PFilmpje">
-        <a href="https://www.youtube.com/watch?v=jgdtoEfQfZA">Bekijk Video</a>
-    </div>
+    <!---->
     <div class="PScrollMenu">
         <a href="#PPlattegrond" class="PMenuPlat">Plattegrond</a>
         <a href="#PBereikbaarheid" class="PMenuBereik">Bereikbaarheid</a>
         <a href="#PVoorziening" class="PMenuVoor">Voorziening</a>
         <a href="#PGroepen" class="PMenuGroep">Groepen</a>
     </div>
+    <!---->
     <div id="PPlattegrond">
-        <div class="PPTitel">
-            <h2>Praktische Informatie</h2>
-        </div>
-        <div class="PPOndertekst">
-            <p>Download de kaart of krijg er een bij de informatiebalie</p>
-        </div>
+        <p class="PPTitel">Praktische Informatie</p>
+        <p class="PPOndertekst">Download de kaart of krijg er een bij de informatiebalie</p>
         <div class="PPDownloadKaart">
-            <div class="PPDownloadTekst">
-                <div class="PPDownloadKnop">
-                    
-                </div>
-                <p>Download de kaart</p>
+            <a class="PPDownloadTekst" href="~/images/PLATTEGROND Keukenhof 2019.png" download="">
+                <img class="PPDownloadKnop" src="~/images/download.svg" alt="pijltje"/>
+                <p class="PPDT" style="text-decoration:none;color:black;">Download de kaart</p>
+            </a>
+        </div>
+        <a class="PPLink" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
+            Veelgestelde vragen
+            <img src="~/images/arrow-right.svg" alt="pijltje" />
+        </a>
+        <div class="row">
+            <div class="columnTekst">
+                <p class="oranjeTitel">Ik heb online een Parkgids besteld, waar kan ik die ophalen?</p>
+                <p class="Otekst">
+                    De parkgids is een handig boekje met informatie over Keukenhof.
+                    Na het plaatsen van de bestelling, heb je een email ontvangen met het digitale ticket.
+                    Hier zit een voucher voor de Parkgids bij, die je kunt inleveren bij de informatiebalie.
+                    Je ontvangt dan je Parkgids.
+                </p>
+            </div>
+            <div class="columnTekst">
+                <p class="oranjeTitel">Waar kan ik entree tickets kopen?</p>
+                <p class="Otekst">
+                    Tickets zijn in het najaar van 2019 beschikbaar in onze webshop.
+                    Maar je kunt ook je ticket bij de entree van Keukenhof kopen tijdens de openingsperiode.
+                </p>
+            </div>
+            <div class="columnTekst">
+                <p class="oranjeTitel">Hoe lang is mijn entreeticket geldig?</p>
+                <p class="Otekst">
+                    Tickets zijn niet aan een datum gebonden en kunnen dus tijdens het hele seizoen (eenmalig) worden gebruikt.
+                    Dit geldt ook voor Combitickets.
+                    Je ticket wordt gescand op de dag van je bezoek aan Keukenhof.
+                </p>
             </div>
         </div>
     </div>
+    <!---->
     <div id="PBereikbaarheid">
-
+        <p class="PBereikTitel">Hoe bent u van plan naar Keukenhof te reizen?</p>
+        <a class="PBereikOranje POranje1" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP1"></div>
+            <p class="PBereikTekst">Openbaar vervoer</p>
+        </a>
+        <a class="PBereikOranje POranje2" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP2"></div>
+            <p class="PBereikTekst">Combitickets</p>
+        </a>
+        <a class="PBereikOranje POranje3" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP3"></div>
+            <p class="PBereikTekst">Eigen vervoer</p>
+        </a>
+        <a class="PBereikOranje POranje4" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP4"></div>
+            <p class="PBereikTekst">Groepen</p>
+        </a>
     </div>
+    <!---->
     <div id="PVoorziening">
-
-    </div>
-    <div id="PGroepen">
-        <div class="PGroepBeide">
-            <img src="~/images/PLATTEGROND Keukenhof 2019-2.png" alt="Bloemen met toeristen" style="width: 100%; height:86.21%">
-            <div class="PGroepTekst">
-                <p></p>
+        <p class="PVoorTitel">Voorzieningen</p>
+        <div class="PVoorMenu">
+            <div class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/wifi.svg" alt="pijltje" />
+                <p>Wi-Fi</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/locker.svg" alt="pijltje" />
+                <p>Lockers</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/dog 1.svg" alt="pijltje" />
+                <p>Honden in het park</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/scootmobiel.svg" alt="pijltje" />
+                <p>Toegankelijkheid</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/fiets.svg" alt="pijltje" />
+                <p>Fiets huren</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/lost and found.svg" alt="pijltje" />
+                <p>Gevonden voorwerpen</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
             </div>
         </div>
+        <div class="PVoorInfo">
+            <img class="PVoorP" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+            <p class="PVoorTekst">Groepen</p>
+            <div class="PVoorPlaatje"></div>
+        </div>
+    </div>
+    <!---->
+    <div id="PGroepen">
+        <a class="PGroepBeide" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            <img class="PGroepPijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+            <p class="PGroepTekst">Groepen</p>
+            <div class="PGroepPlaatje"></div>
+        </a>
     </div>
 </body>

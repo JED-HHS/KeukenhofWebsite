@@ -1,16 +1,18 @@
-﻿.piTitel {
+﻿
+.POpening {
+    position: relative;
+    width: 100%;
+    height: 742px;
+}
+
+.piTitel {
     left: 10.94%;
     width: 77.69%;
     position: absolute;
     height: 48px;
     top: 518px;
     font-family: sans-serif;
-
-
     /*font-size: 38px;*/
-
-
-
     /*font-family: Source Sans Pro;*/
     font-style: normal;
     font-weight: 600;
@@ -31,7 +33,6 @@
     /*font-style: normal;
     font-weight: 600;
     font-size: 15px;*/
-
     /*font-family: Avenir;*/
     font-style: normal;
     font-weight: normal;
@@ -63,48 +64,52 @@
     font-size: 15px;
     padding-left: 80px;*/
 }
-    .PFilmpje a {
-        position: absolute;
-        width: 13.19%;
-        height: 56px;
-        left: 10.94%;
-        top: 654px;
-        border: 1.5px solid #00694C;
-        box-sizing: border-box;
-        border-radius: 27px;
-        font-family: sans-serif;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 28px;
-        padding-top: 14px;
-        /* identical to box height, or 156% */
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-        /* Dark Grey */
-        color: #36454E;
-    }
-.PScrollMenu {
+
+.PFilmpje a {
     position: absolute;
+    width: 13.19%;
+    height: 56px;
+    left: 10.94%;
+    top: 654px;
+    border: 1.5px solid #00694C;
+    box-sizing: border-box;
+    border-radius: 27px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 14px;
+    /* identical to box height, or 156% */
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.PScrollMenu {
+    position: relative;
     left: 0%;
     right: 0%;
-    top: 742px;
+    /*top: 742px;*/
     height: 64px;
     /* Dark Grey */
     background: #36454E;
 }
-.PScrollMenu a {
-    /* Label */
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 120%;
-    /* or 19px */
-    /* White */
-    color: #FFFFFF;
-}
+
+    .PScrollMenu a {
+        /* Label */
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 120%;
+        /* or 19px */
+        /* White */
+        color: #FFFFFF;
+    }
+
 .PMenuPlat {
     position: absolute;
     left: 2.6%;
@@ -112,6 +117,7 @@
     top: 37.5%;
     bottom: 32.81%;
 }
+
 .PMenuBereik {
     position: absolute;
     left: 14.58%;
@@ -121,6 +127,9 @@
     /**/
     opacity: 0.64;
 }
+
+
+
 .PMenuVoor {
     position: absolute;
     left: 28.65%;
@@ -130,6 +139,7 @@
     /**/
     opacity: 0.64;
 }
+
 .PMenuGroep {
     position: absolute;
     left: 42.19%;
@@ -139,42 +149,52 @@
     /**/
     opacity: 0.64;
 }
+
 #PPlattegrond {
-    position: absolute;
+    position: relative;
     left: 0%;
     right: 0%;
-    top: 806px;
+    /*top: 806px;*/
     height: 559px;
     /**/
     background: #E1EBE9;
 }
+
 #PBereikbaarheid {
-    position: absolute;
+    position: relative;
     left: 0%;
     right: 0%;
-    top: 1365px;
+    /*top: 1365px;*/
     height: 421px;
     /**/
     background: #FBDFD3;
 }
+
 #PVoorziening {
-    position: absolute;
+    position: relative;
     left: 0%;
     right: 0%;
-    top: 1768px;
+    /*top: 1768px;*/
     height: 548px;
     /**/
     background: #E1EBE9;
 }
+
 #PGroepen {
-    position: absolute;
+    position: relative;
     left: 0%;
     right: 0%;
-    top: 2316px;
+    /*top: 2316px;*/
     height: 528px;
     /**/
     background: #FBDFD3;
 }
+/*
+
+
+
+*/
+
 .PPTitel {
     position: absolute;
     left: 2.78%;
@@ -191,6 +211,7 @@
     /* Black */
     color: #1F2325;
 }
+
 .PPOndertekst {
     position: absolute;
     left: 2.78%;
@@ -207,6 +228,7 @@
     /* Dark Grey */
     color: #36454E;
 }
+
 .PPDownloadKaart {
     position: absolute;
     left: 2.78%;
@@ -214,23 +236,354 @@
     top: 21.29%;
     bottom: 15.74%;
     background: url('/images/PLATTEGROND Keukenhof 2019.png');
-    opacity: 0.32;
+    /*opacity: 0.32;*/
     border-radius: 4px;
 }
+
 .PPDownloadTekst {
     position: absolute;
     left: 30.49%;
     right: 30.49%;
-    top: 156px;
-    bottom: 156px;
+    top: 44.32%;
+    bottom: 44.32%;
     /* White */
     background: #FFFFFF;
     /* Green Default */
     border: 1.5px solid #00694C;
     box-sizing: border-box;
     border-radius: 27px;
-    opacity: 1;
+    display: flex;
+    align-items: center;
+    text-align: right;
 }
+.PPDownloadKnop {
+    position: absolute;
+    left: 12.5%;
+    top: 25%;
+    height: 50%;
+}
+.PPDT {
+    position: absolute;
+    height: 50%;
+    top:25%;
+    right:12.5%;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    /* Dark Grey */
+    color: #36454E;
+}
+.PPLink {
+    position: absolute;
+    height: auto;
+    right: 2.78%;
+    width: 14%;
+    top: 13.24%;
+    /* Label */
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    display: flex;
+    align-items: flex-start;
+    /* Dark Grey */
+    color: #36454E;
+    text-decoration: none;
+}
+    .PPLink:hover {
+        color: #36454E;
+    }
+    .PPLink img {
+        position: absolute;
+        left: auto;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    }
+
+
+.row {
+    position: absolute;
+    left: 51.39%;
+    right: 2.78%;
+    top: 21.29%;
+    bottom: 5.72%;
+}
+
+.columnTekst {
+    position: relative;
+    margin-bottom:2%;
+    height: 31.33%;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.oranjeTitel {
+    /*padding-left: 6%;
+    font-family: sans-serif;
+    font-size: 18px;*/
+    position: absolute;
+    left: 6.06%;
+    right: 11.55%;
+    top: 14.29%;
+    bottom: auto;
+    /* H5 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 140% */
+    /* Dark Grey */
+    color: #36454E;
+}
+
+.Otekst {
+    /*top: 10%;
+    left: 10%;
+    color: black;
+    font-size: 14px;*/
+
+    position: absolute;
+    left: 6.06%;
+    right: 6.06%;
+    top: 40%;
+    bottom: auto;
+    /* Small */
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+    /* Dark Grey */
+    color: #36454E;
+}
+/*
+
+
+
+*/
+.PBereikTitel {
+    position: absolute;
+    right: 9.5%;
+    /*height: 31px;*/
+    left: 9.5%;
+    top: 6.06%;
+    /* H3 */
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 31px;
+    /* identical to box height, or 97% */
+    display: flex;
+    align-items: center;
+    /* Black */
+    color: #1F2325;
+}
+
+.PBereikOranje {
+    position: absolute;
+    width: 17.3%;
+    height: 69%;
+    top: 17.5%;
+    background-color: white;
+    border-radius:4px;
+}
+
+.PBereikOranje:hover {
+    background-color: #EA6025;
+}
+    .PBereikOranje:hover p {
+        color: #FFFFFF;
+    }
+.POranje1 {
+    left: 9.5%;
+}
+.POranje2 {
+    left: 30.5%;
+}
+.POranje3 {
+    left: 51.5%;
+}
+.POranje4 {
+    left: 72.5%;
+}
+.PBereikPijl {
+    position: absolute;
+    left: 85.1%;
+    right: -55.53%;
+    top: 85.00%;
+    bottom: -33.84%;
+}
+
+.PBereikPlaatje {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /**/
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 20%;
+    border-radius: 4px;
+}
+.PBereikP1 {
+    background-image: url('../images/Bus.png');
+}
+.PBereikP2 {
+    background-image: url('../images/KeukenhofIngang.png');
+}
+.PBereikP3 {
+    background-image: url('../images/FietsendeMensen.png');
+}
+.PBereikP4 {
+    background-image: url('../images/AndereBus.png');
+}
+
+.PBereikTekst {
+    position: absolute;
+    left: 6.45%;
+    right: 25%;
+    top: 85.00%;
+    bottom: 5.81%;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #36454E;
+}
+/*
+
+
+
+*/
+.PVoorTitel {
+    position: absolute;
+    left: 2.78%;
+    right: 75.87%;
+    top: 5.84%;
+    bottom: 86.86%;
+    /* H2 */
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    /* identical to box height, or 100% */
+    /* Black */
+    color: #1F2325;
+}
+.PVoorMenu{
+    position: absolute;
+    bottom: 2.19%;
+    top: 18.98%;
+    left: 4.17%;
+    right: 60%;
+}
+
+.PVoorSelect{
+    position: relative;
+    width: 100%;
+    height: 16.67%;
+    border-radius: 4px;
+}
+    .PVoorSelect:hover {
+        background: white;
+        border-radius: 4px;
+        text-decoration: underline;
+    }
+    .PVoorSelect p {
+        position: absolute;
+        left: 11.11%;
+        right: 25%;
+        top: 25%;
+        bottom: 45.26%;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        /* or 133% */
+        /* Dark Grey */
+        color: #36454E;
+    }
+.PVoorIcon {
+    position: absolute;
+    left: 2.5%;
+    right: 0%;
+    top: 25%;
+    bottom: 13.47%;
+}
+.PVoorPijl {
+    position: absolute;
+    left: 86.1%;
+    right: -55.54%;
+    top: 25%;
+    bottom: -33.84%;
+}
+.PVoorP {
+    position: absolute;
+    left: 86.1%;
+    right: -55.54%;
+    top: 88%;
+    bottom: -33.84%;
+}
+.PVoorInfo {
+    position: absolute;
+    right: 2.78%;
+    bottom: 5.84%;
+    left: 40.45%;
+    top: 5.84%;
+    background: #FFFFFF;
+}
+.PVoorPlaatje {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 18%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/PLATTEGROND Keukenhof 2019-2.png');
+}
+.PVoorTekst {
+    position: absolute;
+    left: 2.45%;
+    right: 39.92%;
+    top: 88.00%;
+    bottom: 5.81%;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #36454E;
+    z-index: 1;
+}
+/*
+
+
+
+*/
 .PGroepBeide {
     position: absolute;
     left: 2.78%;
@@ -240,3 +593,55 @@
     background: #FFFFFF;
     border-radius: 4px;
 }
+
+.PGroepTekst {
+    position: absolute;
+    left: 2.45%;
+    right: 39.92%;
+    top: 88.00%;
+    bottom: 5.81%;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #36454E;
+    z-index: 1;
+}
+
+.PGroepPlaatje {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 18%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/PLATTEGROND Keukenhof 2019-2.png');
+    border-radius: 4px;
+}
+
+.PGroepPijl {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 1360px;
+    top: 410px;
+    z-index: 1;
+}
+
+.PGroepBeide:hover {
+    background-color: #00694C;
+}
+
+    .PGroepBeide:hover img {
+        filter: invert(100%);
+    }
+
+    .PGroepBeide:hover p {
+        color: white;
+    }
