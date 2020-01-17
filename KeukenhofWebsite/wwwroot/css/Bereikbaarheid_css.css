@@ -1,5 +1,6 @@
 ﻿.image{
     width: 100%;
+    position: relative;
 }
 
 .ber_title {
@@ -125,6 +126,8 @@
 }
 
 .fiets {
+    display: inline-block;
+    position: relative;
     background-color: #fbdfd3;
     width: 100%;
     padding-left: 10%;
@@ -139,17 +142,21 @@
 }
 
 .coll_left {
-    padding-right: 1%;
-
+    position: relative;
 }
 
 .coll_right{
+    position: relative;
     padding-left: 1%;
-    float: left;
+    float: right;
 }
 
 .fiets_img{
     width: 100%;
+}
+
+.fiets_plaatje{
+    position: absolute;
 }
 
 .row {
@@ -159,7 +166,7 @@
     border-radius: 10px;
     padding-left: 10%;
     padding-right: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .row_bottom{
@@ -172,11 +179,12 @@
 }
 
 .groups {
-    top: 355%;
+    position: relative;
     width: 100%;
     background-color: #e1ebe9;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
     padding-bottom: 2%;
+    margin-top: -1%;
 }
