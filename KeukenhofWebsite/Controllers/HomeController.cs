@@ -54,6 +54,11 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        public IActionResult Content()
+        {
+            return View();
+        }
+        
         public IActionResult Evenementen()
         {
             return View();
