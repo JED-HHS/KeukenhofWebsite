@@ -26,13 +26,13 @@
             <tr>
                 <th>
                     <div class="container">
-                        <img src="~/images/Keukenhof-logoo.jpg" class="header_logo" alt="Keukenhof logo" width="200" height="80">
+                        <a asp-controller="Home" asp-action="_Hoofdpagina"><img src="~/images/Keukenhof-logoo.jpg" class="header_logo" alt="Keukenhof logo" width="200" height="80"></a>
                     </div>
                 </th>
                 <th>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a class="header_text" asp-area="" asp-controller="" asp-action="Park"><p class="header_links">Het park</p></a></li>
+                            <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="HetPark"><p class="header_links">Het park</p></a></li>
                             <li><a class="header_text" asp-area="" asp-controller="" asp-action="Praktisch"><p class="header_links">Praktisch</p></a></li>
                             <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="FAQ"><p class="header_links">Veelgestelde vragen</p></a></li>
                             <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="Bereikbaarheid"><p class="header_links">Bereikbaarheid</p></a></li>
@@ -101,7 +101,7 @@
             </div>
             <div class="algemeneLinkjesFooter">
                 <div class="alf">
-                    <a href="#">
+                    <a asp-controller="Home" asp-action="HetPark">
                         Het Park <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
                     </a>
                 </div>
@@ -128,10 +128,10 @@
                 <div class="handigeLinkjesTekst">
                     <ul>
                         <li><a asp-controller="Home" asp-action="Bereikbaarheid">Bereikbaarheid</a></li>
-                        <li><a href="#">Evenementen</a></li>
+                        <li><a asp-controller="Home" asp-action="Evenementen">Evenementen</a></li>
                         <li><a asp-controller="Home" asp-action="FAQ">Veelgestelde vragen</a></li>
                         <li><a asp-controller="Home" asp-action="_Contact">Contact</a></li>
-                        <li><a href="#">Privacy Statement</a></li>
+                        <li><a asp-controller="Home" asp-action="Privacy_statement">Privacy Statement</a></li>
                     </ul>
                 </div>
             </div>
