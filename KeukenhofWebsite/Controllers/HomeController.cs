@@ -34,6 +34,11 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        public IActionResult Privacy_statement()
+        {
+            return View();
+        }
+
         public IActionResult FAQ()
         {
             return View(_context.QenA.ToList());
