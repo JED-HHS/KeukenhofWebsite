@@ -9,27 +9,27 @@ using KeukenhofWebsite.Models;
 
 namespace KeukenhofWebsite.Controllers
 {
-    public class AdminController : Controller
+    public class PaginasController : Controller
     {
         private readonly KeukenhofWebsiteContext _context;
 
-        public AdminController(KeukenhofWebsiteContext context)
+        public PaginasController(KeukenhofWebsiteContext context)
         {
             _context = context;
         }
 
-        public IActionResult GoToRelevantIndex(string path)
+        public IActionResult GoToMainIndex()
         {
-            return RedirectToAction("Index", path);
+            return RedirectToAction("Index", "Admin");
         }
 
-        // GET: Admin
+        // GET: Paginas
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Admin.ToListAsync());
+            return View(await _context.Pagina.ToListAsync());
         }
 
-        // GET: Admin/Details/5
+        // GET: Paginas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -37,39 +37,39 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.AdminId == id);
-            if (admin == null)
+            var pagina = await _context.Pagina
+                .FirstOrDefaultAsync(m => m.PaginaId == id);
+            if (pagina == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(pagina);
         }
 
-        // GET: Admin/Create
+        // GET: Paginas/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Create
+        // POST: Paginas/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
+        public async Task<IActionResult> Create([Bind("PaginaId,Titel")] Pagina pagina)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(admin);
+                _context.Add(pagina);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(pagina);
         }
 
-        // GET: Admin/Edit/5
+        // GET: Paginas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,22 +77,22 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin.FindAsync(id);
-            if (admin == null)
+            var pagina = await _context.Pagina.FindAsync(id);
+            if (pagina == null)
             {
                 return NotFound();
             }
-            return View(admin);
+            return View(pagina);
         }
 
-        // POST: Admin/Edit/5
+        // POST: Paginas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
+        public async Task<IActionResult> Edit(int id, [Bind("PaginaId,Titel")] Pagina pagina)
         {
-            if (id != admin.AdminId)
+            if (id != pagina.PaginaId)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace KeukenhofWebsite.Controllers
             {
                 try
                 {
-                    _context.Update(admin);
+                    _context.Update(pagina);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AdminExists(admin.AdminId))
+                    if (!PaginaExists(pagina.PaginaId))
                     {
                         return NotFound();
                     }
@@ -117,10 +117,10 @@ namespace KeukenhofWebsite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(pagina);
         }
 
-        // GET: Admin/Delete/5
+        // GET: Paginas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -128,30 +128,30 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.AdminId == id);
-            if (admin == null)
+            var pagina = await _context.Pagina
+                .FirstOrDefaultAsync(m => m.PaginaId == id);
+            if (pagina == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(pagina);
         }
 
-        // POST: Admin/Delete/5
+        // POST: Paginas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var admin = await _context.Admin.FindAsync(id);
-            _context.Admin.Remove(admin);
+            var pagina = await _context.Pagina.FindAsync(id);
+            _context.Pagina.Remove(pagina);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AdminExists(int id)
+        private bool PaginaExists(int id)
         {
-            return _context.Admin.Any(e => e.AdminId == id);
+            return _context.Pagina.Any(e => e.PaginaId == id);
         }
     }
 }

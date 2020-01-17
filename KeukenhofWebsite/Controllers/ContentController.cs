@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using KeukenhofWebsite.Models;
+using KeukenhofWebsite.Controllers;
 
 namespace KeukenhofWebsite.Controllers
 {
@@ -16,6 +17,11 @@ namespace KeukenhofWebsite.Controllers
         public ContentController(KeukenhofWebsiteContext context)
         {
             _context = context;
+        }
+
+        public IActionResult GoToMainIndex()
+        {
+            return RedirectToAction("Index", "Admin");
         }
 
         // GET: Content

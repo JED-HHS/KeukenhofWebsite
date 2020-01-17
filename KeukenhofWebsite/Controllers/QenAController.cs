@@ -18,6 +18,11 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
+        public IActionResult GoToMainIndex()
+        {
+            return RedirectToAction("Index", "Admin");
+        }
+
         // GET: QenA
         public async Task<IActionResult> Index()
         {

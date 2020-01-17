@@ -9,90 +9,90 @@ using KeukenhofWebsite.Models;
 
 namespace KeukenhofWebsite.Controllers
 {
-    public class AdminController : Controller
+    public class ParkController : Controller
     {
         private readonly KeukenhofWebsiteContext _context;
 
-        public AdminController(KeukenhofWebsiteContext context)
+        public ParkController(KeukenhofWebsiteContext context)
         {
             _context = context;
         }
 
-        public IActionResult GoToRelevantIndex(string path)
+        public IActionResult GoToMainIndex()
         {
-            return RedirectToAction("Index", path);
+            return RedirectToAction("Index", "Admin");
         }
 
-        // GET: Admin
+        // GET: Park
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Admin.ToListAsync());
+            return View(await _context.Park.ToListAsync());
         }
 
-        // GET: Admin/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: Park/Details/5
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.AdminId == id);
-            if (admin == null)
+            var park = await _context.Park
+                .FirstOrDefaultAsync(m => m.Naam == id);
+            if (park == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(park);
         }
 
-        // GET: Admin/Create
+        // GET: Park/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Create
+        // POST: Park/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
+        public async Task<IActionResult> Create([Bind("Naam,Openingsdag,Sluitingsdag,OpeningstijdMaandag,SluitingstijdMaandag,OpeningstijdDinsdag,SluitingstijdDinsdag,OpeningstijdWoensdag,SluitingstijdWoensdag,OpeningstijdDonderdag,SluitingstijdDonderdag,OpeningstijdVrijdag,SluitingstijdVrijdag,OpeningstijdZaterdag,SluitingstijdZaterdag,OpeningstijdZondag,SluitingstijdZondag")] Park park)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(admin);
+                _context.Add(park);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(park);
         }
 
-        // GET: Admin/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Park/Edit/5
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var admin = await _context.Admin.FindAsync(id);
-            if (admin == null)
+            var park = await _context.Park.FindAsync(id);
+            if (park == null)
             {
                 return NotFound();
             }
-            return View(admin);
+            return View(park);
         }
 
-        // POST: Admin/Edit/5
+        // POST: Park/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
+        public async Task<IActionResult> Edit(string id, [Bind("Naam,Openingsdag,Sluitingsdag,OpeningstijdMaandag,SluitingstijdMaandag,OpeningstijdDinsdag,SluitingstijdDinsdag,OpeningstijdWoensdag,SluitingstijdWoensdag,OpeningstijdDonderdag,SluitingstijdDonderdag,OpeningstijdVrijdag,SluitingstijdVrijdag,OpeningstijdZaterdag,SluitingstijdZaterdag,OpeningstijdZondag,SluitingstijdZondag")] Park park)
         {
-            if (id != admin.AdminId)
+            if (id != park.Naam)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace KeukenhofWebsite.Controllers
             {
                 try
                 {
-                    _context.Update(admin);
+                    _context.Update(park);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AdminExists(admin.AdminId))
+                    if (!ParkExists(park.Naam))
                     {
                         return NotFound();
                     }
@@ -117,41 +117,41 @@ namespace KeukenhofWebsite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(park);
         }
 
-        // GET: Admin/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: Park/Delete/5
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.AdminId == id);
-            if (admin == null)
+            var park = await _context.Park
+                .FirstOrDefaultAsync(m => m.Naam == id);
+            if (park == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(park);
         }
 
-        // POST: Admin/Delete/5
+        // POST: Park/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var admin = await _context.Admin.FindAsync(id);
-            _context.Admin.Remove(admin);
+            var park = await _context.Park.FindAsync(id);
+            _context.Park.Remove(park);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AdminExists(int id)
+        private bool ParkExists(string id)
         {
-            return _context.Admin.Any(e => e.AdminId == id);
+            return _context.Park.Any(e => e.Naam == id);
         }
     }
 }
