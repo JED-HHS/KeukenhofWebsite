@@ -5,16 +5,18 @@
     <link rel="stylesheet" href="~/css/Evenementen_css.css" />
 </head>
 
-<div class="evenementen_bovenkant">
+<div id="evenementen_bovenkant">
     <div class="evenementen_plaatje"></div>
     <p class="evenementen_titel">Evenementen</p>
 </div>
 
-<div class="evenementen_pagina">
+<div id="pagina">
     <div class="paginering">
-        <a href="#">1</a>
-        <a href="#" class="active">2</a>
-        <a href="#">3</a>
+        <div id="myDIV">
+            <button onclick="javascript:pagina1()" class="btn active">1</button>
+            <button onclick="javascript:pagina2()" class="btn">2</button>
+            <button onclick="javascript:pagina3()" class="btn">3</button>
+        </div>
     </div>
     <div class="artikel_deel">
         <div class="evenementen_rij1">
@@ -70,7 +72,7 @@
                 <p class="artikel_kopje">Herman Brood</p>
                 <p class="artikel_text">De kunstcollectie van Herman Brood</p>
             </div>
-          
+
         </div>
         <div class="evenementen_rij2">
             <div class="artikel1">
@@ -127,6 +129,35 @@
             </div>
         </div>
     </div>
-        </div>
-
 </div>
+
+
+
+
+
+<script>
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+
+    function pagina1() {
+        document.getElementById("pagina").style.background = "#FBDFD3";
+        document.getElementById("evenementen_bovenkant").style.background = "#FBDFD3";
+    }
+    function pagina3() {
+        document.getElementById("pagina").style.background = "#E1EBE9";
+        document.getElementById("evenementen_bovenkant").style.background = "#E1EBE9";
+    }
+
+
+    function pagina2(){
+        document.getElementById("pagina").style.background = "#FF1493";
+        document.getElementById("evenementen_bovenkant").style.background = "#FF1493";
+    }
+</script>
