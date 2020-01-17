@@ -11,12 +11,19 @@ namespace KeukenhofWebsite.Models
         [Key] public string Naam { get; set; }
         public DateTime Openingsdag { get; set; }
         public DateTime Sluitingsdag { get; set; }
-        public DateTime OpeningstijdenMaandag { get; set; }
-        public DateTime OpeningstijdenDinsdag { get; set; }
-        public DateTime OpeningstijdenWoensdag { get; set; }
-        public DateTime OpeningstijdenDonderdag { get; set; }
-        public DateTime OpeningstijdenVrijdag { get; set; }
-        public DateTime OpeningstijdenZaterdag { get; set; }
-        public DateTime OpeningstijdenZondag { get; set; }
+        public DateTime OpeningstijdMaandag { get; set; }
+        public DateTime SluitingstijdMaandag { get; set; }
+        public DateTime OpeningstijdDinsdag { get; set; }
+        public DateTime SluitingstijdDinsdag { get; set; }
+        public DateTime OpeningstijdWoensdag { get; set; }
+        public DateTime SluitingstijdWoensdag { get; set; }
+        public DateTime OpeningstijdDonderdag { get; set; }
+        public DateTime SluitingstijdDonderdag { get; set; }
+        public DateTime OpeningstijdVrijdag { get; set; }
+        public DateTime SluitingstijdVrijdag { get; set; }
+        public DateTime OpeningstijdZaterdag { get; set; }
+        public DateTime SluitingstijdZaterdag { get; set; }
+        public DateTime OpeningstijdZondag { get; set; }
+        public DateTime SluitingstijdZondag { get; set; }
     }
 }

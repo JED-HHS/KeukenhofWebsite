@@ -18,5 +18,6 @@ namespace KeukenhofWebsite.Models
         public DbSet<Content> Content { get; set; }
         public DbSet<Park> Park { get; set; }
         public DbSet<KeukenhofWebsite.Models.Admin> Admin { get; set; }
+        public DbSet<Pagina> Pagina { get; set; }
     }
 }
