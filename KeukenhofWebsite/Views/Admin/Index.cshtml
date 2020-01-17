@@ -6,8 +6,15 @@
 
 <h2>Index</h2>
 
+<div>
+    <div><a asp-action="GoToRelevantIndex" asp-route-path="Content">Go to content</a></div>
+    <div><a asp-action="GoToRelevantIndex" asp-route-path="Paginas">Go to paginas</a></div>
+    <div><a asp-action="GoToRelevantIndex" asp-route-path="QenA">Go to Q&A</a></div>
+    <div><a asp-action="GoToRelevantIndex" asp-route-path="Park">Go to Park</a></div>
+</div>
+
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New Admin</a>
 </p>
 <table class="table">
     <thead>
@@ -51,9 +58,4 @@
 }
     </tbody>
 </table>
-<div>
-    <a asp-action="GoToRelevantIndex" asp-route-path="Content">Go to content</a>
-    <a asp-action="GoToRelevantIndex" asp-route-path="Paginas">Go to paginas</a>
-    <a asp-action="GoToRelevantIndex" asp-route-path="QenA">Go to Q&A</a>
-    <a asp-action="GoToRelevantIndex" asp-route-path="Park">Go to Park</a>
-</div>
+
