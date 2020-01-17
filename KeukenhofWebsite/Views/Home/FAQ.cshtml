@@ -1,0 +1,85 @@
+﻿@model IEnumerable<KeukenhofWebsite.Models.QenA>
+
+@{
+    ViewData["Title"] = "FAQ";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+<head>
+    <link href="~/css/FAQ_css.css" type="text/css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+</head>
+
+<body>
+    <img class="faq_image" src="~/images/faq_image.svg" alt="faq_image">
+
+    <div class="faq_info">
+        <h1 class="faq_title">
+            Veelgestelde vragen
+        </h1>
+
+        <div class="faq_open">
+            <p class="open_text_left">In 2020 is Keukenhof open van 21 maart tot en met 10 mei<br />tussen 9:00-17:00 uur.</p>
+        </div>
+        <div class="faq_busy">
+            <p class="open_text_right">In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
+        </div>
+    </div>
+
+    <div class="questions">
+        <div class="access">
+            <h1 class="qena">Vraag en antwoord</h1>
+                
+            <div class="faq_col">
+                @foreach (var Question in Model)
+                {
+                    @if (Question.AnswerId % 2 == 1)
+                    {
+                        <div class="row">
+                            <button type="button" class="collapsible">
+                                <p class="coll_q">@Question.Question</p><i class="fas fa-angle-down arrow"></i>
+                            </button>
+                            <div class="coll_content">
+                                <p class="coll_a">@Question.Answer</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            
+            <div class="faq_col col_right">
+                @foreach (var Question in Model)
+                {
+                    @if (Question.AnswerId % 2 == 0)
+                    {
+                        <div class="row">
+                            <button type="button" class="collapsible">
+                                <p class="coll_q">@Question.Question</p><i class="fas fa-angle-down arrow"></i>
+                            </button>
+                            <div class="coll_content">
+                                <p class="coll_a">@Question.Answer</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
