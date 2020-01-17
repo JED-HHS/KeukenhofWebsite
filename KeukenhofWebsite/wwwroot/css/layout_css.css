@@ -1,13 +1,14 @@
 ﻿.container {
     width: 100%;
-    color: white;
+    padding-left: 0;
+    padding-right: 0;
+    border-color: white;
 }
 
-.text {
-    color: white;
+.header_text {
+    color: #36454E;
     font-family: sans-serif;
 }
-
 
 .navbar-inverse {
     color: white;
@@ -15,21 +16,20 @@
 }
 
 .navbar {
-    background-color: #ea6025;
-    position: absolute;
+    background-color: white;
+    position: relative !important;
     left: 0%;
     right: 0%;
     top: 0%;
     margin-left: 0px;
-    color: white;
 }
 
 .navbar-nav {
     float: right;
 }
 
-p {
-    color: white;
+.header_links {
+    color: #36454E;
     margin-top: auto;
     margin-bottom: auto;
     font-family: sans-serif;
@@ -37,15 +37,214 @@ p {
     margin-left: 30px;
 }
 
-img {
+.header_logo {
+    padding-top: 10px;
     float: left;
 }
 
-a:hover p {
-    color: #fcae69;
+a:hover .header_links {
+    color: #36454E;
 }
 
-.search {
+.header_search {
     font-size: 20px;
-    color: white;
+    color: #36454E;
+}
+
+#searchButton {
+    background-color: #ea6025;
+    border: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding-top: 100px;
+}
+
+.modal-content {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+input[type=text], select {
+    color: black;
+    border-width: 0px;
+    width: 90%;
+}
+
+input[type=submit] {
+    background-color: #ea6025;
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 5px 15px;
+}
+
+.outerFooter {
+    position: absolute;
+    width: 100%;
+    height: 269px;
+    top: auto;
+    background: #FFFFFF;
+}
+
+.innerFooter {
+    position: absolute;
+    height: 208px;
+    top: 32px;
+    width: 100%;
+}
+
+.firstFooterBlock {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 0%;
+}
+
+.logoFooter img {
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.socialsFooter {
+    height: 35%;
+    bottom: 0%;
+    width: 100%;
+}
+
+.adresOpeningstijdenFooter {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 30%;
+}
+
+.aot {
+    position: absolute;
+    width: 100%;
+    height: 28px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #36454E;
+    border-radius: 4px;
+}
+
+.aotxt {
+    position: absolute;
+    width: 245px;
+    height: 56px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #36454E;
+}
+
+.aot-adresTitel {
+    top: 0px;
+}
+
+.aotxt-adresTekst {
+    top: 36px;
+}
+
+.aot-openingstijdenTitel {
+    top: 116px;
+}
+
+.aotxt-openingstijdenTekst {
+    top: 152px;
+}
+
+.algemeneLinkjesFooter {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 49%;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.handigeLinkjesFooter {
+    position: absolute;
+    right: 0px;
+    left: 78%;
+    height: 100%;
+}
+
+.alf {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    height: 25%;
+    width: 85%;
+    border-bottom: 1px solid #CEDBD8;
+}
+
+    .alf a {
+        text-decoration: none;
+        color: #36454E;
+    }
+
+    .alf img {
+        position: absolute;
+        left: 60%;
+    }
+
+.handigeLinkjesTitel {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #36454E;
+    border-radius: 4px;
+}
+
+.handigeLinkjesTekst {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 4px;
+}
+
+    .handigeLinkjesTekst a {
+        text-decoration: none;
+        color: #1F2325;
+    }
+
+    .handigeLinkjesTekst ul {
+        list-style-image: url("/images/chevron-right.svg");
+    }
+
+.imgSocial {
+    width: 30px;
+    height: auto;
+    margin-top: 9px;
+    margin-left: 13px;
+}
+
+.faSocial {
+    background-color: #2B7F68;
+    border-radius: 50%;
+    width: 15%;
+    height: 70%;
+    margin-left: 0px;
+    margin-top: 70px;
+    display: inline-block;
+    align-items: center;
 }
