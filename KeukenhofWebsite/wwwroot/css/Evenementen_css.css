@@ -1,18 +1,15 @@
 ﻿#evenementen_bovenkant {
-    position: absolute;
+    position: relative;
     width: 100%;
-    left: 0%;
-    top:10%;
-    height: 60%;
+    height: 500px;
     background: #FBDFD3;
 }
 
 #pagina {
-    position: absolute;
-    top: 70%;
+    position: relative;
     width: 100%;
     left: 0%;
-    height: 130%;
+    height: 1000px;
     background: #FBDFD3;
 }
 
