@@ -1,4 +1,6 @@
-﻿.container {
+﻿
+
+.container {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -93,6 +95,7 @@ input[type=submit] {
 .innerFooter {
     position: absolute;
     height: 208px;
+
     top: 32px;
     width: 100%;
 }
@@ -248,3 +251,5 @@ input[type=submit] {
     display: inline-block;
     align-items: center;
 }
+
+
