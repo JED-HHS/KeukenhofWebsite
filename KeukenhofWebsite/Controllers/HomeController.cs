@@ -60,7 +60,7 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult Zoekresultaten(string query)
         {
-
+            ViewBag.query = query;
             return View();
         }
 
