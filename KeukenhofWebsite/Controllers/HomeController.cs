@@ -58,6 +58,12 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        public IActionResult Zoekresultaten(string query)
+        {
+
+            return View();
+        }
+
         /* GET: tests/Details/5
         // GET: Home
         public async Task<IActionResult> Index()
@@ -192,6 +198,6 @@ namespace KeukenhofWebsite.Controllers
         private bool HomeExists(int id)
         {
             return _context.test.Any(e => e.Id == id);
-        }
+        }*/
     }
 }
