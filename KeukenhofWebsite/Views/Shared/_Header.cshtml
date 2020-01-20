@@ -21,7 +21,8 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
         <table style="width:100%">
             <tr>
                 <th>
@@ -32,6 +33,7 @@
                 <th>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
+
                             <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="HetPark"><p class="header_links">Het park</p></a></li>
                             <li><a class="header_text" asp-area="" asp-controller="" asp-action="Praktisch"><p class="header_links">Praktisch</p></a></li>
                             <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="FAQ"><p class="header_links">Veelgestelde vragen</p></a></li>
@@ -41,12 +43,41 @@
                 </th>
                 <th>
                     <div class="header_search">
-                        <a asp-area="" asp-controller="" asp-action="Zoek"><i class="fas fa-search" style="color: #36454E; margin-left: 30px;"></i></a>
+                        <button id="searchButton"><i class="fas fa-search" style="color: white; margin-left: 30px;"></i></button>
+                    </div>
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <form asp-controller="Home" asp-action="Zoekresultaten">
+                                <input type="text" name="query" placeholder="Typ uw zoekterm..."/>
+                                <input type="submit" name="submit" value="Zoek"/>
+                                <input class="close" type="submit" value="&times;"/>
+                            </form>
+                        </div>
                     </div>
                 </th>
             </tr>
         </table>
     </nav>
+        </header>
+    <script>
+        var modal = document.getElementById("modal");
+        var button = document.getElementById("searchButton");
+        var span = document.getElementsByClassName("close")[0];
+
+        button.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.display.style = "none";
+            }
+        }
+    </script>
 
     <div class="container body-content">
         @RenderBody()
