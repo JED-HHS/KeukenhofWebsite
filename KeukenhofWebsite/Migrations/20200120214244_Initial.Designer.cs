@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KeukenhofWebsite.Migrations
 {
     [DbContext(typeof(KeukenhofWebsiteContext))]
-    [Migration("20200117094543_Initial")]
+    [Migration("20200120214244_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,19 @@ namespace KeukenhofWebsite.Migrations
                 .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.Action", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("PagAction");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Action");
+                });
 
             modelBuilder.Entity("KeukenhofWebsite.Models.Admin", b =>
                 {
@@ -131,11 +144,50 @@ namespace KeukenhofWebsite.Migrations
                     b.ToTable("QenA");
                 });
 
+            modelBuilder.Entity("KeukenhofWebsite.Models.Zoekterm", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ZoektermString");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Zoekterm");
+                });
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.ZoektermAction", b =>
+                {
+                    b.Property<int>("ZoektermId");
+
+                    b.Property<int>("ActionId");
+
+                    b.HasKey("ZoektermId", "ActionId");
+
+                    b.HasIndex("ActionId");
+
+                    b.ToTable("ZoektermAction");
+                });
+
             modelBuilder.Entity("KeukenhofWebsite.Models.Content", b =>
                 {
                     b.HasOne("KeukenhofWebsite.Models.Pagina")
                         .WithMany("Contents")
                         .HasForeignKey("PaginaId");
+                });
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.ZoektermAction", b =>
+                {
+                    b.HasOne("KeukenhofWebsite.Models.Action", "Action")
+                        .WithMany("ZoektermActions")
+                        .HasForeignKey("ActionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("KeukenhofWebsite.Models.Zoekterm", "Zoekterm")
+                        .WithMany("ZoektermActions")
+                        .HasForeignKey("ZoektermId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
