@@ -18,6 +18,47 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
+        public IActionResult _Hoofdpagina()
+        {
+            return View();
+        }
+
+        public IActionResult HetPark()
+        {
+            return View();
+        }
+        
+        public IActionResult _Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy_statement()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ()
+        {
+            return View(_context.QenA.ToList());
+        }
+
+        public IActionResult Bereikbaarheid()
+        {
+            return View();
+        }
+
+        public IActionResult Content()
+        {
+            return View();
+        }
+        
+        public IActionResult Evenementen()
+        {
+            return View();
+        }
+
+        /* GET: tests/Details/5
         // GET: Home
         public async Task<IActionResult> Index()
         {
@@ -36,14 +77,12 @@ namespace KeukenhofWebsite.Controllers
             {
                 return NotFound();
             }
-
             var home = await _context.test
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (home == null)
             {
                 return NotFound();
             }
-
             return View(home);
         }
 
@@ -53,6 +92,8 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+
+        // GET: tests/Edit/5
         // POST: Home/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -76,7 +117,6 @@ namespace KeukenhofWebsite.Controllers
             {
                 return NotFound();
             }
-
             var home = await _context.test.FindAsync(id);
             if (home == null)
             {

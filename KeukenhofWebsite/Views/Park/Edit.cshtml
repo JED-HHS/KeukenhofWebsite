@@ -1,0 +1,106 @@
+﻿@model KeukenhofWebsite.Models.Park
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Park</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Naam" />
+            <div class="form-group">
+                <label asp-for="Openingsdag" class="control-label"></label>
+                <input asp-for="Openingsdag" class="form-control" />
+                <span asp-validation-for="Openingsdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sluitingsdag" class="control-label"></label>
+                <input asp-for="Sluitingsdag" class="form-control" />
+                <span asp-validation-for="Sluitingsdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningstijdMaandag" class="control-label"></label>
+                <input asp-for="OpeningstijdMaandag" class="form-control" />
+                <span asp-validation-for="OpeningstijdMaandag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluitingstijdMaandag" class="control-label"></label>
+                <input asp-for="SluitingstijdMaandag" class="form-control" />
+                <span asp-validation-for="SluitingstijdMaandag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningstijdDinsdag" class="control-label"></label>
+                <input asp-for="OpeningstijdDinsdag" class="form-control" />
+                <span asp-validation-for="OpeningstijdDinsdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluitingstijdDinsdag" class="control-label"></label>
+                <input asp-for="SluitingstijdDinsdag" class="form-control" />
+                <span asp-validation-for="SluitingstijdDinsdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningstijdWoensdag" class="control-label"></label>
+                <input asp-for="OpeningstijdWoensdag" class="form-control" />
+                <span asp-validation-for="OpeningstijdWoensdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluitingstijdWoensdag" class="control-label"></label>
+                <input asp-for="SluitingstijdWoensdag" class="form-control" />
+                <span asp-validation-for="SluitingstijdWoensdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningstijdDonderdag" class="control-label"></label>
+                <input asp-for="OpeningstijdDonderdag" class="form-control" />
+                <span asp-validation-for="OpeningstijdDonderdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluitingstijdDonderdag" class="control-label"></label>
+                <input asp-for="SluitingstijdDonderdag" class="form-control" />
+                <span asp-validation-for="SluitingstijdDonderdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningstijdVrijdag" class="control-label"></label>
+                <input asp-for="OpeningstijdVrijdag" class="form-control" />
+                <span asp-validation-for="OpeningstijdVrijdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluitingstijdVrijdag" class="control-label"></label>
+                <input asp-for="SluitingstijdVrijdag" class="form-control" />
+                <span asp-validation-for="SluitingstijdVrijdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningstijdZaterdag" class="control-label"></label>
+                <input asp-for="OpeningstijdZaterdag" class="form-control" />
+                <span asp-validation-for="OpeningstijdZaterdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluitingstijdZaterdag" class="control-label"></label>
+                <input asp-for="SluitingstijdZaterdag" class="form-control" />
+                <span asp-validation-for="SluitingstijdZaterdag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpeningstijdZondag" class="control-label"></label>
+                <input asp-for="OpeningstijdZondag" class="form-control" />
+                <span asp-validation-for="OpeningstijdZondag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SluitingstijdZondag" class="control-label"></label>
+                <input asp-for="SluitingstijdZondag" class="form-control" />
+                <span asp-validation-for="SluitingstijdZondag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
