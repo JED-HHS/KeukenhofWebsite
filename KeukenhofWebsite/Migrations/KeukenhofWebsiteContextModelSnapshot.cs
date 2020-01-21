@@ -19,17 +19,57 @@ namespace KeukenhofWebsite.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("KeukenhofWebsite.Models.Admin", b =>
+                {
+                    b.Property<int>("AdminId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<string>("MiddleName");
+
+                    b.Property<string>("Username");
+
+                    b.HasKey("AdminId");
+
+                    b.ToTable("Admin");
+                });
+
             modelBuilder.Entity("KeukenhofWebsite.Models.Content", b =>
                 {
                     b.Property<int>("ContentId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("PaginaId");
+
                     b.Property<string>("Tekst");
+
+                    b.Property<string>("Titel")
+                        .IsRequired();
 
                     b.HasKey("ContentId");
 
+                    b.HasIndex("PaginaId");
+
                     b.ToTable("Content");
+                });
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.Pagina", b =>
+                {
+                    b.Property<int>("PaginaId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Titel")
+                        .IsRequired();
+
+                    b.HasKey("PaginaId");
+
+                    b.ToTable("Pagina");
                 });
 
             modelBuilder.Entity("KeukenhofWebsite.Models.Park", b =>
@@ -39,21 +79,35 @@ namespace KeukenhofWebsite.Migrations
 
                     b.Property<DateTime>("Openingsdag");
 
-                    b.Property<DateTime>("OpeningstijdenDinsdag");
+                    b.Property<DateTime>("OpeningstijdDinsdag");
 
-                    b.Property<DateTime>("OpeningstijdenDonderdag");
+                    b.Property<DateTime>("OpeningstijdDonderdag");
 
-                    b.Property<DateTime>("OpeningstijdenMaandag");
+                    b.Property<DateTime>("OpeningstijdMaandag");
 
-                    b.Property<DateTime>("OpeningstijdenVrijdag");
+                    b.Property<DateTime>("OpeningstijdVrijdag");
 
-                    b.Property<DateTime>("OpeningstijdenWoensdag");
+                    b.Property<DateTime>("OpeningstijdWoensdag");
 
-                    b.Property<DateTime>("OpeningstijdenZaterdag");
+                    b.Property<DateTime>("OpeningstijdZaterdag");
 
-                    b.Property<DateTime>("OpeningstijdenZondag");
+                    b.Property<DateTime>("OpeningstijdZondag");
 
                     b.Property<DateTime>("Sluitingsdag");
+
+                    b.Property<DateTime>("SluitingstijdDinsdag");
+
+                    b.Property<DateTime>("SluitingstijdDonderdag");
+
+                    b.Property<DateTime>("SluitingstijdMaandag");
+
+                    b.Property<DateTime>("SluitingstijdVrijdag");
+
+                    b.Property<DateTime>("SluitingstijdWoensdag");
+
+                    b.Property<DateTime>("SluitingstijdZaterdag");
+
+                    b.Property<DateTime>("SluitingstijdZondag");
 
                     b.HasKey("Naam");
 
@@ -73,6 +127,13 @@ namespace KeukenhofWebsite.Migrations
                     b.HasKey("AnswerId");
 
                     b.ToTable("QenA");
+                });
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.Content", b =>
+                {
+                    b.HasOne("KeukenhofWebsite.Models.Pagina")
+                        .WithMany("Contents")
+                        .HasForeignKey("PaginaId");
                 });
 #pragma warning restore 612, 618
         }

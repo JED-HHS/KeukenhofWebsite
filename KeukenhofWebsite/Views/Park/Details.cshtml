@@ -1,0 +1,114 @@
+﻿@model KeukenhofWebsite.Models.Park
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Park</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Openingsdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Openingsdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sluitingsdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sluitingsdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningstijdMaandag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningstijdMaandag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SluitingstijdMaandag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SluitingstijdMaandag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningstijdDinsdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningstijdDinsdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SluitingstijdDinsdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SluitingstijdDinsdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningstijdWoensdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningstijdWoensdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SluitingstijdWoensdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SluitingstijdWoensdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningstijdDonderdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningstijdDonderdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SluitingstijdDonderdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SluitingstijdDonderdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningstijdVrijdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningstijdVrijdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SluitingstijdVrijdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SluitingstijdVrijdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningstijdZaterdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningstijdZaterdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SluitingstijdZaterdag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SluitingstijdZaterdag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OpeningstijdZondag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpeningstijdZondag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SluitingstijdZondag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SluitingstijdZondag)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Naam">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,129 @@
+﻿@model IEnumerable<KeukenhofWebsite.Models.Park>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <a asp-action="GoToMainIndex">Go back to main index</a>
+</div>
+
+<p>
+    <a asp-action="Create">Create New Park</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Openingsdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sluitingsdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningstijdMaandag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SluitingstijdMaandag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningstijdDinsdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SluitingstijdDinsdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningstijdWoensdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SluitingstijdWoensdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningstijdDonderdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SluitingstijdDonderdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningstijdVrijdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SluitingstijdVrijdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningstijdZaterdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SluitingstijdZaterdag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpeningstijdZondag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SluitingstijdZondag)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Openingsdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sluitingsdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningstijdMaandag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SluitingstijdMaandag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningstijdDinsdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SluitingstijdDinsdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningstijdWoensdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SluitingstijdWoensdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningstijdDonderdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SluitingstijdDonderdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningstijdVrijdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SluitingstijdVrijdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningstijdZaterdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SluitingstijdZaterdag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpeningstijdZondag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SluitingstijdZondag)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Naam">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Naam">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Naam">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

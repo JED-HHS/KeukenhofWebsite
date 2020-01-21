@@ -1,0 +1,475 @@
+﻿.bovenstePlaatje{
+    width: 100%;
+}
+
+.eersteTekst {
+    font-family: sans-serif;
+    padding-right: 10%;
+}
+
+.parkTitel {
+    font-family: sans-serif;
+    font-size: 48px;
+    padding-left: 10%;
+    padding-top: 1%;
+}
+
+.tekst1{
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+}
+
+.tekstp{
+    padding-top: 2%;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.knop1 {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+}
+
+.knopGeschiedenis {
+    font-family: sans-serif;
+    font-size: 18px;
+    border-radius: 27px;
+    border: 1.5px solid #00694C;
+    padding: 1%;
+    color: black;
+}
+
+.knop1:hover .knopGeschiedenis{
+    color:black;
+    text-decoration: none;
+}
+
+.keuzeScrollMenu {
+    background-color: #36454E;
+    display: inline-block;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+}
+
+.knopMenu1:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.knopMenu2:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.knopMenu3:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.knopMenu4:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.knopMenu5:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.knopMenu1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 2%;
+    opacity: 0.64;
+}
+
+.knopMenu2 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 2%;
+    opacity: 0.64;
+}
+
+.knopMenu3 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 2%;
+    opacity: 0.64;
+}
+
+.knopMenu4 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 2%;
+    opacity: 0.64;
+}
+
+.knopMenu5 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 2%;
+    opacity: 0.64;
+}
+
+.eersteKeuze {
+    background-color: #FBDFD3;
+    position: relative;
+    width: 100%;
+    margin-top: -1.6%;
+    padding-bottom: 3%;
+}
+
+.k1tekst {
+    padding-left: 10%;
+    width: 60%;
+    float: left;
+}
+
+.k1link {
+    padding-top: 2.5%;
+    padding-left: 84%;
+}
+
+.evenementenLink{
+    color: black;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding-right: 2%;
+}
+
+.evenementen {
+    background-color: #FBDFD3;
+    padding-top: 3%;
+    padding-left: 10%;
+}
+
+.boot{
+    width: 100%;
+}
+
+.kind {
+   width: 100%;
+   height: 45%;
+}
+
+.kas {
+    width: 100%;
+    height: 45%;
+}
+
+.tour {
+    width: 100%;
+    height: 45%;
+}
+
+.datum {
+    color: #808E96;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-left: 4%;
+    padding-top: 2%;
+}
+
+.eTitel1 {
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-left: 4%;
+    color: #36454E;
+    padding-bottom: 5%;
+}
+
+.beschrijving1 {
+    color: #808E96;
+    font-size: 14px;
+    padding-left: 4%;
+}
+
+.eknop {
+    border: 1.5px solid #EA6025;
+    box-sizing: border-box;
+    border-radius: 27px;
+    padding: 2%;
+    font-family: sans-serif;
+    color: black;
+}
+
+.eknopDiv{
+    padding: 5%;
+    background: white;
+    margin-top: -2%;
+}
+
+.eknop:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.soort1 {
+    position: absolute;
+    top: 37%;
+    left: 10.5%;
+    background: white;
+    opacity: 0.9;
+    padding-left: 0.2%;
+    padding-right: 0.2%;
+}
+
+.soort2 {
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    background: white;
+    opacity: 0.9;
+    padding-left: 0.2%;
+    padding-right: 0.2%;
+}
+
+.soort3 {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    background: white;
+    opacity: 0.9;
+    padding-left: 0.2%;
+    padding-right: 0.2%;
+}
+
+.soort4 {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    background: white;
+    opacity: 0.9;
+    padding-left: 0.2%;
+    padding-right: 0.2%;
+}
+
+.e1 {
+    background-color: white;
+    width: 15%;
+    margin-top: -1%;
+}
+
+.e2 {
+    background-color: white;
+    width: 14.5%;
+    height: 55%;
+    position: absolute;
+    left: 31.5%;
+    top: 33%;
+}
+
+.e3 {
+    background-color: white;
+    position: absolute;
+    width: 14.5%;
+    height: 55%;
+    left: 53.5%;
+    top: 33%;
+}
+
+.e4 {
+    background-color: white;
+    position: absolute;
+    width: 14.5%;
+    height: 55%;
+    left: 76.5%;
+    top: 33%;
+}
+
+.tweedekeuze {
+    position: relative;
+    background-color: #E1EBE9;
+    width: 100%;
+    padding: 5%;
+}
+
+.plattegrondfoto{
+    width: 100%;
+}
+
+.divKnop {
+    background-color: white;
+    padding: 1%;
+}
+
+.textd {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.aa:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.pijltje{
+    position: absolute;
+    top: 83%;
+    left: 91%;
+}
+
+.derdekeuze {
+    position: relative;
+    background-color: #FBDFD3;
+    width: 100%;
+    margin-top: -1.6%;
+}
+
+.e12 {
+    background-color: white;
+    width: 15%;
+    position: relative;
+    margin-top: -1.5%;
+}
+
+.e22 {
+    background-color: white;
+    width: 14.5%;
+    height: 55%;
+    position: absolute;
+    left: 31.5%;
+    top: 33%;
+}
+
+.e32 {
+    background-color: white;
+    position: absolute;
+    width: 14.5%;
+    height: 55%;
+    left: 53.5%;
+    top: 33%;
+}
+
+.e42 {
+    background-color: white;
+    position: absolute;
+    width: 14.5%;
+    height: 55%;
+    left: 76.5%;
+    top: 33%;
+}
+
+.evenementen2 {
+    background-color: #FBDFD3;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-bottom: 3%;
+}
+
+.rv{
+    width: 100%;
+}
+
+.parade {
+    width: 100%;
+    height: 50%;
+}
+
+.fiets {
+    width: 100%;
+    height: 50%;
+}
+
+.fanfare {
+    width: 100%;
+    height: 50%;
+}
+
+.soort12 {
+    position: absolute;
+    left: 3.5%;
+    top: 2%;
+    background: white;
+    opacity: 0.9;
+    padding: 1%;
+    padding-left: 0.2%;
+    padding-right: 0.2%;
+}
+
+.vierdekeuze {
+    position: relative;
+    background-color: #E1EBE9;
+    width: 100%;
+    padding: 5%;
+}
+
+.tuinier{
+    width: 100%;
+}
+
+.divKnop {
+    background-color: white;
+    padding: 1%;
+}
+
+.textd {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.aa:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.vijfdekeuze {
+    position: relative;
+    background-color: #FBDFD3;
+    width: 100%;
+    margin-top: -1.4%;
+}
+
+.e13 {
+    background-color: white;
+    width: 15%;
+    position: relative;
+    margin-top: -1.2%;
+}
+
+.e23 {
+    background-color: white;
+    width: 14.5%;
+    height: 55%;
+    position: absolute;
+    left: 31.5%;
+    top: 32%;
+}
+
+.e33 {
+    background-color: white;
+    position: absolute;
+    width: 14.5%;
+    height: 55%;
+    left: 53.5%;
+    top: 32%;
+}
+
+.e43 {
+    background-color: white;
+    position: absolute;
+    width: 14.5%;
+    height: 55%;
+    left: 76.5%;
+    top: 32%;
+}

@@ -11,17 +11,17 @@
         <div class="hoofd_plaatje"></div>
         <p class="hoofd_titel"> Het mooiste lentepark van de wereld</p>
         <div class="informatie">
-                <a class="informatie_links" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+                <a class="informatie_links" asp-controller="Home" asp-action="HetPark">
                     <p class="informatie_text">Open 21 Maart - 10 Mei</p>
                     <p class="link_text">Ontdek het park</p>
                      <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 </a>
-            <a class="informatie_midden "href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            <a class="informatie_midden" asp-controller="Home" asp-action="HetPark">
                     <p class="informatie_text_midden">Kom vandaag nog langs</p>
                     <p class="link_text_midden">Bekijk het park</p>
                     <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
             </a>
-                <a class="informatie_rechts" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+                <a class="informatie_rechts" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
                     <p class="informatie_text">Wat is Keukenhof?</p>
                     <p class="link_text">Bekijk video</p>
                     <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
@@ -31,28 +31,28 @@
 
     <div class="zoek_deel">
         <p class="zoek_titel">Waar bent u naar op zoek?</p>
-        <a class="zoek_vakjes"href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-controller="Home" asp-action="Bereikbaarheid">
             <div class="zoek_vakje1">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje1"></div>
                 <p class="zoek_titels">Bereikbaarheid</p>
             </div>
         </a>
-        <a class="zoek_vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-controller="Home" asp-action="Evenementen">
             <div class="zoek_vakje2">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje2"></div>
                 <p class="zoek_titels">Evenementen</p>
             </div>
         </a>
-        <a class="zoek_vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-controller="Home" asp-action="Toegankelijkheid">
             <div class="zoek_vakje3">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje3"></div>
                 <p class="zoek_titels">Faciliteiten</p>
             </div>
         </a>
-        <a class="zoek_vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-controller="Home" asp-action="Toegankelijkheid">
             <div class="zoek_vakje4">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje4"></div>
@@ -78,78 +78,78 @@
             <p class="praktisch_kopjes">Groepen</p>
             <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
         </div>
-        <div class="meer_info">
+        <a class="meer_info" asp-controller="Home" asp-action="PraktischeInformatie">
             <p class="meer_text">Meer praktische informatie</p>
             <img class="pijl_meer" src="~/images/arrow-right.svg" alt="Arrow-Right">
-        </div>
+        </a>
         <p class="praktisch_titel">Praktische informatie</p>
         <p class="praktisch_ondertitel">Download de kaart of krijg er een bij de informatiebalie</p>
         <div class="map_deel">
-            <div class="download">
+            <a class="download" href="~/images/PLATTEGROND Keukenhof 2019.pdf" download="">
                 <div class="button"></div>
                 <p class="download_text">Download de kaart</p>
                 <img class="download_icon" src="~/images/download.svg" alt="Download icon">
-            </div>
+            </a>
             <div class="map"></div>
         </div>
     </div>
 
     <div class="nieuws_deel">
-        <div class="bekijk">
+        <a class="bekijk" asp-controller="Home" asp-action="Toegankelijkheid"> 
             <p class="bekijk_alles">Bekijk alle</p>
             <img class="bekijk_alles_pijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
-        </div>
-        <div class="nieuws_artikel1">
+        </a>
+        <a class="nieuws_artikel1" asp-controller="Home" asp-action="Toegankelijkheid">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
             <p class="nieuws_titel">De bloembollen voor 2020 worden weer geplant</p>
             <p class="nieuws_datum">7 OKT 2019</p>
             <div class="nieuwstag">
-                <p class="nieuwstag_text">>Nieuws</p>
+                <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws1"></div>
-        </div>
-        <div class="nieuws_artikel2">
+        </a>
+        <a class="nieuws_artikel2" asp-controller="Home" asp-action="Toegankelijkheid">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
             <p class="nieuws_titel">De bloembollenmarkt was weer een groot succes</p>
             <p class="nieuws_datum"> 5 OKT 2019</p>
             <div class="nieuwstag">
-                <p class="nieuwstag_text">>Nieuws</p>
+                <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws2"></div>
-        </div>
-        <div class="nieuws_artikel3">
+        </a>
+        <a class="nieuws_artikel3" asp-controller="Home" asp-action="Toegankelijkheid">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
             <p class="nieuws_titel">Wat zal het thema voor volgend jaar Keukenhof worden?</p>
             <p class="nieuws_datum">2 AUG 2019</p>
             <div class="nieuwstag">
-                <p class="nieuwstag_text">>Nieuws</p>
+                <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws3"></div>
-        </div>
-        <div class="nieuws_artikel4">
+        </a>
+        <a class="nieuws_artikel4" asp-controller="Home" asp-action="Toegankelijkheid">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
             <p class="nieuws_titel">De bloembollen voor 2020 worden weer geplant</p>
             <p class="nieuws_datum">7 OKT 2019</p>
             <div class="nieuwstag">
-                <p class="nieuwstag_text">>Nieuws</p>
+                <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws4"></div>
-        </div>
+        </a>
         <p class="nieuws">Nieuws</p>
     </div>
 
     <div class="deel5">
-        <a class="deel5_binnenkant" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="deel5_binnenkant" asp-controller="Home" asp-action="Toegankelijkheid">
             <img class="pijl_deel5" src="~/images/arrow-right.svg" alt="Arrow-Right" />
-            <p class="deel5_text">Hier moet nog tekst in</p>
+            <p class="deel5_text">Groepen</p>
             <div class="deel5_plaatje"></div>
         </a>
     </div>

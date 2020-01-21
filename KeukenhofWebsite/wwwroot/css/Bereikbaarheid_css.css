@@ -1,5 +1,6 @@
 ﻿.image{
     width: 100%;
+    position: relative;
 }
 
 .ber_title {
@@ -8,21 +9,29 @@
 }
 
 .top_info {
-    position: absolute;
-    top: 68%;
-    width: 80%;
-    right: 10%;
-    padding-top: 45px;
+    padding-left: 10%;
+    top: 63%;
+    padding-right: 10%;
+}
+
+.ber-left {
+    float: left;
+    width: 48%;
+    padding-right: 2%;
+}
+
+.ber-right {
+    float: left;
+    width: 48%;
+    padding-left: 2%;
 }
 
 .open_text_left {
-    position: absolute;
+    position: relative;
     font-size: 18px;
-    width: 45.5%;
 }
 
 .open_text_right {
-    margin-left: 50%;
     font-size: 18px;
 }
 
@@ -48,8 +57,8 @@
 }
 
 .ov{
-    position: absolute;
-    top: 100%;
+    position:relative;
+    margin-top: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
     margin-left: 10%;
@@ -62,7 +71,6 @@
 }
 
 .lines {
-    position: absolute;
     top: 127%;
     width: 100%;
     background-color: #e1ebe9;
@@ -102,10 +110,8 @@
 }
 
 .option {
-    position: absolute;
     background-color: #fbdfd3;
     width: 100%;
-    top: 199%;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
@@ -113,7 +119,6 @@
 }
 
 .eigen_vervoer{
-    position: absolute;
     margin-left: 10%;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -121,8 +126,8 @@
 }
 
 .fiets {
-    position: absolute;
-    top: 293%;
+    display: inline-block;
+    position: relative;
     background-color: #fbdfd3;
     width: 100%;
     padding-left: 10%;
@@ -131,31 +136,37 @@
     padding-bottom: 2%;
 }
 
-.coll{
+.coll {
     width: 49%;
-    float: left;
+    
 }
 
 .coll_left {
-    padding-right: 1%;
+    position: relative;
 }
 
 .coll_right{
     position: relative;
     padding-left: 1%;
+    float: right;
 }
 
 .fiets_img{
     width: 100%;
 }
 
+.fiets_plaatje{
+    position: absolute;
+}
+
 .row {
+    float: left;
     width: 100%;
     background-color: white;
     border-radius: 10px;
     padding-left: 10%;
     padding-right: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .row_bottom{
@@ -168,12 +179,12 @@
 }
 
 .groups {
-    position: absolute;
-    top: 355%;
+    position: relative;
     width: 100%;
     background-color: #e1ebe9;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
     padding-bottom: 2%;
+    margin-top: -1%;
 }
