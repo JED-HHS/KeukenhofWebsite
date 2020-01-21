@@ -27,7 +27,7 @@ namespace KeukenhofWebsite.Controllers
         {
             return View();
         }
-        
+
         public IActionResult _Contact()
         {
             return View();
@@ -52,7 +52,7 @@ namespace KeukenhofWebsite.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Evenementen()
         {
             return View();
@@ -193,5 +193,6 @@ namespace KeukenhofWebsite.Controllers
         {
             return _context.test.Any(e => e.Id == id);
         }
+    }*/
     }
 }
