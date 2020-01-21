@@ -27,6 +27,8 @@ namespace KeukenhofWebsite.Migrations
 
                     b.Property<string>("PagAction");
 
+                    b.Property<string>("pagTitle");
+
                     b.HasKey("Id");
 
                     b.ToTable("Action");

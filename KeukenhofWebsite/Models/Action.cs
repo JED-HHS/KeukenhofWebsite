@@ -9,6 +9,7 @@ namespace KeukenhofWebsite.Models
     {
         public int Id { get; set; }
         public string PagAction { get; set; }
+        public string pagTitle { get; set; }
 
         public IList<ZoektermAction> ZoektermActions { get; set; }
     }

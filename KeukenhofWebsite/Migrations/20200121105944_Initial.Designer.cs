@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KeukenhofWebsite.Migrations
 {
     [DbContext(typeof(KeukenhofWebsiteContext))]
-    [Migration("20200120214244_Initial")]
+    [Migration("20200121105944_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,8 @@ namespace KeukenhofWebsite.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("PagAction");
+
+                    b.Property<string>("pagTitle");
 
                     b.HasKey("Id");
 
