@@ -1,55 +1,42 @@
-﻿.keyvisual {
-    position: absolute;
+﻿.key_visual {
+    position: relative;
     width: 100%;
-    height: 628px;
-    left: 0px;
-    background: linear-gradient(180deg, rgba(35, 31, 32, 0) 0%, #231F20 100%);
-    opacity: 0.4;
+    height: 700px;
 }
 
 .zoek_deel {
-    position:absolute;
+    position:relative;
     width: 100%;
-    height: 421px;
-    left: 0px;
-    top: 100%;
+    height: 500px;
     background: #FBDFD3;
    
 }
 
 .praktisch_deel {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 512px;
-    left: 0px;
-    top: 158%;
+    height: 600px;
     background: #E1EBE9;
 }
 
 
 .nieuws_deel {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 498px;
-    left: 0%;
-    top: 228%;
+    height: 600px;
     background: #FBDFD3;
 }
 .deel5 {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 528px;
-    left: 0px;
-    top: 296%;
+    height: 500px;
     background: #E1EBE9;
 }
 
 .insta6 {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 378px;
-    left: 0px;
-    top: 369%;
+    height: 400px;
     background: #FBDFD3;
 }
 
@@ -86,10 +73,8 @@
 
 .scroll {
     position: absolute;
-    width: 41px;
-    height: 19px;
-    left: 1400px;
-    top: 615px;
+    left: 85%;
+    top:80%;
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
@@ -102,9 +87,8 @@
 
 .scroll_down {
     position: absolute;
-    left: 1409px;
-    top: 640px;
-    color:red;
+    left: 85.5%;
+    top: 83.3%;
     filter:invert(100%);
 }
 
@@ -169,44 +153,43 @@
     font-family: Source Sans Pro;
     font-style: normal;
     position: absolute;
-    width: 233px;
-    height: 64px;
-    left: 48px;
-    top: 517px;
+    width: 15%;
+    height: 8.5%;
+    left: 3.5%;
+    top: 71.5%;
     background: white;
 }
 
 .informatie_midden {
     font-family: Source Sans Pro;
     position: absolute;
-    width: 233px;
-    height: 64px;
-    left: 281px;
-    top: 517px;
+    width: 15%;
+    height: 8.5%;
+    left: 18.5%;
+    top: 71.5%;
     background: #ea6025;
 }
 
 .informatie_rechts {
     font-family: Source Sans Pro;
     position: absolute;
-    width: 233px;
-    height: 64px;
-    left: 514px;
-    top: 517px;
+    width: 15%;
+    height: 8.5%;
+    left: 33.5%;
+    top: 71.5%;
     background: white;
 }
 
 .zoek_titel {
     position: absolute;
-    width: 600px;
-    height: 31px;
-    left: 32px;
-    top: 32px;
+    width: 30%;
+    height: 7%;
+    left: 2%;
+    top: 5%;
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 31px;
     display: flex;
     align-items: center;
     color: #1F2325;
@@ -214,37 +197,37 @@
 
 .zoek_vakje1 {
     position: absolute;
-    width: 248px;
-    height: 310px;
-    left: 105px;
-    top: 79px;
-    background-color:white;
+    width: 16.3%;
+    height: 75%;
+    left: 6.9%;
+    top: 19%;
+    background-color: white;
 }
 
 .zoek_vakje2 {
     position: absolute;
-    width: 248px;
-    height: 310px;
-    left: 458px;
-    top: 79px;
+    width: 16.3%;
+    height: 75%;
+    left: 30.2%;
+    top: 19%;
     background-color: white;
 }
 
 .zoek_vakje3 {
     position: absolute;
-    width: 248px;
-    height: 310px;
-    left:811px;
-    top: 79px;
+    width: 16.3%;
+    height: 75%;
+    left: 53.5%;
+    top: 19%;
     background-color: white;
 }
 
 .zoek_vakje4 {
     position: absolute;
-    width: 248px;
-    height: 310px;
-    left:1164px;
-    top: 79px;
+    width: 16.3%;
+    height: 75%;  
+    left: 76.7%;
+    top: 19%;
     background-color: white;
 }
 
@@ -361,7 +344,6 @@ zoek_pijlen {
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
-    line-height: 40px;
     color: #1F2325;
 }
 
@@ -375,7 +357,6 @@ zoek_pijlen {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 28px;
     color: #36454E;
 }
 
@@ -389,15 +370,13 @@ zoek_pijlen {
 
 .meer_text {
     position: absolute;
-    height: 19px;
-    left: 18px;
-    right: 43px;
-    top: 10px;
+    height:50%;
+    left: 10%;
+    top: 5%;
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
-    line-height: 120%;
     display: flex;
     align-items: center;
     color: #36454E;
@@ -405,22 +384,18 @@ zoek_pijlen {
 
 .pijl_meer {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    right: 16px;
-    top: 6px;
+    height: 50%;
+    left: 80%;
+    top: 5%;
 }
 .praktisch_kopjes {
     position: absolute;
-    width: 432px;
-    height: 28px;
-    left: 32px;
-    top: 24px;
+    left: 6%;
+    top: 30%;
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 28px;
     color: #36454E;
 }
 
@@ -462,40 +437,33 @@ zoek_pijlen {
 
 .praktische_chevrons {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    right: 24px;
-    top: calc(50% - 24px/2);
+    right: 5%;
+    top: 36%;
 }
 
 .download {
     position: absolute;
-    left: 16.75%;
-    right: 55.36%;
-    top: 50.47%;
+    left: 30%;
+    right: 30%;
+    top: 47.47%;
     bottom: 36.72%;
     z-index: 1;
 }
 .download_icon {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 16px;
-    top: calc(50% - 24px/2 - 0px);
+    left:8%;
+    top:27%;
     z-index:1;
 }
 
 .download_text {
     position: absolute;
-    height: 19px;
-    left: 45px;
-    right: 17px;
-    top: calc(50% - 19px/2 + 4px);
+    left: 24%;
+    top: 27%;
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
-    line-height: 120%;
     display: flex;
     align-items: center;
     text-align: right;
@@ -517,51 +485,48 @@ zoek_pijlen {
 
 .nieuws {
     position: absolute;
-    width: 127px;
-    height: 40px;
-    left: 32px;
-    top: 32px;
+    left: 5%;
+    top: 5%;
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
-    line-height: 40px;
     color: #1F2325;
 }
 
 .nieuws_artikel1 {
     position: absolute;
-    width: 248px;
-    height: 370px;
-    left: 105px;
-    top: 96px;
+    width: 16.3%;
+    height: 75%;
+    left: 6.9%;
+    top: 19%;
     background: #FFFFFF;
 }
 
 .nieuws_artikel2 {
     position: absolute;
-    width: 248px;
-    height: 370px;
-    left: 458px;
-    top: 96px;
+    width: 16.3%;
+    height: 75%;
+    left: 30.2%;
+    top: 19%;
     background: #FFFFFF;
 }
 
 .nieuws_artikel3 {
     position: absolute;
-    width: 248px;
-    height: 370px;
-    left: 811px;
-    top: 96px;
+    width: 16.3%;
+    height: 75%;
+    left: 53.5%;
+    top: 19%;
     background: #FFFFFF;
 }
 
 .nieuws_artikel4 {
     position: absolute;
-    width: 248px;
-    height: 370px;
-    left: 1164px;
-    top: 96px;
+    width: 16.3%;
+    height: 75%;
+    left: 76.7%;
+    top: 19%;
     background: #FFFFFF;
 }
 
@@ -615,10 +580,10 @@ zoek_pijlen {
 
 .nieuwstag {
     position: absolute;
-    width: 62px;
-    height: 30px;
-    left: 16px;
-    top: 16px;
+    width: 22%;
+    height: 7%;
+    left: 6%;
+    top: 3%;
     opacity: 0.9;
     background-color: white;
     z-index: 1;
@@ -626,24 +591,19 @@ zoek_pijlen {
 
 .nieuwstag_text {
     position: absolute;
-    width: 47px;
-    height: 22px;
-    left: 8px;
-    top: 4px;
+    left: 10%;
+    top: 20%;
     font-family: Avenir;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 22px;
     color: #1F2325;
 }
 
 .nieuws_datum {
     position: absolute;
-    width: 205px;
-    height: 12px;
-    left: 16px;
-    top: 194px;
+    left: 7%;
+    top: 53%;
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
@@ -656,24 +616,22 @@ zoek_pijlen {
 
 .nieuws_titel {
     position: absolute;
-    width: 216px;
-    height: 84px;
-    left: 16px;
-    top: 214px;
+    width:80%;
+    left: 7%;
+    top: 59%;
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 28px;
     color: #36454E;
 }
 
 .leesmeer_button {
     position: absolute;
-    width: 110px;
-    height: 40px;
-    left: 16px;
-    bottom: 16px;
+    width: 42%;
+    height: 10%;
+    left: 7%;
+    bottom:6%;
     background: #FFFFFF;
     border: 1.5px solid #EA6025;
     box-sizing: border-box;
@@ -682,15 +640,12 @@ zoek_pijlen {
 
 .leesmeer_text {
     position: absolute;
-    height: 19px;
-    left: 16px;
-    right: 16px;
-    top: calc(50% - 19px/2 + 0.5px);
+    left: 15%;
+    top: 15%;
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
-    line-height: 120%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -699,15 +654,12 @@ zoek_pijlen {
 
 .bekijk_alles {
     position: absolute;
-    height: 19px;
-    left: 18px;
-    right: 43px;
-    top: 10px;
+    left: 10%;
+    top: 10%;
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
-    line-height: 120%;
     display: flex;
     align-items: center;
     color: #36454E;
@@ -723,10 +675,8 @@ zoek_pijlen {
 
 .bekijk_alles_pijl {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    right: 16px;
-    top: 6px;
+    left: 70%;
+    top: 10%;
 }
 
 .deel5_binnenkant {
@@ -772,19 +722,16 @@ zoek_pijlen {
 
 .pijl_deel5 {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 1360px;
-    top: 410px;
+    left: 96%;
+    top: 88%;
     z-index: 1;
 }
 .deel5_binnenkant:hover {
     background-color: #00694C;
 }
-.deel5_binnekant:hover img{
+.deel5_binnenkant:hover img{
     filter:invert(100%);
 }
-
 .deel5_binnenkant:hover p {
     color:white;
 }
@@ -807,29 +754,23 @@ zoek_pijlen {
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
-    line-height: 40px;
     color: #1F2325;
 }
 
 .insta_logo {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 16px;
-    top: calc(50% - 24px/2);
+    left: 5%;
+    top: 5%;
 }
 
 .insta_volg {
     position: absolute;
-    height: 19px;
-    left: 45px;
-    right: 17px;
-    top: calc(50% - 19px/2 + 0.5px);
+    left: 20%;
+    top: 5%;
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
-    line-height: 120%;
     display: flex;
     align-items: center;
     text-align: right;

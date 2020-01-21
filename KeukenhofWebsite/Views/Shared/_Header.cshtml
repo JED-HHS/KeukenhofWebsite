@@ -21,34 +21,154 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
         <table style="width:100%">
             <tr>
                 <th>
                     <div class="container">
-                        <img src="~/images/Keukenhof-logoo.jpg" class="header_logo" alt="Keukenhof logo" width="200" height="80">
+                        <a asp-controller="Home" asp-action="_Hoofdpagina"><img src="~/images/Keukenhof-logoo.jpg" class="header_logo" alt="Keukenhof logo" width="200" height="80"></a>
                     </div>
                 </th>
                 <th>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a class="header_text" asp-area="" asp-controller="" asp-action="Park"><p class="header_links">Het park</p></a></li>
-                            <li><a class="header_text" asp-area="" asp-controller="" asp-action="Praktisch"><p class ="header_links">Praktisch</p></a></li>
-                            <li><a class="header_text" asp-area="" asp-controller="" asp-action="FAQ"><p class ="header_links">Veelgestelde vragen</p></a></li>
-                            <li><a class="header_text" asp-area="" asp-controller="" asp-action="Bereikbaarheid"><p class ="header_links">Bereikbaarheid</p></a></li>
+
+                            <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="HetPark"><p class="header_links">Het park</p></a></li>
+                            <li><a class="header_text" asp-area="" asp-controller="" asp-action="Praktisch"><p class="header_links">Praktisch</p></a></li>
+                            <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="FAQ"><p class="header_links">Veelgestelde vragen</p></a></li>
+                            <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="Bereikbaarheid"><p class="header_links">Bereikbaarheid</p></a></li>
                         </ul>
                     </div>
                 </th>
                 <th>
                     <div class="header_search">
-                        <a asp-area="" asp-controller="" asp-action="Zoek"><i class="fas fa-search" style="color: #36454E; margin-left: 30px;"></i></a>
+                        <button id="searchButton"><i class="fas fa-search" style="color: white; margin-left: 30px;"></i></button>
+                    </div>
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <form asp-controller="Home" asp-action="Zoekresultaten">
+                                <input type="text" name="query" placeholder="Typ uw zoekterm..."/>
+                                <input type="submit" name="submit" value="Zoek"/>
+                                <input class="close" type="submit" value="&times;"/>
+                            </form>
+                        </div>
                     </div>
                 </th>
             </tr>
         </table>
     </nav>
+        </header>
+    <script>
+        var modal = document.getElementById("modal");
+        var button = document.getElementById("searchButton");
+        var span = document.getElementsByClassName("close")[0];
 
-    @RenderBody()
-    <!--Footer-->
+        button.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.display.style = "none";
+            }
+        }
+    </script>
+
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+
+    <footer>
+    <div class="outerFooter">
+        <div class="innerFooter">
+            <div class="firstFooterBlock">
+                <div class="logoFooter">
+                    <img src="~/images/Keukenhof-logoo.jpg" alt="Logo Keukenhof" class="LogoFooter" />
+                </div>
+
+                <div class="socialsFooter">
+                    <a class="faSocial" href="https://www.instagram.com/visitkeukenhof/?hl=en">
+                        <img src="~/images/instagram.svg" alt="instagram" class="imgSocial" />
+                    </a>
+
+                    <a class="faSocial" href="https://www.facebook.com/Visit-Keukenhof-626441381105826/?brand_redir=306547471635">
+                        <img src="~/images/facebook.svg" alt="facebook" class="imgSocial" />
+                    </a>
+
+                    <a class="faSocial" href="https://twitter.com/visitkeukenhof?lang=en">
+                        <img src="~/images/twitter.svg" alt="twitter" class="imgSocial" />
+                    </a>
+
+                    <a class="faSocial" href="https://www.youtube.com/channel/UCgI01qAKL2Smlat13n5bVWg">
+                        <img src="~/images/youtube.svg" alt="youtube" class="imgSocial" />
+                    </a>
+                </div>
+            </div>
+            <div class="adresOpeningstijdenFooter">
+
+                <div class="aot aot-adresTitel">
+                    <p>Adres</p>
+                </div>
+                <div class="aotxt aotxt-adresTekst">
+                    <p>Stationsweg 166A</p>
+                    <p>2161 AM Lisse</p>
+                </div>
+
+
+                <div class="aot aot-openingstijdenTitel">
+                    <p>Openingstijden</p>
+                </div>
+                <div class="aotxt aotxt-openingstijdenTekst">
+                    <p>21 maart - 10 mei 2020,</p>
+                    <p>9:00-17:00u</p>
+                </div>
+
+            </div>
+            <div class="algemeneLinkjesFooter">
+                <div class="alf">
+                    <a asp-controller="Home" asp-action="HetPark">
+                        Het Park <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="alf">
+                    <a href="#">
+                        Praktisch <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="alf">
+                    <a href="#">
+                        Groepen <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="alf">
+                    <a href="#">
+                        Pers <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
+                    </a>
+                </div>
+            </div>
+            <div class="handigeLinkjesFooter">
+                <div class="handigeLinkjesTitel">
+                    <p>Meer handige links</p>
+                </div>
+                <div class="handigeLinkjesTekst">
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Bereikbaarheid">Bereikbaarheid</a></li>
+                        <li><a asp-controller="Home" asp-action="Evenementen">Evenementen</a></li>
+                        <li><a asp-controller="Home" asp-action="FAQ">Veelgestelde vragen</a></li>
+                        <li><a asp-controller="Home" asp-action="_Contact">Contact</a></li>
+                        <li><a asp-controller="Home" asp-action="Privacy_statement">Privacy Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
 </body>
 </html>
