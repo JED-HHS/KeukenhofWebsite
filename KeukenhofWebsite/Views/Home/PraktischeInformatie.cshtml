@@ -38,7 +38,7 @@
         <p class="PPOndertekst">Download de kaart of krijg er een bij de informatiebalie</p>
         <div class="PPDownloadKaart">
             <a class="PPDownloadTekst" href="~/images/PLATTEGROND Keukenhof 2019.png" download="">
-                <img class="PPDownloadKnop" src="~/images/download.svg" alt="pijltje"/>
+                <img class="PPDownloadKnop" src="~/images/download.svg" alt="pijltje" />
                 <p class="PPDT" style="text-decoration:none;color:black;">Download de kaart</p>
             </a>
         </div>
@@ -108,42 +108,43 @@
     <!---->
     <div id="PVoorziening">
         <p class="PVoorTitel">Voorzieningen</p>
-        <div class="PVoorMenu">
-            <div class="PVoorSelect">
+        <div id="PVoorMenu">
+            <button type="button" onclick="javascript:wifi()" class="PVoorSelect PActive">
                 <img class="PVoorIcon" src="~/images/wifi.svg" alt="pijltje" />
                 <p>Wi-Fi</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
-            </div>
-            <div class="PVoorSelect">
+            </button>
+            <button type="button" onclick="javascript:locker()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/locker.svg" alt="pijltje" />
                 <p>Lockers</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
-            </div>
-            <div class="PVoorSelect">
+            </button>
+            <button type="button" onclick="javascript:hond()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/dog 1.svg" alt="pijltje" />
                 <p>Honden in het park</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
-            </div>
-            <div class="PVoorSelect">
+            </button>
+            <button type="button" onclick="javascript:scootmobiel()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/scootmobiel.svg" alt="pijltje" />
                 <p>Toegankelijkheid</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
-            </div>
-            <div class="PVoorSelect">
+            </button>
+            <button type="button" onclick="javascript:fiets()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/fiets.svg" alt="pijltje" />
                 <p>Fiets huren</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
-            </div>
-            <div class="PVoorSelect">
+            </button>
+            <button type="button" onclick="javascript:lostandfound()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/lost and found.svg" alt="pijltje" />
                 <p>Gevonden voorwerpen</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
-            </div>
+            </button>
         </div>
-        <div class="PVoorInfo">
+        <div id="PVoorInfo">
             <img class="PVoorP" src="~/images/arrow-right.svg" alt="Arrow-Right" />
-            <p class="PVoorTekst">Groepen</p>
-            <div class="PVoorPlaatje"></div>
+            <p class="PVoorTekst" id="PVoorT">Klik op de knoppen hiernaast voor meer informatie</p>
+            <!--<img id="PVoorPlaatje" src="~/images/190407LLT5844.jpg"/>-->
+            <div id="PVoorPlaatje"></div>
         </div>
     </div>
     <!---->
@@ -154,4 +155,60 @@
             <div class="PGroepPlaatje"></div>
         </a>
     </div>
+    <script>
+        var header = document.getElementById("PVoorziening");
+        var btns = header.getElementsByClassName("PVoorSelect");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("PActive");
+                current[0].className = current[0].className.replace(" PActive", "");
+                this.className += " PActive";
+            });
+        }
+
+        function wifi() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190423LLU1188.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "Bij de paviljoens in het park is er gratis Wi-Fi";
+        }
+        function locker() {
+            document.getElementById("PVoorPlaatje").style.background = "##FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190422LLT7020.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "Kleinere bagagestukken kunnen in de lockers worden opgeborgen";
+        }
+        function hond() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190422LLT8397.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "Honden zijn toegestaan in Keukenhof, als ze zijn aangelijnd";
+        }
+        function scootmobiel() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190407LLT5844.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "Ons park is goed toegankelijk voor rolstoelen en scootmobiels en is ruim voorzien van aangepaste toiletten.";
+        }
+        function fiets() {
+            document.getElementById("PVoorPlaatje").style.background = "##FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190511LLU8603.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "Je kunt fietsen huren op het parkeerterrein bij de Hoofdentree om de omgeving per fiets te verkennen";
+        }
+        function lostandfound() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190405LLU1157.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "We plaatsen alle gevonden artikelen online";
+        }
+    </script>
 </body>
+
+

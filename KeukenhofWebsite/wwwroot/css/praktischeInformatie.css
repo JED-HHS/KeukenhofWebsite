@@ -488,7 +488,7 @@
     /* Black */
     color: #1F2325;
 }
-.PVoorMenu{
+#PVoorMenu{
     position: absolute;
     bottom: 2.19%;
     top: 18.98%;
@@ -496,17 +496,24 @@
     right: 60%;
 }
 
-.PVoorSelect{
+.PVoorSelect {
     position: relative;
     width: 100%;
     height: 16.67%;
     border-radius: 4px;
+    /*box-sizing: border-box;
+    float: left;
+    outline: none;
+    padding: 10px 16px;*/
+    background-color: #E1EBE9;
 }
-    .PVoorSelect:hover {
-        background: white;
-        border-radius: 4px;
-        text-decoration: underline;
-    }
+.PActive {
+    background-color: #FFFFFF;
+}
+.btn:hover {
+    text-decoration-line: underline;
+    background-color: #E1EBE9;
+}
     .PVoorSelect p {
         position: absolute;
         left: 11.11%;
@@ -543,7 +550,7 @@
     top: 88%;
     bottom: -33.84%;
 }
-.PVoorInfo {
+#PVoorInfo {
     position: absolute;
     right: 2.78%;
     bottom: 5.84%;
@@ -551,7 +558,7 @@
     top: 5.84%;
     background: #FFFFFF;
 }
-.PVoorPlaatje {
+#PVoorPlaatje {
     position: absolute;
     width: 100%;
     left: 0%;
@@ -561,7 +568,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('/images/PLATTEGROND Keukenhof 2019-2.png');
+    background-image: url('/images/190407llt5844.jpg');
 }
 .PVoorTekst {
     position: absolute;
@@ -569,15 +576,16 @@
     right: 39.92%;
     top: 88.00%;
     bottom: 5.81%;
-    font-family: Source Sans Pro;
+    font-family: sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
     display: flex;
     align-items: center;
+    /* Dark Grey */
     color: #36454E;
-    z-index: 1;
 }
 /*
 
@@ -638,9 +646,9 @@
     background-color: #00694C;
 }
 
-    .PGroepBeide:hover img {
+    /*.PGroepBeide:hover img {
         filter: invert(100%);
-    }
+    }*/
 
     .PGroepBeide:hover p {
         color: white;
