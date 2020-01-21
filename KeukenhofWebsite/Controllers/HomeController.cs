@@ -30,7 +30,7 @@ namespace KeukenhofWebsite.Controllers
         
         public IActionResult _Contact()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Privacy_statement()
@@ -192,6 +192,6 @@ namespace KeukenhofWebsite.Controllers
         private bool HomeExists(int id)
         {
             return _context.test.Any(e => e.Id == id);
-        }
+        }*/
     }
 }
