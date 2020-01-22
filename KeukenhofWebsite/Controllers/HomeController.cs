@@ -27,10 +27,10 @@ namespace KeukenhofWebsite.Controllers
         {
             return View();
         }
-        
+
         public IActionResult _Contact()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Privacy_statement()
@@ -52,48 +52,33 @@ namespace KeukenhofWebsite.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Evenementen()
         {
             return View();
         }
 
-        /* GET: tests/Details/5
-        // GET: Home
-        public async Task<IActionResult> Index()
+        public IActionResult Zoekresultaten(string query)
         {
-            return View(await _context.test.ToListAsync());
-        }
+            ViewBag.query = query;
 
-        public IActionResult Zoekresultaten()
-        {
-            return View();
-        }
+            query = query.ToUpper();
+            var result = from zt in _context.Zoekterm
+                         join zta in _context.ZoektermAction on zt.Id equals zta.ZoektermId
+                         join action in _context.Action on zta.ActionId equals action.Id                         
+                         where zt.ZoektermString.ToUpper().Contains(query)
+                         select action;
 
-        // GET: Home/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var home = await _context.test
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (home == null)
-            {
-                return NotFound();
-            }
-            return View(home);
+            ViewBag.count = result.Count();
+            return View(result.Distinct());
         }
-
-        // GET: Home/Create
-        public IActionResult Create()
+        
+        public IActionResult PraktischeInformatie()
         {
             return View();
         }
 
-
-        // GET: tests/Edit/5
+        /* GET: tests/Edit/5
         // POST: Home/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -193,5 +178,6 @@ namespace KeukenhofWebsite.Controllers
         {
             return _context.test.Any(e => e.Id == id);
         }*/
+
     }
 }
