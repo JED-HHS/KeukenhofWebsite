@@ -77,11 +77,5 @@ namespace KeukenhofWebsite.Controllers
         {
             return View();
         }
-
-        public IActionResult Zoekresultaten()
-
-        {
-            return View();
-        }
     }
 }
