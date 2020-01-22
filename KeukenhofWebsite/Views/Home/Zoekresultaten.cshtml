@@ -19,14 +19,29 @@
     <div class="results">
         <h2 class="Zoekresultaten">Zoekresultaten</h2>
 
-        @foreach (var Result in Model)
+        @if (ViewBag.count > 0)
         {
-            <a class="resultpage" asp-action="@Result.PagAction">
+            @foreach (var Result in Model)
+            {
+                <a class="resultpage" asp-action="@Result.PagAction">
+                    <p class="pageTitle">
+                        <b>@Result.pagTitle</b>
+                    </p>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+            }
+            <a class="resultpage" asp-action="FAQ">
                 <p class="pageTitle">
-                    <b>@Result.pagTitle</b>
+                    <b>Veelgestelde Vragen</b>
                 </p>
                 <i class="fas fa-arrow-right link-arrow"></i>
             </a>
+        }
+        else
+        {
+            <p class="noResult">
+                Er zijn geen zoekresultaten gevonden. Misschien kunt u uw antwoord vinden bij de <a class="FAQ" asp-action="FAQ">veelgestelde vragen.</a>
+            </p>
         }
 
 

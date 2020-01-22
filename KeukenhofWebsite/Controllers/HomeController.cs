@@ -67,12 +67,10 @@ namespace KeukenhofWebsite.Controllers
                          join zta in _context.ZoektermAction on zt.Id equals zta.ZoektermId
                          join action in _context.Action on zta.ActionId equals action.Id                         
                          where zt.ZoektermString.ToUpper().Contains(query)
-                         group action by action.Id into newAction
-                         select newAction;
+                         select action;
 
-
-
-            return View(result);
+            ViewBag.count = result.Count();
+            return View(result.Distinct());
         }
 
         /* GET: tests/Details/5
