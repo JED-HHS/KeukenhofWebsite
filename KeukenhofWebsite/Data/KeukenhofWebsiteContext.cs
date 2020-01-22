@@ -37,5 +37,6 @@ namespace KeukenhofWebsite.Models
         public DbSet<Action> Action { get; set; }
         public DbSet<Zoekterm> Zoekterm { get; set; }
         public DbSet<ZoektermAction> ZoektermAction { get; set; }
+        public DbSet<Image> Image { get; set; }
     }
 }

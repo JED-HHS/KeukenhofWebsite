@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KeukenhofWebsite.Migrations
 {
     [DbContext(typeof(KeukenhofWebsiteContext))]
-    [Migration("20200121105944_Initial")]
+    [Migration("20200122094654_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,6 +73,23 @@ namespace KeukenhofWebsite.Migrations
                     b.HasIndex("PaginaId");
 
                     b.ToTable("Content");
+                });
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.Image", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("PaginaId");
+
+                    b.Property<string>("Path");
+
+                    b.HasKey("ImageId");
+
+                    b.HasIndex("PaginaId");
+
+                    b.ToTable("Image");
                 });
 
             modelBuilder.Entity("KeukenhofWebsite.Models.Pagina", b =>
@@ -176,6 +193,13 @@ namespace KeukenhofWebsite.Migrations
                 {
                     b.HasOne("KeukenhofWebsite.Models.Pagina")
                         .WithMany("Contents")
+                        .HasForeignKey("PaginaId");
+                });
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.Image", b =>
+                {
+                    b.HasOne("KeukenhofWebsite.Models.Pagina")
+                        .WithMany("Images")
                         .HasForeignKey("PaginaId");
                 });
 

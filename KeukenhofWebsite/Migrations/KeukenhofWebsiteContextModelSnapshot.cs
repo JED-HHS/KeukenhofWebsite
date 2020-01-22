@@ -73,6 +73,23 @@ namespace KeukenhofWebsite.Migrations
                     b.ToTable("Content");
                 });
 
+            modelBuilder.Entity("KeukenhofWebsite.Models.Image", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("PaginaId");
+
+                    b.Property<string>("Path");
+
+                    b.HasKey("ImageId");
+
+                    b.HasIndex("PaginaId");
+
+                    b.ToTable("Image");
+                });
+
             modelBuilder.Entity("KeukenhofWebsite.Models.Pagina", b =>
                 {
                     b.Property<int>("PaginaId")
@@ -174,6 +191,13 @@ namespace KeukenhofWebsite.Migrations
                 {
                     b.HasOne("KeukenhofWebsite.Models.Pagina")
                         .WithMany("Contents")
+                        .HasForeignKey("PaginaId");
+                });
+
+            modelBuilder.Entity("KeukenhofWebsite.Models.Image", b =>
+                {
+                    b.HasOne("KeukenhofWebsite.Models.Pagina")
+                        .WithMany("Images")
                         .HasForeignKey("PaginaId");
                 });
 

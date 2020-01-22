@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\tests\**" />
+    <Content Remove="Views\tests\**" />
+    <EmbeddedResource Remove="Views\tests\**" />
+    <None Remove="Views\tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\images\Vector.png" />
   </ItemGroup>
 
@@ -20,10 +27,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\tests\" />
   </ItemGroup>
 
 </Project>
