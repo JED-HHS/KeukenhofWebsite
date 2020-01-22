@@ -192,6 +192,6 @@ namespace KeukenhofWebsite.Controllers
         private bool HomeExists(int id)
         {
             return _context.test.Any(e => e.Id == id);
-        }
+        }*/
     }
 }
