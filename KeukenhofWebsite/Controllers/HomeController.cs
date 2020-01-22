@@ -26,7 +26,7 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult _Hoofdpagina()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult HetPark()
