@@ -58,6 +58,21 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        public IActionResult Zoekresultaten(string query)
+        {
+            ViewBag.query = query;
+
+            query = query.ToUpper();
+            var result = from zt in _context.Zoekterm
+                         join zta in _context.ZoektermAction on zt.Id equals zta.ZoektermId
+                         join action in _context.Action on zta.ActionId equals action.Id                         
+                         where zt.ZoektermString.ToUpper().Contains(query)
+                         select action;
+
+            ViewBag.count = result.Count();
+            return View(result.Distinct());
+        }
+        
         public IActionResult PraktischeInformatie()
         {
             return View();

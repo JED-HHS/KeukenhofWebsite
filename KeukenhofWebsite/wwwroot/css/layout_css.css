@@ -20,10 +20,10 @@
 .navbar {
     background-color: white;
     position: relative !important;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    margin-left: 0px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-left: 0;
 }
 
 .navbar-nav {
@@ -54,7 +54,7 @@ a:hover .header_links {
 }
 
 #searchButton {
-    background-color: #ea6025;
+    background-color: white;
     border: none;
 }
 .modal {
@@ -72,14 +72,21 @@ a:hover .header_links {
 
 input[type=text], select {
     color: black;
-    border-width: 0px;
+    border-width: 0;
     width: 90%;
 }
 
-input[type=submit] {
+input[type=submit]{
     background-color: #ea6025;
     border-radius: 10px;
-    border-width: 0px;
+    border-width: 0;
+    padding: 5px 15px;
+}
+
+.annuleer {
+    background-color: #ea6025;
+    border-radius: 10px;
+    border-width: 0;
     padding: 5px 15px;
 }
 
@@ -102,7 +109,7 @@ input[type=submit] {
     position: absolute;
     width: 25%;
     height: 100%;
-    left: 0%;
+    left: 0;
 }
 
 .logoFooter img {
@@ -112,7 +119,7 @@ input[type=submit] {
 
 .socialsFooter {
     height: 35%;
-    bottom: 0%;
+    bottom: 0;
     width: 100%;
 }
 
@@ -149,7 +156,7 @@ input[type=submit] {
 }
 
 .aot-adresTitel {
-    top: 0px;
+    top: 0;
 }
 
 .aotxt-adresTekst {
@@ -178,7 +185,7 @@ input[type=submit] {
 
 .handigeLinkjesFooter {
     position: absolute;
-    right: 0px;
+    right: 0;
     left: 78%;
     height: 100%;
 }
@@ -245,7 +252,7 @@ input[type=submit] {
     border-radius: 50%;
     width: 15%;
     height: 70%;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 70px;
     display: inline-block;
     align-items: center;
