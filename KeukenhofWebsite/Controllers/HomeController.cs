@@ -75,13 +75,7 @@ namespace KeukenhofWebsite.Controllers
         
         public IActionResult PraktischeInformatie()
         {
-            return View();
-        }
-
-        public IActionResult Zoekresultaten()
-
-        {
-            return View();
+            return View(_context.Content.ToList());
         }
     }
 }
