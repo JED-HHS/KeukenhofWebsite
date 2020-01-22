@@ -11,21 +11,21 @@
         <p class="scroll">Scroll</p>
         <img class="scroll_down" src="~/images/arrow-down.svg" alt="Arrow-Down" />
         <div class="hoofd_plaatje"></div>
-        <p class="hoofd_titel"> Het mooiste lentepark van de wereld</p>
+        <p class="hoofd_titel">@Model.Where(s => s.ContentId == 3).Select(s => s.Tekst).Single()</p>
         <div class="informatie">
                 <a class="informatie_links" asp-controller="Home" asp-action="HetPark">
                     <p class="informatie_text">Open 21 Maart - 10 Mei</p>
-                    <p class="link_text">Ontdek het park</p>
+                    <p class="link_text">@Model.Where(s => s.ContentId == 4).Select(s => s.Tekst).Single()</p>
                      <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 </a>
             <a class="informatie_midden" asp-controller="Home" asp-action="HetPark">
                     <p class="informatie_text_midden">Kom vandaag nog langs</p>
-                    <p class="link_text_midden">Bekijk het park</p>
+                    <p class="link_text_midden"@Model.Where(s => s.ContentId == 6).Select(s => s.Tekst).Single()</p>
                     <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
             </a>
                 <a class="informatie_rechts" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
                     <p class="informatie_text">Wat is Keukenhof?</p>
-                    <p class="link_text">Bekijk video</p>
+                    <p class="link_text">@Model.Where(s => s.ContentId == 7).Select(s => s.Tekst).Single()</p>
                     <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 </a>
             </div>
