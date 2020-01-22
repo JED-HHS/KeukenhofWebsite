@@ -20,22 +20,22 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult _Hoofdpagina()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult HetPark()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult _Contact()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Privacy_statement()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult FAQ()
@@ -45,12 +45,12 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult Bereikbaarheid()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Content()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Evenementen()

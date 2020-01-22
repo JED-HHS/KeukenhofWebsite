@@ -1,158 +1,160 @@
-﻿@{
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
     <link rel="stylesheet" href="~/css/Hoofdpagina_css.css" />
 </head>
-      
-    <div class="key_visual">
-        <p class="scroll">Scroll</p>
-        <img class="scroll_down" src="~/images/arrow-down.svg" alt="Arrow-Down" />
-        <div class="hoofd_plaatje"></div>
-        <p class="hoofd_titel"> Het mooiste lentepark van de wereld</p>
-        <div class="informatie">
-                <a class="informatie_links" asp-controller="Home" asp-action="HetPark">
-                    <p class="informatie_text">Open 21 Maart - 10 Mei</p>
-                    <p class="link_text">Ontdek het park</p>
-                     <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-                </a>
-            <a class="informatie_midden" asp-controller="Home" asp-action="HetPark">
-                    <p class="informatie_text_midden">Kom vandaag nog langs</p>
-                    <p class="link_text_midden">Bekijk het park</p>
-                    <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-            </a>
-                <a class="informatie_rechts" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
-                    <p class="informatie_text">Wat is Keukenhof?</p>
-                    <p class="link_text">Bekijk video</p>
-                    <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-                </a>
-            </div>
-    </div>
 
-    <div class="zoek_deel">
-        <p class="zoek_titel">Waar bent u naar op zoek?</p>
-        <a class="zoek_vakjes" asp-controller="Home" asp-action="Bereikbaarheid">
-            <div class="zoek_vakje1">
-                <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-                <div class="zoek_plaatje1"></div>
-                <p class="zoek_titels">Bereikbaarheid</p>
-            </div>
+<div class="key_visual">
+    <p class="scroll">Scroll</p>
+    <img class="scroll_down" src="~/images/arrow-down.svg" alt="Arrow-Down" />
+    <div class="hoofd_plaatje"></div>
+    <p class="hoofd_titel">@Model.Where(s => s.ContentId == 3).Select(s => s.Tekst).Single()</p>
+    <div class="informatie">
+        <a class="informatie_links" asp-controller="Home" asp-action="HetPark">
+            <p class="informatie_text">Open 21 Maart - 10 Mei</p>
+            <p class="link_text">@Model.Where(s => s.ContentId == 4).Select(s => s.Tekst).Single()</p>
+            <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
         </a>
-        <a class="zoek_vakjes" asp-controller="Home" asp-action="Evenementen">
-            <div class="zoek_vakje2">
-                <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-                <div class="zoek_plaatje2"></div>
-                <p class="zoek_titels">Evenementen</p>
-            </div>
+        <a class="informatie_midden" asp-controller="Home" asp-action="HetPark">
+            <p class="informatie_text_midden">Kom vandaag nog langs</p>
+            <p class="link_text_midden">@Model.Where(s => s.ContentId == 6).Select(s => s.Tekst).Single()</p>
+            <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
         </a>
-        <a class="zoek_vakjes" asp-controller="Home" asp-action="Content">
-            <div class="zoek_vakje3">
-                <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-                <div class="zoek_plaatje3"></div>
-                <p class="zoek_titels">Faciliteiten</p>
-            </div>
+        <a class="informatie_rechts" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
+            <p class="informatie_text">Wat is Keukenhof?</p>
+            <p class="link_text">@Model.Where(s => s.ContentId == 7).Select(s => s.Tekst).Single()</p>
+            <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
         </a>
-        <a class="zoek_vakjes" asp-controller="Home" asp-action="Content">
-            <div class="zoek_vakje4">
-                <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-                <div class="zoek_plaatje4"></div>
-                <p class="zoek_titels">Bloemenshows</p>
-            </div>
-        </a>
+    </div>
 </div>
 
-    <div class="praktisch_deel">
-        <div class="openingstijden">
-            <p class="praktisch_kopjes">Openingstijden</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
+<div class="zoek_deel">
+    <p class="zoek_titel">Waar bent u naar op zoek?</p>
+    <a class="zoek_vakjes" asp-controller="Home" asp-action="Bereikbaarheid">
+        <div class="zoek_vakje1">
+            <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
+            <div class="zoek_plaatje1"></div>
+            <p class="zoek_titels">Bereikbaarheid</p>
         </div>
-        <div class="toegankelijkheid">
-            <p class="praktisch_kopjes">Toegankelijkheid</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
+    </a>
+    <a class="zoek_vakjes" asp-controller="Home" asp-action="Evenementen">
+        <div class="zoek_vakje2">
+            <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
+            <div class="zoek_plaatje2"></div>
+            <p class="zoek_titels">Evenementen</p>
         </div>
-        <div class="parkeren">
-            <p class="praktisch_kopjes">Parkeren en openbaar vervoer</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
+    </a>
+    <a class="zoek_vakjes" asp-controller="Home" asp-action="Content">
+        <div class="zoek_vakje3">
+            <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
+            <div class="zoek_plaatje3"></div>
+            <p class="zoek_titels">Faciliteiten</p>
         </div>
-        <div class="groepen">
-            <p class="praktisch_kopjes">Groepen</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
+    </a>
+    <a class="zoek_vakjes" asp-controller="Home" asp-action="Content">
+        <div class="zoek_vakje4">
+            <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
+            <div class="zoek_plaatje4"></div>
+            <p class="zoek_titels">Bloemenshows</p>
         </div>
-        <a class="meer_info" asp-controller="Home" asp-action="PraktischeInformatie">
-            <p class="meer_text">Meer praktische informatie</p>
-            <img class="pijl_meer" src="~/images/arrow-right.svg" alt="Arrow-Right">
-        </a>
-        <p class="praktisch_titel">Praktische informatie</p>
-        <p class="praktisch_ondertitel">Download de kaart of krijg er een bij de informatiebalie</p>
-        <div class="map_deel">
-            <a class="download" href="~/images/PLATTEGROND Keukenhof 2019.pdf" download="">
-                <div class="button"></div>
-                <p class="download_text">Download de kaart</p>
-                <img class="download_icon" src="~/images/download.svg" alt="Download icon">
-            </a>
-            <div class="map"></div>
-        </div>
-    </div>
+    </a>
+</div>
 
-    <div class="nieuws_deel">
-        <a class="bekijk" asp-controller="Home" asp-action="Content"> 
-            <p class="bekijk_alles">Bekijk alle</p>
-            <img class="bekijk_alles_pijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
-        </a>
-        <a class="nieuws_artikel1" asp-controller="Home" asp-action="Content">
-            <div class="leesmeer_button">
-                <p class="leesmeer_text">Lees meer</p>
-            </div>
-            <p class="nieuws_titel">De bloembollen voor 2020 worden weer geplant</p>
-            <p class="nieuws_datum">7 OKT 2019</p>
-            <div class="nieuwstag">
-                <p class="nieuwstag_text">Nieuws</p>
-            </div>
-            <div class="foto_nieuws1"></div>
-        </a>
-        <a class="nieuws_artikel2" asp-controller="Home" asp-action="Content">
-            <div class="leesmeer_button">
-                <p class="leesmeer_text">Lees meer</p>
-            </div>
-            <p class="nieuws_titel">De bloembollenmarkt was weer een groot succes</p>
-            <p class="nieuws_datum"> 5 OKT 2019</p>
-            <div class="nieuwstag">
-                <p class="nieuwstag_text">Nieuws</p>
-            </div>
-            <div class="foto_nieuws2"></div>
-        </a>
-        <a class="nieuws_artikel3" asp-controller="Home" asp-action="Content">
-            <div class="leesmeer_button">
-                <p class="leesmeer_text">Lees meer</p>
-            </div>
-            <p class="nieuws_titel">Wat zal het thema voor volgend jaar Keukenhof worden?</p>
-            <p class="nieuws_datum">2 AUG 2019</p>
-            <div class="nieuwstag">
-                <p class="nieuwstag_text">Nieuws</p>
-            </div>
-            <div class="foto_nieuws3"></div>
-        </a>
-        <a class="nieuws_artikel4" asp-controller="Home" asp-action="Content">
-            <div class="leesmeer_button">
-                <p class="leesmeer_text">Lees meer</p>
-            </div>
-            <p class="nieuws_titel">De bloembollen voor 2020 worden weer geplant</p>
-            <p class="nieuws_datum">7 OKT 2019</p>
-            <div class="nieuwstag">
-                <p class="nieuwstag_text">Nieuws</p>
-            </div>
-            <div class="foto_nieuws4"></div>
-        </a>
-        <p class="nieuws">Nieuws</p>
+<div class="praktisch_deel">
+    <div class="openingstijden">
+        <p class="praktisch_kopjes">Openingstijden</p>
+        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
     </div>
+    <div class="toegankelijkheid">
+        <p class="praktisch_kopjes">Toegankelijkheid</p>
+        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
+    </div>
+    <div class="parkeren">
+        <p class="praktisch_kopjes">Parkeren en openbaar vervoer</p>
+        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
+    </div>
+    <div class="groepen">
+        <p class="praktisch_kopjes">Groepen</p>
+        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
+    </div>
+    <a class="meer_info" asp-controller="Home" asp-action="PraktischeInformatie">
+        <p class="meer_text">Meer praktische informatie</p>
+        <img class="pijl_meer" src="~/images/arrow-right.svg" alt="Arrow-Right">
+    </a>
+    <p class="praktisch_titel">Praktische informatie</p>
+    <p class="praktisch_ondertitel">Download de kaart of krijg er een bij de informatiebalie</p>
+    <div class="map_deel">
+        <a class="download" href="~/images/PLATTEGROND Keukenhof 2019.pdf" download="">
+            <div class="button"></div>
+            <p class="download_text">Download de kaart</p>
+            <img class="download_icon" src="~/images/download.svg" alt="Download icon">
+        </a>
+        <div class="map"></div>
+    </div>
+</div>
 
-    <div class="deel5">
-        <a class="deel5_binnenkant" asp-controller="Home" asp-action="Content">
-            <img class="pijl_deel5" src="~/images/arrow-right.svg" alt="Arrow-Right" />
-            <p class="deel5_text">Groepen</p>
-            <div class="deel5_plaatje"></div>
-        </a>
-    </div>
+<div class="nieuws_deel">
+    <a class="bekijk" asp-controller="Home" asp-action="Content">
+        <p class="bekijk_alles">Bekijk alle</p>
+        <img class="bekijk_alles_pijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+    </a>
+    <a class="nieuws_artikel1" asp-controller="Home" asp-action="Content">
+        <div class="leesmeer_button">
+            <p class="leesmeer_text">Lees meer</p>
+        </div>
+        <p class="nieuws_titel">De bloembollen voor 2020 worden weer geplant</p>
+        <p class="nieuws_datum">7 OKT 2019</p>
+        <div class="nieuwstag">
+            <p class="nieuwstag_text">Nieuws</p>
+        </div>
+        <div class="foto_nieuws1"></div>
+    </a>
+    <a class="nieuws_artikel2" asp-controller="Home" asp-action="Content">
+        <div class="leesmeer_button">
+            <p class="leesmeer_text">Lees meer</p>
+        </div>
+        <p class="nieuws_titel">De bloembollenmarkt was weer een groot succes</p>
+        <p class="nieuws_datum"> 5 OKT 2019</p>
+        <div class="nieuwstag">
+            <p class="nieuwstag_text">Nieuws</p>
+        </div>
+        <div class="foto_nieuws2"></div>
+    </a>
+    <a class="nieuws_artikel3" asp-controller="Home" asp-action="Content">
+        <div class="leesmeer_button">
+            <p class="leesmeer_text">Lees meer</p>
+        </div>
+        <p class="nieuws_titel">Wat zal het thema voor volgend jaar Keukenhof worden?</p>
+        <p class="nieuws_datum">2 AUG 2019</p>
+        <div class="nieuwstag">
+            <p class="nieuwstag_text">Nieuws</p>
+        </div>
+        <div class="foto_nieuws3"></div>
+    </a>
+    <a class="nieuws_artikel4" asp-controller="Home" asp-action="Content">
+        <div class="leesmeer_button">
+            <p class="leesmeer_text">Lees meer</p>
+        </div>
+        <p class="nieuws_titel">De bloembollen voor 2020 worden weer geplant</p>
+        <p class="nieuws_datum">7 OKT 2019</p>
+        <div class="nieuwstag">
+            <p class="nieuwstag_text">Nieuws</p>
+        </div>
+        <div class="foto_nieuws4"></div>
+    </a>
+    <p class="nieuws">Nieuws</p>
+</div>
+
+<div class="deel5">
+    <a class="deel5_binnenkant" asp-controller="Home" asp-action="Content">
+        <img class="pijl_deel5" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+        <p class="deel5_text">Groepen</p>
+        <div class="deel5_plaatje"></div>
+    </a>
+</div>
 
 <div class="insta6">
     <p class="insta_titel">Instagram #VisitKeukenhof</p>
