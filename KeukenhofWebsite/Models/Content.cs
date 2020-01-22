@@ -13,4 +13,6 @@ namespace KeukenhofWebsite.Models
         public string Tekst { get; set; }
 
     }
+
+
 }
