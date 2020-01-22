@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
@@ -13,10 +15,10 @@
 <div class="eersteTekst">
     <h1 class="parkTitel">Het fleurigste dagje uit</h1>
     <div class="tekst1">
-        <p class="tekstp">Dit voorjaar staan meer dan 7 miljoen bloembollen in bloei met wel 800 verschillende soorten tulpen.</p>
+        <p class="tekstp">@Model.Where(s => s.ContentId == 10).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="tekst1">
-        <p class="tekstp">In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
+        <p class="tekstp">@Model.Where(s => s.ContentId == 11).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="knop1">
         <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="knopGeschiedenis">Geschiedenis</a>
@@ -35,7 +37,7 @@
     <h1 class="parkTitel">Wat is er te doen bij Keukenhof?</h1>
 
     <div class="k1tekst">
-        <p class="tekstp">Naast de ruim 32ha aan bloemen kunt u genieten van verrassende inspiratietuinen. Voor kinderen is er de gratis speurtocht, een kinderboerderij, doolhof en speeltuin.</p>
+        <p class="tekstp">@Model.Where(s => s.ContentId == 12).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="k1link">
         <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="evenementenLink">Bekijk alle</a>
@@ -97,7 +99,7 @@
         <div class="divKnop">
             <p class="textd">Download de plattegrond van het park</p>
             <img src="~/images/arrow-right.svg" alt="pijltje" class="pijltje">
-        </div>    
+        </div>
     </a>
 </div>
 
@@ -105,7 +107,7 @@
     <h1 class="parkTitel">Evenementen</h1>
 
     <div class="k1tekst">
-        <p class="tekstp">In Keukenhof kunt u genieten van geweldige evenementen. Elke weekend zijn er verschillende evenementen, dus zoek de juiste datum voor uw bezoek uit!</p>
+        <p class="tekstp">@Model.Where(s => s.ContentId == 13).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="k1link">
         <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="evenementenLink">Bekijk alle</a>
@@ -175,7 +177,7 @@
     <h1 class="parkTitel">Bloemenshows</h1>
 
     <div class="k1tekst">
-        <p class="tekstp">In Keukenhof kunt u genieten van spectaculaire bloemenshows en unieke kunstwerken. Vergeet vooral de Tulpomania tentoonstelling in het Juliana Paviljoen niet.</p>
+        <p class="tekstp">@Model.Where(s => s.ContentId == 14).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="k1link">
         <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="evenementenLink">Bekijk alle</a>

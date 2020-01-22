@@ -1,27 +1,29 @@
-﻿@{ 
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
-    <link href="~/css/contact.css" rel="stylesheet" type="text/css"/>
+    <link href="~/css/contact.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <div class="plaatjeBoven">
-    <img src="~/images/Contact-Tulpen.png" alt="Tulp" style=" height:auto; width:100%;">
+        <img src="~/images/Contact-Tulpen.png" alt="Tulp" style=" height:auto; width:100%;">
     </div>
     <div class="WitteContext">
-    <h1 class="contact">Contact</h1>
+        <h1 class="contact">Contact</h1>
 
-    <table>
-        <tr>
-            <td>
-                <p class="Links">In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
-            </td>
-            <td>
-                <p class="Rechts">Bezoekersadres:<br />Stationsweg 166A, 2161 AM Lisse</p>
-            </td>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <td>
+                    <p class="Links">@Model.Where(s => s.ContentId == 1).Select(s => s.Tekst).Single()</p>
+                </td>
+                <td>
+                    <p class="Rechts">@Model.Where(s => s.ContentId == 2).Select(s => s.Tekst).Single()</p>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div class="Lichtgroen">
@@ -94,13 +96,12 @@
             <div class="infoTekst">
                 <div class="columnTekst">
                     <h1 class="oranjeTitel">Openingstijden</h1>
-                    <p class="Otekst">De Keukenhof is geopend van <b>21 maart - 10 mei 2020 van 9:00-17:00u</b></p>
-                    <p class="Otekst">Terwijl het park is gesloten, worden er verschillende evenementen gehouden</p>
+                    <p class="Otekst">@Model.Where(s => s.ContentId == 5).Select(s => s.Tekst).Single()</b></p>
+                    <p class="Otekst">@Model.Where(s => s.ContentId == 8).Select(s => s.Tekst).Single()</p>
                 </div>
                 <div class="columnTekst">
                     <h1 class="oranjeTitel">Hoe kan ik contact opnemen met Keukenhof?</h1>
-                    <p class="Otekst">De Keukenhof is geopend van <b>21 maart - 10 mei 2020 van 9:00-17:00u</b></p>
-                    <p class="Otekst">Terwijl het park is gesloten, worden er verschillende evenementen gehouden</p>
+                    <p class="Otekst">@Model.Where(s => s.ContentId == 9).Select(s => s.Tekst).Single()</p>
                 </div>
             </div>
         </div>
