@@ -30,7 +30,7 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult _Contact()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Privacy_statement()
