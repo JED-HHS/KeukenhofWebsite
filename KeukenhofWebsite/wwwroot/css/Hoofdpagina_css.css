@@ -1,4 +1,8 @@
-﻿.key_visual {
+﻿body {
+    font-family: sans-serif;
+}
+
+.key_visual {
     position: relative;
     width: 100%;
     height: 700px;
@@ -8,8 +12,7 @@
     position:relative;
     width: 100%;
     height: 500px;
-    background: #FBDFD3;
-   
+    background: #FBDFD3; 
 }
 
 .praktisch_deel {
@@ -18,7 +21,6 @@
     height: 600px;
     background: #E1EBE9;
 }
-
 
 .nieuws_deel {
     position: relative;
@@ -40,14 +42,12 @@
     background: #FBDFD3;
 }
 
-
 .hoofd_titel {
     position: absolute;
     left: 2.78%;
     right: 33.42%;
     top: 65.2%;
     bottom: 60.89%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
@@ -75,7 +75,6 @@
     position: absolute;
     left: 85%;
     top:80%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -150,7 +149,6 @@
 }
 
 .informatie_links {
-    font-family: Source Sans Pro;
     font-style: normal;
     position: absolute;
     width: 15%;
@@ -161,7 +159,6 @@
 }
 
 .informatie_midden {
-    font-family: Source Sans Pro;
     position: absolute;
     width: 15%;
     height: 8.5%;
@@ -171,7 +168,6 @@
 }
 
 .informatie_rechts {
-    font-family: Source Sans Pro;
     position: absolute;
     width: 15%;
     height: 8.5%;
@@ -186,7 +182,6 @@
     height: 7%;
     left: 2%;
     top: 5%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -293,7 +288,6 @@
     right: 39.92%;
     top: 85.00%;
     bottom: 5.81%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -340,7 +334,6 @@ zoek_pijlen {
     right: 65.1%;
     top: 6.25%;
     bottom: 85.94%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -353,7 +346,6 @@ zoek_pijlen {
     right: 57.81%;
     top: 14.84%;
     bottom: 79.69%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -373,7 +365,6 @@ zoek_pijlen {
     height:50%;
     left: 10%;
     top: 5%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -392,7 +383,6 @@ zoek_pijlen {
     position: absolute;
     left: 6%;
     top: 30%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -449,6 +439,7 @@ zoek_pijlen {
     bottom: 36.72%;
     z-index: 1;
 }
+
 .download_icon {
     position: absolute;
     left:8%;
@@ -460,7 +451,6 @@ zoek_pijlen {
     position: absolute;
     left: 24%;
     top: 27%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -487,7 +477,6 @@ zoek_pijlen {
     position: absolute;
     left: 5%;
     top: 5%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -593,7 +582,6 @@ zoek_pijlen {
     position: absolute;
     left: 10%;
     top: 20%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -604,7 +592,6 @@ zoek_pijlen {
     position: absolute;
     left: 7%;
     top: 53%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 12px;
@@ -619,7 +606,6 @@ zoek_pijlen {
     width:80%;
     left: 7%;
     top: 59%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -642,7 +628,6 @@ zoek_pijlen {
     position: absolute;
     left: 15%;
     top: 15%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -656,7 +641,6 @@ zoek_pijlen {
     position: absolute;
     left: 10%;
     top: 10%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -694,7 +678,6 @@ zoek_pijlen {
     right: 39.92%;
     top: 88.00%;
     bottom: 5.81%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -709,7 +692,6 @@ zoek_pijlen {
     position: absolute;
     width:100%;
     height:auto;
-
     left: 0%;
     right: 0%;
     top: 0%;
@@ -750,7 +732,6 @@ zoek_pijlen {
     right: 57.47%;
     top: 8.47%;
     bottom: 80.95%;
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -767,7 +748,6 @@ zoek_pijlen {
     position: absolute;
     left: 20%;
     top: 5%;
-    font-family: Avenir;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
