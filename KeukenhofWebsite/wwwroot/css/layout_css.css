@@ -14,7 +14,7 @@
 
 .navbar-inverse {
     color: white;
-    border-color: #ea6025;
+    border-color: white;
 }
 
 .navbar {
@@ -54,7 +54,7 @@ a:hover .header_links {
 }
 
 #searchButton {
-    background-color: #ea6025;
+    background-color: white;
     border: none;
 }
 .modal {
