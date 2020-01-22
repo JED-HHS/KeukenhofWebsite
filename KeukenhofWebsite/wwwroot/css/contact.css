@@ -1,33 +1,34 @@
-﻿.contact {
-    padding-left: 17.5%;
+﻿body{
     font-family: sans-serif;
-    font-size: 48px;
 }
-.WitteContext{
 
+.WitteContext{
+    position: relative;
+}
+
+.contact {
+    padding-left: 17.5%;
+    font-size: 48px;
 }
 
 .Titel {
-    position: absolute;
-    left: 6.45%;
-    right: 39.92%;
-    top: 85.00%;
-    bottom: 5.81%;
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
     color: #36454E;
+    font-size: 20px;
+    float: left;
+    width: 80%;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+.GroenTitel{
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .Links {
     padding-left: 32%;
     font-size: 18px;
     color: black;
-    font-family: sans-serif;
 }
 
 .Rechts {
@@ -35,183 +36,97 @@
     width: 100%;
     padding-left: 50%;
     color: black;
-    font-family: sans-serif;
 }
 
 .Lichtgroen {
-    position: absolute;
-    width: 100%;
-    height: 65%;
-    top: 100%;
+    position: relative;
     background-color: #E1EBE9;
-}
-
-.GroenTitel {
-    color: black;
-    padding-left: 10%;
+    padding-bottom: 20%;
+    padding-left: 5%;
 }
 
 .OranjeTitel {
     color: black;
 }
 
-.CPlaatjeTitel {
-    font-family: Source Sans Pro;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
+.Kplaatje1 {
+    width: 100%;
+    height: 82%;
 }
 
-.keuze1 {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../images/bloemenveld.png');
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 20%;
+.Kplaatje2 {
+    width: 100%;
+    height: 80%;
 }
 
-.keuze2 {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../images/UilMevrouw.png');
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 20%;
-}
-.keuze3 {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../images/ManBijBloem.png');
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 20%;
+.Kplaatje3 {
+    width: 100%;
+    height: 80%;
 }
 
-.keuze4 {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../images/Bloemenveld2.png');
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 20%;
+.Kplaatje4 {
+    width: 100%;
+    height: 80%;
 }
 
 .Groen1 {
-    position: absolute;
-    width: 17.3%;
-    height: 69%;
-    left: 9.5%;
-    top: 17.5%;
     background-color: white;
+    width: 15%;
+    margin-top: -1%;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    height: 66%;
 }
 
 .Groen2 {
-    position: absolute;
-    width: 17.3%;
-    height: 69%;
-    left: 30.5%;
-    top: 17.5%;
     background-color: white;
+    width: 15%;
+    margin-top: -1%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
 }
 
 .Groen3 {
-    position: absolute;
-    width: 17.3%;
-    height: 69%;
-    left: 51.5%;
-    top: 17.5%;
     background-color: white;
+    width: 15%;
+    margin-top: -1%;
+    position: absolute;
+    top: 25%;
+    left: 55%;
 }
 
 .Groen4 {
-    position: absolute;
-    width: 17.3%;
-    height: 69%;
-    left: 72.5%;
-    top: 17.5%;
     background-color: white;
-}
-
-
-.EerstePijl {
+    width: 15%;
+    margin-top: -1%;
     position: absolute;
-    margin-left: 85.1%;
-    margin-right: -55.53%;
-    margin-top: 108%;
-    margin-bottom: -33.84%;
+    top: 25%;
+    left: 80%;
 }
 
-.TweedePijl {
+.vakjes:hover{
+    text-decoration: none;
+}
+
+.pijl{
     position: absolute;
-    left: 85.1%;
-    right: -55.53%;
-    top: 85.00%;
-    bottom: -33.84%;
+    top: 85%;
 }
 
-.DerdePijl {
-    position: absolute;
-    left: 85.1%;
-    right: -55.53%;
-    top: 85.00%;
-    bottom: -33.84%;
-}
-
-.VierdePijl {
-    position: absolute;
-    left: 85.1%;
-    right: -55.53%;
-    top: 85.00%;
-    bottom: -33.84%;
-}
-
-.Groen1:hover {
-    background-color: #00694C;
-}
-
-.Groen2:hover {
-    background-color: #00694C;
-}
-
-.Groen3:hover {
-    background-color: #00694C;
-}
-
-.Groen4:hover {
-    background-color: #00694C;
-}
-
-.vakjes:hover p {
-    color: white;
-}
-
-.PInfo {
-    position: absolute;
-    width: 100%;
-    top:163.5%;
+.PI {
+    position: relative;
+    margin-top: -2%;
     background-color: #FBDFD3;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
-.OranjeTitel {
-    color: black;
-    margin-top: 2%;
-    margin-bottom: 2%;
+.TitelP {
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: sans-serif;
+    font-size: 32px;
 }
 
 .row {
@@ -228,28 +143,28 @@
 .columnTekst{
     background-color: white;
     float: left;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     padding-top:0.5%;
     padding-right: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     border-radius: 10px;
 }
 
 .oranjeTitel{
     padding-left: 6%;
-    font-family: sans-serif;
     font-size: 18px;
 }
 
 .Otekst {
     top: 10%;
-    left: 10%;
+    padding-left: 6%;
     color: black;
     font-size: 14px;
 }
 
 .TelefoonMevrouw{
-    width: 100%;
+    width: 85%;
+    padding-left: 10%;
 }
 
 .infoTekst{

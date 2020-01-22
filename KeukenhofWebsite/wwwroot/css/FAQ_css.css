@@ -1,11 +1,14 @@
-﻿.faq_image {
+﻿body{
+    font-family: sans-serif;
+}
+
+.faq_image {
     position: relative;
     width: 100%;
 }
 
 .faq_title {
     font-size: 48px;
-    font-family: sans-serif;
 }
 
 .faq_open{
@@ -70,7 +73,6 @@
     vertical-align: middle;
     display: inline-block;
     font-size: 17px;
-    font-family: sans-serif;
     padding-top: 11px;
     padding-left: 11px;
 }
