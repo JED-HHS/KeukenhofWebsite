@@ -11,5 +11,6 @@ namespace KeukenhofWebsite.Models
         [Key]public int PaginaId { get; set; }
         [Required]public string Titel { get; set; }
         public ICollection<Content> Contents { get; set; }
+        public ICollection<Image> Images { get; set; }
     }
 }
