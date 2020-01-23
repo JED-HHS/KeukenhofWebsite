@@ -6,28 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using KeukenhofWebsite.Models;
+using Action = KeukenhofWebsite.Models.Action;
 
 namespace KeukenhofWebsite.Controllers
 {
-    public class AdminController : Controller
+    public class ActionsController : Controller
     {
         private readonly KeukenhofWebsiteContext _context;
 
-        public AdminController(KeukenhofWebsiteContext context)
+        public ActionsController(KeukenhofWebsiteContext context)
         {
             _context = context;
         }
 
-        public IActionResult GoToRelevantIndex(string path)
-        {
-            return RedirectToAction("Index", path);
-        }
-
+        // GET: Actions
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Admin.ToListAsync());
+            return View(await _context.Action.ToListAsync());
         }
 
+        // GET: Actions/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -35,35 +33,39 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.AdminId == id);
-            if (admin == null)
+            var action = await _context.Action
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (action == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(action);
         }
 
+        // GET: Actions/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Actions/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
+        public async Task<IActionResult> Create([Bind("Id,PagAction,pagTitle")] Action action)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(admin);
+                _context.Add(action);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(action);
         }
 
-        // GET: Admin/Edit/5
+        // GET: Actions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -71,19 +73,22 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin.FindAsync(id);
-            if (admin == null)
+            var action = await _context.Action.FindAsync(id);
+            if (action == null)
             {
                 return NotFound();
             }
-            return View(admin);
+            return View(action);
         }
 
+        // POST: Actions/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PagAction,pagTitle")] Action action)
         {
-            if (id != admin.AdminId)
+            if (id != action.Id)
             {
                 return NotFound();
             }
@@ -92,12 +97,12 @@ namespace KeukenhofWebsite.Controllers
             {
                 try
                 {
-                    _context.Update(admin);
+                    _context.Update(action);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AdminExists(admin.AdminId))
+                    if (!ActionExists(action.Id))
                     {
                         return NotFound();
                     }
@@ -108,9 +113,10 @@ namespace KeukenhofWebsite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(action);
         }
 
+        // GET: Actions/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -118,29 +124,30 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.AdminId == id);
-            if (admin == null)
+            var action = await _context.Action
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (action == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(action);
         }
 
+        // POST: Actions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var admin = await _context.Admin.FindAsync(id);
-            _context.Admin.Remove(admin);
+            var action = await _context.Action.FindAsync(id);
+            _context.Action.Remove(action);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AdminExists(int id)
+        private bool ActionExists(int id)
         {
-            return _context.Admin.Any(e => e.AdminId == id);
+            return _context.Action.Any(e => e.Id == id);
         }
     }
 }
