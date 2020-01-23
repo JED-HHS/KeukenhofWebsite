@@ -3,6 +3,7 @@
 @{
     Layout = "~/Views/Shared/_Header.cshtml";
 }
+
 <head>
     <link href="~/css/contact.css" rel="stylesheet" type="text/css" />
 </head>
@@ -28,75 +29,50 @@
 
     <div class="Lichtgroen">
         <h2 class="GroenTitel">Waar bent u naar op zoek?</h2>
-        <a class="vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+
+        <a class="vakjes" asp-action="Content">
             <div class="Groen1">
-                <div class="EerstePijl">
-                    <img src="~/images/arrow-right.svg" alt="pijltje" />
-                </div>
-                <div class="keuze1">
-
-                </div>
-                <div class="CPlaatjeTitel1">
-                    <p class="Titel">Groepen</p>
-                </div>
+                <img src="~/images/190511LLU8603.jpg" class="Kplaatje1" />
+                <p class="Titel">Groepen</p>
+                <img src="~/images/arrow-right.svg" class="pijl" />
             </div>
         </a>
-        <a class="vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+
+        <a class="vakjes" asp-action="Content">
             <div class="Groen2">
-                <div class="TweedePijl">
-                    <img src="~/images/arrow-right.svg" alt="pijltje" />
-                </div>
-                <div class="keuze2">
-
-                </div>
-                <div class="CPlaatjeTitel">
-                    <p class="Titel">Pers</p>
-                </div>
+                <img src="~/images/VrouwMetUil.png" class="Kplaatje2" />
+                <p class="Titel">Pers</p>
+                <img src="~/images/arrow-right.svg" class="pijl" />
             </div>
         </a>
-        <a class="vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+
+        <a class="vakjes" asp-action="Content">
             <div class="Groen3">
-                <div class="DerdePijl">
-
-                    <img src="~/images/arrow-right.svg" alt="pijltje" />
-
-                </div>
-                <div class="keuze3">
-
-                </div>
-                <div class="CPlaatjeTitel">
-                    <p class="Titel">Gevonden Items</p>
-                </div>
-
+                <img src="~/images/ManBijBloem.jpg" class="Kplaatje3" />
+                <p class="Titel">Gevonden Items</p>
+                <img src="~/images/arrow-right.svg" class="pijl" />
             </div>
         </a>
-        <a class="vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
-            <div class="Groen4">
-                <div class="VierdePijl">
-                    <img src="~/images/arrow-right.svg" alt="pijltje" />
-                </div>
-                <div class="keuze4">
 
-                </div>
-                <div class="CPlaatjeTitel">
-                    <p class="Titel">Leveranciers</p>
-                </div>
+        <a class="vakjes" asp-action="Content">
+            <div class="Groen4">
+                <img src="~/images/Bloemenveld2.jpg" class="Kplaatje4" />
+                <p class="Titel">Leveranciers</p>
+                <img src="~/images/arrow-right.svg" class="pijl" />
             </div>
         </a>
     </div>
 
-    <div class="PInfo">
-        <h2 class="OranjeTitel">Praktische Informatie</h2>
-
-
+    <div class="PI">
+        <h1 class="TitelP">Praktische informatie</h1>
         <div class="row">
             <div class="columnPlaatje">
-                <img src="~/images/VrouwMetBlijeTelefoon.png" alt="Telefoon" class="TelefoonMevrouw">
+                <img src="~/images/VrouwMetBlijeTelefoon.jpg" alt="Telefoon" class="TelefoonMevrouw">
             </div>
             <div class="infoTekst">
                 <div class="columnTekst">
                     <h1 class="oranjeTitel">Openingstijden</h1>
-                    <p class="Otekst">@Model.Where(s => s.ContentId == 5).Select(s => s.Tekst).Single()</b></p>
+                    <p class="Otekst">@Model.Where(s => s.ContentId == 5).Select(s => s.Tekst).Single()</p>
                     <p class="Otekst">@Model.Where(s => s.ContentId == 8).Select(s => s.Tekst).Single()</p>
                 </div>
                 <div class="columnTekst">
@@ -105,7 +81,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 </body>

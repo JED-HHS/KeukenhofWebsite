@@ -1,3 +1,6 @@
+﻿.body {
+}
+
 .container {
     width: 100%;
     padding-left: 0;
@@ -57,6 +60,7 @@ a:hover .header_links {
     background-color: white;
     border: none;
 }
+
 .modal {
     display: none;
     position: fixed;

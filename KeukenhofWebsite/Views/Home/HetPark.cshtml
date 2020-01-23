@@ -9,7 +9,7 @@
 
 
 <div class="bovenstePlaatje">
-    <img src="~/images/2chappos.png" alt="wandelen naast bloemen" class="bovenstePlaatje">
+    <img src="~/images/2mensenbijbloemen.jpg" alt="wandelen naast bloemen" class="bovenstePlaatje">
 </div>
 
 <div class="eersteTekst">
@@ -21,7 +21,7 @@
         <p class="tekstp">@Model.Where(s => s.ContentId == 11).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="knop1">
-        <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="knopGeschiedenis">Geschiedenis</a>
+        <a asp-action="Content" class="knopGeschiedenis">Geschiedenis</a>
     </div>
 </div>
 
@@ -40,20 +40,14 @@
         <p class="tekstp">@Model.Where(s => s.ContentId == 12).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="k1link">
-        <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="evenementenLink">Bekijk alle</a>
+        <a asp-action="Evenementen" class="evenementenLink">Bekijk alle</a>
         <img src="~/images/oranjePijl.png" alt="pijl" class="pijl">
     </div>
 
     <div class="evenementen">
         <div class="e1">
             <img src="~/images/190422LLT7020.jpg" alt="boot" class="boot">
-            <p class="soort1">Attractie</p>
-            <p class="datum">21 Maa - 10 mei 2020</p>
-            <h2 class="eTitel1">Fluisterboot</h2>
-            <p class="beschrijving1">Boottocht door de bloembollenvelden</p>
-            <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
-            </div>
+            <p class="Titel">Groepen</p>
         </div>
 
         <div class="e2">
@@ -63,7 +57,7 @@
             <h2 class="eTitel1">Speurtocht</h2>
             <p class="beschrijving1">Verzamel alle aanwijzingen voor de speurtocht</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Content" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -74,7 +68,7 @@
             <h2 class="eTitel1">Picknicken</h2>
             <p class="beschrijving1">Neem uw picnickmand mee en zoek een veld uit</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Content" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -85,7 +79,7 @@
             <h2 class="eTitel1">Rondleiding</h2>
             <p class="beschrijving1">Ontdek de highlights van Keukenhof met gids</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Content" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -110,7 +104,7 @@
         <p class="tekstp">@Model.Where(s => s.ContentId == 13).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="k1link">
-        <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="evenementenLink">Bekijk alle</a>
+        <a asp-action="Evenementen" class="evenementenLink">Bekijk alle</a>
         <img src="~/images/oranjePijl.png" alt="pijl" class="pijl">
     </div>
 
@@ -122,7 +116,7 @@
             <h2 class="eTitel1">Fleur uw tuin op</h2>
             <p class="beschrijving1">Rob Verlinden laat handige tips en tricks zien</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -133,7 +127,7 @@
             <h2 class="eTitel1">Bloemenparade</h2>
             <p class="beschrijving1">Als de Bloemenparade plaatsvindt, is ’t erg druk</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -144,7 +138,7 @@
             <h2 class="eTitel1">Oud Hollandse dagen</h2>
             <p class="beschrijving1">Terug in de tijd: Keukenhof bestaat 70 jaar</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -155,7 +149,7 @@
             <h2 class="eTitel1">Fanfare</h2>
             <p class="beschrijving1">Lekker genieten van de prachtige fanfare muziek</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -164,8 +158,8 @@
 </div>
 
 <div class="vierdekeuze" id="4">
-    <img src="~/images/tuinierboi.png" alt="tuinier" class="tuinier">
-    <a href="~/images/tuinierboi.png" download="" class="aa2">
+    <img src="~/images/tuinier.jpg" alt="tuinier" class="tuinier">
+    <a href="~/images/tuinier.jpg" download="" class="aa2">
         <div class="divKnop">
             <p class="textd">Tulpomania</p>
             <img src="~/images/arrow-right.svg" alt="pijltje" class="pijltje">
@@ -180,7 +174,7 @@
         <p class="tekstp">@Model.Where(s => s.ContentId == 14).Select(s => s.Tekst).Single()</p>
     </div>
     <div class="k1link">
-        <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="evenementenLink">Bekijk alle</a>
+        <a asp-action="Evenementen" class="evenementenLink">Bekijk alle</a>
         <img src="~/images/oranjePijl.png" alt="pijl" class="pijl">
     </div>
 
@@ -192,7 +186,7 @@
             <h2 class="eTitel1">Bloemen festival</h2>
             <p class="beschrijving1">Rob Verlinden laat handige tips en tricks zien</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -203,7 +197,7 @@
             <h2 class="eTitel1">Herman brood</h2>
             <p class="beschrijving1">Als de Bloemenparade plaatsvindt, is ’t erg druk</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -214,7 +208,7 @@
             <h2 class="eTitel1">Orchideeën</h2>
             <p class="beschrijving1">Terug in de tijd: Keukenhof bestaat 70 jaar</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
@@ -225,7 +219,7 @@
             <h2 class="eTitel1">Happy hippy</h2>
             <p class="beschrijving1">Lekker genieten van de prachtige fanfare muziek</p>
             <div class="eknopDiv">
-                <a href="https://www.youtube.com/watch?v=3K48yI5gqCg" class="eknop">Lees meer</a>
+                <a asp-action="Evenementen" class="eknop">Lees meer</a>
             </div>
         </div>
 
