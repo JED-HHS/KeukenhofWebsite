@@ -94,6 +94,7 @@
     margin-top: -1%;
     position: absolute;
     top: 25%;
+    height: 67%;
     left: 55%;
 }
 
@@ -102,6 +103,7 @@
     width: 15%;
     margin-top: -1%;
     position: absolute;
+    height: 67%;
     top: 25%;
     left: 80%;
 }

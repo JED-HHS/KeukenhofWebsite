@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keukenhof</title>
 
-
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -36,11 +35,11 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
 
-                            <li><a class="header_text" asp-area="" asp-controller="Admin" asp-action="Index"><p class="header_links">Beheer</p></a></li>
-                            <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="HetPark"><p class="header_links">Het park</p></a></li>
-                            <li><a class="header_text" asp-area="" asp-controller="" asp-action="Praktisch"><p class="header_links">Praktisch</p></a></li>
-                            <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="FAQ"><p class="header_links">Veelgestelde vragen</p></a></li>
-                            <li><a class="header_text" asp-area="" asp-controller="Home" asp-action="Bereikbaarheid"><p class="header_links">Bereikbaarheid</p></a></li>
+
+                            <li><a class="header_text" asp-action="HetPark"><p class="header_links">Het park</p></a></li>
+                            <li><a class="header_text" asp-action="PraktischeInformatie"><p class="header_links">Praktisch</p></a></li>
+                            <li><a class="header_text" asp-action="FAQ"><p class="header_links">Veelgestelde vragen</p></a></li>
+                            <li><a class="header_text" asp-action="Bereikbaarheid"><p class="header_links">Bereikbaarheid</p></a></li>
                  </ul>
                     </div>
                 </th>
@@ -136,22 +135,22 @@
             </div>
             <div class="algemeneLinkjesFooter">
                 <div class="alf">
-                    <a asp-controller="Home" asp-action="HetPark">
+                    <a asp-action="HetPark">
                         Het Park <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
                     </a>
                 </div>
                 <div class="alf">
-                    <a href="#">
+                    <a asp-action="PraktischeInformatie">
                         Praktisch <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
                     </a>
                 </div>
                 <div class="alf">
-                    <a href="#">
+                    <a asp-action="Content">
                         Groepen <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
                     </a>
                 </div>
                 <div class="alf">
-                    <a href="#">
+                    <a asp-action="Content">
                         Pers <img src="~/images/arrow-right.svg" alt="ASP.NET" class="img-responsive" />
                     </a>
                 </div>
@@ -162,11 +161,11 @@
                 </div>
                 <div class="handigeLinkjesTekst">
                     <ul>
-                        <li><a asp-controller="Home" asp-action="Bereikbaarheid">Bereikbaarheid</a></li>
-                        <li><a asp-controller="Home" asp-action="Evenementen">Evenementen</a></li>
-                        <li><a asp-controller="Home" asp-action="FAQ">Veelgestelde vragen</a></li>
-                        <li><a asp-controller="Home" asp-action="_Contact">Contact</a></li>
-                        <li><a asp-controller="Home" asp-action="Privacy_statement">Privacy Statement</a></li>
+                        <li><a asp-action="Bereikbaarheid">Bereikbaarheid</a></li>
+                        <li><a asp-action="Evenementen">Evenementen</a></li>
+                        <li><a asp-action="FAQ">Veelgestelde vragen</a></li>
+                        <li><a asp-action="_Contact">Contact</a></li>
+                        <li><a asp-action="Privacy_statement">Privacy Statement</a></li>
                     </ul>
                 </div>
             </div>

@@ -151,7 +151,7 @@
 .informatie_links {
     font-style: normal;
     position: absolute;
-    width: 15%;
+    width: 18%;
     height: 8.5%;
     left: 3.5%;
     top: 71.5%;
@@ -160,9 +160,9 @@
 
 .informatie_midden {
     position: absolute;
-    width: 15%;
+    width: 18%;
     height: 8.5%;
-    left: 18.5%;
+    left: 20%;
     top: 71.5%;
     background: #ea6025;
 }
@@ -171,7 +171,7 @@
     position: absolute;
     width: 15%;
     height: 8.5%;
-    left: 33.5%;
+    left: 37%;
     top: 71.5%;
     background: white;
 }
@@ -363,7 +363,6 @@ zoek_pijlen {
 .meer_text {
     position: absolute;
     height:50%;
-    left: 10%;
     top: 5%;
     font-style: normal;
     font-weight: 800;
@@ -376,17 +375,24 @@ zoek_pijlen {
 .pijl_meer {
     position: absolute;
     height: 50%;
-    left: 80%;
+    left: 90%;
     top: 5%;
 }
+
 .praktisch_kopjes {
     position: absolute;
-    left: 6%;
-    top: 30%;
+    left: 3%;
+    padding-top: 5%;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     color: #36454E;
+}
+
+.praktisch_text {
+    position: absolute;
+    top: 35%;
+    left: 3%;
 }
 
 .openingstijden {
@@ -629,7 +635,6 @@ zoek_pijlen {
     left: 15%;
     top: 15%;
     font-style: normal;
-    font-weight: 800;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -699,7 +704,7 @@ zoek_pijlen {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/190422llt7258.jpg');
+    background-image: url('../images/Bloemenveld.jpg');
 }
 
 .pijl_deel5 {
