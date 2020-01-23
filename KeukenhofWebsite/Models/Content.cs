@@ -12,5 +12,7 @@ namespace KeukenhofWebsite.Models
         [Required]public string Titel { get; set; }
         public string Tekst { get; set; }
 
+        public int PaginaId { get; set; }
+        public Pagina Pagina { get; set; }
     }
 }

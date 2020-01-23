@@ -75,7 +75,7 @@ namespace KeukenhofWebsite.Controllers
         
         public IActionResult PraktischeInformatie()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         /* GET: tests/Edit/5
