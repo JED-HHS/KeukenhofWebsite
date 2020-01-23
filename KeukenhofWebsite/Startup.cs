@@ -61,7 +61,7 @@ namespace KeukenhofWebsite
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=_Contact}/{id?}");
+                    template: "{controller=Home}/{action=_Hoofdpagina}/{id?}");
             });
         }
     }
