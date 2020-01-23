@@ -18,6 +18,8 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
+        public HomeController() { }
+
         public IActionResult _Hoofdpagina()
         {
             return View();
@@ -81,7 +83,7 @@ namespace KeukenhofWebsite.Controllers
         
         public IActionResult PraktischeInformatie()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
     }
 }

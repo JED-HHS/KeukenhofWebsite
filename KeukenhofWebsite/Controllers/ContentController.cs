@@ -27,6 +27,14 @@ namespace KeukenhofWebsite.Controllers
         // GET: Content
         public async Task<IActionResult> Index()
         {
+            /*var reSult = from content in _context.Content
+                         join pagina in _context.Pagina on content.PaginaId equals pagina.PaginaId
+                         select content;*/
+
+
+            /*return View(await reSult.ToListAsync());*/
+            ViewBag.PaginaTitel = _context.Pagina.Select(s => s.Titel);
+
             return View(await _context.Content.ToListAsync());
         }
 
