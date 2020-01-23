@@ -43,6 +43,28 @@ namespace KeukenhofWebsite.Test
         }
 
         [Fact]
+        public async Task DetailsTest_ReturnsNotFound_WhenNoIdProvided()
+        {
+            KeukenhofWebsiteContext context = GetInMemoryDBMetData();
+            var controller = new PaginasController(context);
+            var result = await controller.Details(null);
+
+            var viewResult = Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
+        public async void QenA_Details()
+        {
+            KeukenhofWebsiteContext context = GetInMemoryDBMetData();
+            var controller = new PaginasController(context);
+            var result = await controller.Details(3) as ViewResult;
+            var viewResult = Assert.IsType<ViewResult>(result);
+
+            var pagina = new Pagina { PaginaId = 3, Titel = "Miauw Pagina?" };
+            Assert.Equal(pagina.ToString(), viewResult.ViewData.Model.ToString());
+        }
+
+        [Fact]
         public async void Pagina_DeleteConfirmed()
         {
             KeukenhofWebsiteContext context = GetInMemoryDBMetData();

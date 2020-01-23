@@ -42,6 +42,27 @@ namespace KeukenhofWebsite.Test
             return new KeukenhofWebsiteContext(options);
 
         }
+
+        [Fact]
+        public async Task DetailsTest_ReturnsNotFound_WhenNoIdProvided()
+        {
+            KeukenhofWebsiteContext context = GetInMemoryDBMetData();
+            var controller = new ContentController(context);
+            var result = await controller.Details(null);
+
+            var viewResult = Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
+        public async void QenA_Details()
+        {
+            KeukenhofWebsiteContext context = GetInMemoryDBMetData();
+            var controller = new ContentController(context);
+            var result = await controller.Details(1) as ViewResult;
+            var viewResult = Assert.IsType<ViewResult>(result);
+            var content =new Content { ContentId = 1, Titel = "Text-Links", Tekst = "hallo ik ben text en ik sta links" };
+            Assert.Equal(content.ToString(), viewResult.ViewData.Model.ToString());
+        }
         [Fact]
         public async void Content_DeleteConfirmed()
         {

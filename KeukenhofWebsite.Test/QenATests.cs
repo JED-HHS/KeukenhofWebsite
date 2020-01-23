@@ -41,6 +41,28 @@ namespace KeukenhofWebsite.Test
             return new KeukenhofWebsiteContext(options);
             
         }
+
+        [Fact]
+        public async Task DetailsTest_ReturnsNotFound_WhenNoIdProvided()
+        {
+            KeukenhofWebsiteContext context = GetInMemoryDBMetData();
+            var controller = new QenAController(context);
+            var result = await controller.Details(null);
+            var viewResult = Assert.IsType<NotFoundResult>(result);
+        }
+
+    
+
+        [Fact]
+        public async void QenA_Details()
+        {
+            KeukenhofWebsiteContext context = GetInMemoryDBMetData();
+            var controller = new QenAController(context);
+            var result = await controller.Details(2) as ViewResult;
+            var viewResult = Assert.IsType<ViewResult>(result);
+            var qenb = new QenA { AnswerId = 2, Question = "Welke kaas is blauw?", Answer = "Red" };
+            Assert.Equal(qenb.ToString(), viewResult.ViewData.Model.ToString());
+        }
             
         [Fact]
         public async void QenA_DeleteConfirmed()
