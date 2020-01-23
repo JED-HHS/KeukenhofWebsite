@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Bereikbaarheid";
+    ViewBag.ovLink = "https://www.google.nl/maps/dir//Keukenhof,+Stationsweg+166A,+2161+AM+Lisse/@52.2700188,4.5442006,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47c5c20434806f1d:0x37db0da72386280!2m2!1d4.5463893!2d52.2700188!3e0";
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 
@@ -57,7 +58,7 @@
     <div class="option">
         <img src="~/images/Keukenhof_ingang.png" alt="Ingang_img" class="plan_img" />
         <div class="download_button">
-            <a class="plan_img" asp-controller="" asp-action="<!--DIT NOG VULLEN!!!!!!!-->">
+            <a class="plan_img" href="@ViewBag.ovLink">
                 <p class="ber_link_text">
                     Hoe kunt u het beste reizen?
                     <i class="fas fa-arrow-right"></i>
@@ -80,7 +81,7 @@
     <div class="fiets">
         <div class="coll coll_left">
             <div class="fiets_plaatje">
-                <img src="~/images/fietsdoorduinen.png" alt="Fiets_image" class="fiets_img"/>
+                <img src="~/images/fietsdoorduinen.jpg" alt="Fiets_image" class="fiets_img"/>
             </div>
         </div>
         <div class="coll coll_right">
@@ -113,9 +114,9 @@
     </div>
 
     <div class="groups" id="groups">
-        <img src="~/images/tulpen.png" alt="Tulp_image" style="width: 100%;"/>
+        <img src="~/images/Bloemenveld.jpg" alt="Tulp_image" style="width: 100%;"/>
         <div class="download_button">
-            <a class="plan_img" asp-controller="" asp-action="<!--DIT NOG VULLEN!!!!!!!-->">
+            <a class="plan_img" asp-action="Content">
                 <p class="ber_link_text">
                     Groepen
                     <i class="fas fa-arrow-right"></i>

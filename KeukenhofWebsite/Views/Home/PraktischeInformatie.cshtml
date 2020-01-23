@@ -1,6 +1,10 @@
-﻿@{
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
+    ViewData["Title"] = "PraktischeInformatie";
     Layout = "~/Views/Shared/_Header.cshtml";
 }
+
 <head>
     <link href="~/css/praktischeInformatie.css" rel="stylesheet" type="text/css" />
 </head>
@@ -15,10 +19,10 @@
 
         <div class="PTekst">
             <div class="PLinks">
-                <p>In 2020 is Keukenhof open van 21 maart tot en met 10 mei tussen 9:00-17:00 uur.</p>
+                <p>@Model.Where(m => m.ContentId == 30).Select(s => s.Tekst).Single()</p>
             </div>
             <div class="PRechts">
-                <p>In alle rust genieten van Keukenhof? Voor 10:30 uur en na 16:00 uur is het minder druk.</p>
+                <p>@Model.Where(m => m.ContentId == 31).Select(s => s.Tekst).Single()</p>
             </div>
         </div>
         <div class="PFilmpje">
@@ -34,41 +38,35 @@
     </div>
     <!---->
     <div id="PPlattegrond">
-        <p class="PPTitel">Praktische Informatie</p>
-        <p class="PPOndertekst">Download de kaart of krijg er een bij de informatiebalie</p>
+        <p class="PPTitel">@Model.Where(m => m.ContentId == 32).Select(s => s.Titel).Single()</p>
+        <p class="PPOndertekst">@Model.Where(m => m.ContentId == 32).Select(s => s.Tekst).Single()</p>
         <div class="PPDownloadKaart">
             <a class="PPDownloadTekst" href="~/images/PLATTEGROND Keukenhof 2019.png" download="">
                 <img class="PPDownloadKnop" src="~/images/download.svg" alt="pijltje" />
                 <p class="PPDT" style="text-decoration:none;color:black;">Download de kaart</p>
             </a>
         </div>
-        <a class="PPLink" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
+        <a class="PPLink" asp-action="FAQ">
             Veelgestelde vragen
             <img src="~/images/arrow-right.svg" alt="pijltje" />
         </a>
         <div class="row">
             <div class="columnTekst">
-                <p class="oranjeTitel">Ik heb online een Parkgids besteld, waar kan ik die ophalen?</p>
+                <p class="oranjeTitel">@Model.Where(m => m.ContentId == 33).Select(s => s.Titel).Single()</p>
                 <p class="Otekst">
-                    De parkgids is een handig boekje met informatie over Keukenhof.
-                    Na het plaatsen van de bestelling, heb je een email ontvangen met het digitale ticket.
-                    Hier zit een voucher voor de Parkgids bij, die je kunt inleveren bij de informatiebalie.
-                    Je ontvangt dan je Parkgids.
+                    @Model.Where(m => m.ContentId == 33).Select(s => s.Tekst).Single()
                 </p>
             </div>
             <div class="columnTekst">
-                <p class="oranjeTitel">Waar kan ik entree tickets kopen?</p>
+                <p class="oranjeTitel">@Model.Where(m => m.ContentId == 34).Select(s => s.Titel).Single()</p>
                 <p class="Otekst">
-                    Tickets zijn in het najaar van 2019 beschikbaar in onze webshop.
-                    Maar je kunt ook je ticket bij de entree van Keukenhof kopen tijdens de openingsperiode.
+                    @Model.Where(m => m.ContentId == 34).Select(s => s.Tekst).Single()
                 </p>
             </div>
             <div class="columnTekst">
-                <p class="oranjeTitel">Hoe lang is mijn entreeticket geldig?</p>
+                <p class="oranjeTitel">@Model.Where(m => m.ContentId == 35).Select(s => s.Titel).Single()</p>
                 <p class="Otekst">
-                    Tickets zijn niet aan een datum gebonden en kunnen dus tijdens het hele seizoen (eenmalig) worden gebruikt.
-                    Dit geldt ook voor Combitickets.
-                    Je ticket wordt gescand op de dag van je bezoek aan Keukenhof.
+                    @Model.Where(m => m.ContentId == 35).Select(s => s.Tekst).Single()
                 </p>
             </div>
         </div>
@@ -76,28 +74,28 @@
     <!---->
     <div id="PBereikbaarheid">
         <p class="PBereikTitel">Hoe bent u van plan naar Keukenhof te reizen?</p>
-        <a class="PBereikOranje POranje1" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="PBereikOranje POranje1" asp-action="Bereikbaarheid">
             <div class="PBereikPijl">
                 <img src="~/images/arrow-right.svg" alt="pijltje" />
             </div>
             <div class="PBereikPlaatje PBereikP1"></div>
             <p class="PBereikTekst">Openbaar vervoer</p>
         </a>
-        <a class="PBereikOranje POranje2" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="PBereikOranje POranje2" asp-action="Content">
             <div class="PBereikPijl">
                 <img src="~/images/arrow-right.svg" alt="pijltje" />
             </div>
             <div class="PBereikPlaatje PBereikP2"></div>
             <p class="PBereikTekst">Combitickets</p>
         </a>
-        <a class="PBereikOranje POranje3" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="PBereikOranje POranje3" asp-action="Bereikbaarheid">
             <div class="PBereikPijl">
                 <img src="~/images/arrow-right.svg" alt="pijltje" />
             </div>
             <div class="PBereikPlaatje PBereikP3"></div>
             <p class="PBereikTekst">Eigen vervoer</p>
         </a>
-        <a class="PBereikOranje POranje4" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="PBereikOranje POranje4" asp-action="Content">
             <div class="PBereikPijl">
                 <img src="~/images/arrow-right.svg" alt="pijltje" />
             </div>
@@ -111,45 +109,44 @@
         <div id="PVoorMenu">
             <button type="button" onclick="javascript:wifi()" class="PVoorSelect PActive">
                 <img class="PVoorIcon" src="~/images/wifi.svg" alt="pijltje" />
-                <p>Wi-Fi</p>
+                <p>@Model.Where(m => m.ContentId == 36).Select(s => s.Titel).Single()</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
             </button>
             <button type="button" onclick="javascript:locker()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/locker.svg" alt="pijltje" />
-                <p>Lockers</p>
+                <p>@Model.Where(m => m.ContentId == 37).Select(s => s.Titel).Single()</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
             </button>
             <button type="button" onclick="javascript:hond()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/dog 1.svg" alt="pijltje" />
-                <p>Honden in het park</p>
+                <p>@Model.Where(m => m.ContentId == 38).Select(s => s.Titel).Single()</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
             </button>
             <button type="button" onclick="javascript:scootmobiel()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/scootmobiel.svg" alt="pijltje" />
-                <p>Toegankelijkheid</p>
+                <p>@Model.Where(m => m.ContentId == 39).Select(s => s.Titel).Single()</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
             </button>
             <button type="button" onclick="javascript:fiets()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/fiets.svg" alt="pijltje" />
-                <p>Fiets huren</p>
+                <p>@Model.Where(m => m.ContentId == 40).Select(s => s.Titel).Single()</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
             </button>
             <button type="button" onclick="javascript:lostandfound()" class="PVoorSelect">
                 <img class="PVoorIcon" src="~/images/lost and found.svg" alt="pijltje" />
-                <p>Gevonden voorwerpen</p>
+                <p>@Model.Where(m => m.ContentId == 41).Select(s => s.Titel).Single()</p>
                 <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
             </button>
         </div>
         <div id="PVoorInfo">
             <img class="PVoorP" src="~/images/arrow-right.svg" alt="Arrow-Right" />
             <p class="PVoorTekst" id="PVoorT">Klik op de knoppen hiernaast voor meer informatie</p>
-            <!--<img id="PVoorPlaatje" src="~/images/190407LLT5844.jpg"/>-->
             <div id="PVoorPlaatje"></div>
         </div>
     </div>
-    <!---->
+
     <div id="PGroepen">
-        <a class="PGroepBeide" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="PGroepBeide" asp-action="Content">
             <img class="PGroepPijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
             <p class="PGroepTekst">Groepen</p>
             <div class="PGroepPlaatje"></div>
@@ -171,42 +168,42 @@
             document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190423LLU1188.jpg')";
             document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
             document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
-            document.getElementById("PVoorT").innerHTML = "Bij de paviljoens in het park is er gratis Wi-Fi";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 36).Select(s=> s.Tekst).Single()";
         }
         function locker() {
             document.getElementById("PVoorPlaatje").style.background = "##FFFFFF";
             document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190422LLT7020.jpg')";
             document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
             document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
-            document.getElementById("PVoorT").innerHTML = "Kleinere bagagestukken kunnen in de lockers worden opgeborgen";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 37).Select(s => s.Tekst).Single()";
         }
         function hond() {
             document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
             document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190422LLT8397.jpg')";
             document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
             document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
-            document.getElementById("PVoorT").innerHTML = "Honden zijn toegestaan in Keukenhof, als ze zijn aangelijnd";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 38).Select(s => s.Tekst).Single()";
         }
         function scootmobiel() {
             document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
             document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190407LLT5844.jpg')";
             document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
             document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
-            document.getElementById("PVoorT").innerHTML = "Ons park is goed toegankelijk voor rolstoelen en scootmobiels en is ruim voorzien van aangepaste toiletten.";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 39).Select(s => s.Tekst).Single()";
         }
         function fiets() {
             document.getElementById("PVoorPlaatje").style.background = "##FFFFFF";
             document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190511LLU8603.jpg')";
             document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
             document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
-            document.getElementById("PVoorT").innerHTML = "Je kunt fietsen huren op het parkeerterrein bij de Hoofdentree om de omgeving per fiets te verkennen";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 40).Select(s => s.Tekst).Single()";
         }
         function lostandfound() {
             document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
             document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190405LLU1157.jpg')";
             document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
             document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
-            document.getElementById("PVoorT").innerHTML = "We plaatsen alle gevonden artikelen online";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 41).Select(s => s.Tekst).Single()";
         }
     </script>
 </body>
