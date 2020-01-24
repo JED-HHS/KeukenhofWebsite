@@ -1,10 +1,12 @@
-﻿@{
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
     <link rel="stylesheet" href="~/css/Hoofdpagina_css.css" />
 </head>
-      
+
     <div class="key_visual">
         <p class="scroll">Scroll</p>
         <img class="scroll_down" src="~/images/arrow-down.svg" alt="Arrow-Down" />
@@ -52,14 +54,14 @@
                 <p class="zoek_titels">Faciliteiten</p>
             </div>
         </a>
-        <a class="zoek_vakjes" asp-controller="Home" asp-action="Content">
-            <div class="zoek_vakje4">
-                <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-                <div class="zoek_plaatje4"></div>
-                <p class="zoek_titels">Bloemenshows</p>
-            </div>
+        <a class="informatie_rechts" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
+            <p class="informatie_text">Wat is Keukenhof?</p>
+            <p class="link_text">@Model.Where(s => s.ContentId == 7).Select(s => s.Tekst).Single()</p>
+            <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
         </a>
+    </div>
 </div>
+
 
     <div class="praktisch_deel">
         <a asp-action="Content" class="openingstijden">
@@ -74,7 +76,8 @@
         <a asp-action="Content" class="groepen">
             <p class="praktisch_kopjes">Groepen</p>
         </a>
-        <a class="meer_info" asp-action="PraktischeInformatie">
+
+      <a class="meer_info" asp-action="PraktischeInformatie">
             <p class="meer_text">Meer praktische informatie</p>
             <img class="pijl_meer" src="~/images/arrow-right.svg" alt="Arrow-Right">
         </a>
@@ -88,10 +91,12 @@
             </a>
             <div class="map"></div>
         </div>
-    </div>
+</div>
+
+
 
     <div class="nieuws_deel">
-        <a class="bekijk" asp-action="Content"> 
+        <a class="bekijk" asp-action="Content">
             <p class="bekijk_alles">Bekijk alle</p>
             <img class="bekijk_alles_pijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
         </a>
@@ -148,7 +153,17 @@
             <p class="deel5_text">Groepen</p>
             <div class="deel5_plaatje"></div>
         </a>
+        <div class="map"></div>
     </div>
+</div>
+
+<div class="deel5">
+    <a class="deel5_binnenkant" asp-controller="Home" asp-action="Content">
+        <img class="pijl_deel5" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+        <p class="deel5_text">Groepen</p>
+        <div class="deel5_plaatje"></div>
+    </a>
+</div>
 
 <div class="insta6">
     <p class="insta_titel">Instagram #VisitKeukenhof</p>

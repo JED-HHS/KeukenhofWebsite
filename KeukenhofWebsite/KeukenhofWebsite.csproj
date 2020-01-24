@@ -35,10 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\tests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="bundleconfig.json" />
   </ItemGroup>
 
