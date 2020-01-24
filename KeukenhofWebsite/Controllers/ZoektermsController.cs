@@ -9,28 +9,22 @@ using KeukenhofWebsite.Models;
 
 namespace KeukenhofWebsite.Controllers
 {
-    public class QenAController : Controller
+    public class ZoektermsController : Controller
     {
         private readonly KeukenhofWebsiteContext _context;
 
-        public QenAController(KeukenhofWebsiteContext context)
+        public ZoektermsController(KeukenhofWebsiteContext context)
         {
             _context = context;
         }
 
-
-        public IActionResult GoToMainIndex()
-        {
-            return RedirectToAction("Index", "Admin");
-        }
-
-        // GET: QenA
+        // GET: Zoekterms
         public async Task<IActionResult> Index()
         {
-            return View(await _context.QenA.ToListAsync());
+            return View(await _context.Zoekterm.ToListAsync());
         }
 
-        // GET: QenA/Details/5
+        // GET: Zoekterms/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,39 +32,39 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var qenA = await _context.QenA
-                .FirstOrDefaultAsync(m => m.AnswerId == id);
-            if (qenA == null)
+            var zoekterm = await _context.Zoekterm
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (zoekterm == null)
             {
                 return NotFound();
             }
 
-            return View(qenA);
+            return View(zoekterm);
         }
 
-        // GET: QenA/Create
+        // GET: Zoekterms/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: QenA/Create
+        // POST: Zoekterms/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AnswerId,Question,Answer")] QenA qenA)
+        public async Task<IActionResult> Create([Bind("Id,ZoektermString")] Zoekterm zoekterm)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(qenA);
+                _context.Add(zoekterm);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(qenA);
+            return View(zoekterm);
         }
 
-        // GET: QenA/Edit/5
+        // GET: Zoekterms/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -78,22 +72,22 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var qenA = await _context.QenA.FindAsync(id);
-            if (qenA == null)
+            var zoekterm = await _context.Zoekterm.FindAsync(id);
+            if (zoekterm == null)
             {
                 return NotFound();
             }
-            return View(qenA);
+            return View(zoekterm);
         }
 
-        // POST: QenA/Edit/5
+        // POST: Zoekterms/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AnswerId,Question,Answer")] QenA qenA)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ZoektermString")] Zoekterm zoekterm)
         {
-            if (id != qenA.AnswerId)
+            if (id != zoekterm.Id)
             {
                 return NotFound();
             }
@@ -102,12 +96,12 @@ namespace KeukenhofWebsite.Controllers
             {
                 try
                 {
-                    _context.Update(qenA);
+                    _context.Update(zoekterm);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!QenAExists(qenA.AnswerId))
+                    if (!ZoektermExists(zoekterm.Id))
                     {
                         return NotFound();
                     }
@@ -118,10 +112,10 @@ namespace KeukenhofWebsite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(qenA);
+            return View(zoekterm);
         }
 
-        // GET: QenA/Delete/5
+        // GET: Zoekterms/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,30 +123,30 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var qenA = await _context.QenA
-                .FirstOrDefaultAsync(m => m.AnswerId == id);
-            if (qenA == null)
+            var zoekterm = await _context.Zoekterm
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (zoekterm == null)
             {
                 return NotFound();
             }
 
-            return View(qenA);
+            return View(zoekterm);
         }
 
-        // POST: QenA/Delete/5
+        // POST: Zoekterms/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var qenA = await _context.QenA.FindAsync(id);
-            _context.QenA.Remove(qenA);
+            var zoekterm = await _context.Zoekterm.FindAsync(id);
+            _context.Zoekterm.Remove(zoekterm);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool QenAExists(int id)
+        private bool ZoektermExists(int id)
         {
-            return _context.QenA.Any(e => e.AnswerId == id);
+            return _context.Zoekterm.Any(e => e.Id == id);
         }
     }
 }

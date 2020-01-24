@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
 @{
     ViewData["Title"] = "Bereikbaarheid";
     ViewBag.ovLink = "https://www.google.nl/maps/dir//Keukenhof,+Stationsweg+166A,+2161+AM+Lisse/@52.2700188,4.5442006,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x47c5c20434806f1d:0x37db0da72386280!2m2!1d4.5463893!2d52.2700188!3e0";
@@ -18,10 +19,10 @@
         </h1>
 
         <div class="ber_left">
-            <p class="open_text_left">Voorkom drukte voor het parkeren met de auto en geniet van het gemak wanneer u kiest voor de bus!</p>
+            <p class="open_text_left">@Model.Where(s => s.ContentId == 21).Select(s => s.Tekst).Single()</p>
         </div>
         <div class="ber_right">
-            <p class="open_text_right">Tijdens de dagen dat Keukenhof geopend is, rijden er extra bussen van Arriva vanaf verschillende treinstations en steden naar Keukenhof! </p>
+            <p class="open_text_right">@Model.Where(s => s.ContentId == 22).Select(s => s.Tekst).Single()</p>
         </div>
     </div>
 
@@ -37,9 +38,7 @@
         </h1>
 
         <p class="ov_info">
-            Met het OV reis je snel en comfortabel naar Keukenhof. Reis eerst naar een van de vertreklocaties (departure locations) en neem vanaf daar de rechtstreekse bus 
-            Arriva naar Keukenhof. We adviseren om 9292 te raadplegen tot aan één van onderstaande stations die het dichts bij jou in de buurt. Bekijk hoe er het snelst gereisd
-            kan worden naar Keukenhof via de Arriva Reisplanner als u vanuit Amsterdam komt, raadpleeg anders 9292OV tot en met Amsterdam, Leiden of Haarlem.
+            @Model.Where(s => s.ContentId == 23).Select(s => s.Tekst).Single()
         </p>
     </div>
 
@@ -73,15 +72,14 @@
         </h1>
 
         <p class="ov_info">
-            Op drukke dagen raden wij aan gebruik te maken van het Openbaar Vervoer, maar uiteraard kunt u ook met de auto, motor, fiets of scooter naar Keukenhof komen. Er zijn genoeg parkeerplekken voor alle vervoersmiddelen.
-            Keukenhof ligt tussen Amsterdam en Den Haag en is gemakkelijk te bereiken via de A4 (afslag Nieuw-Vennep) en de A44 (afslag 3 Lisse).
+            @Model.Where(s => s.ContentId == 24).Select(s => s.Tekst).Single()
         </p>
     </div>
 
     <div class="fiets">
         <div class="coll coll_left">
             <div class="fiets_plaatje">
-                <img src="~/images/fietsdoorduinen.jpg" alt="Fiets_image" class="fiets_img"/>
+                <img src="~/images/fietsdoorduinen.jpg" alt="Fiets_image" class="fiets_img" />
             </div>
         </div>
         <div class="coll coll_right">
@@ -90,7 +88,7 @@
                     Parkeren van de auto, fiets en scooter
                 </h1>
                 <p class="img_text">
-                    Bij het park is er voldoende parkeergelegenehid voor auto's en motors. Ook is er is een fietsenstalling bij beide ingangen van het park. Je kunt je fiets of scooter hier gratis parkeren.
+                    @Model.Where(s => s.ContentId == 25).Select(s => s.Tekst).Single()
                 </p>
             </div>
             <div class="row">
@@ -98,7 +96,7 @@
                     Oplaadpunten voor elektrische auto's en fietsen
                 </h1>
                 <p class="img_text">
-                    Ja. Op het parkeerterrein bij de Hoofdingang hebben wij oplaadpunten voor elektrische auto's. Als je het terrein op komt rijden, kun je aan de verkeersleider vragen waar je deze oplaadpunten kunt vinden. Bij Ingang Extra is een oplaadpunt voor elektrische fietsen.
+                    @Model.Where(s => s.ContentId == 26).Select(s => s.Tekst).Single()
                 </p>
             </div>
             <div class="row row_bottom">
@@ -106,7 +104,7 @@
                     Mag ik in het park fietsen en zijn ze te huur?
                 </h1>
                 <p class="img_text">
-                    Nee, Keukenhof is een echt wandelpark. Je kunt wel fietsen huren op het parkeerterrein bij de Hoofdentree om de omgeving per fiets te verkennen.
+                    @Model.Where(s => s.ContentId == 27).Select(s => s.Tekst).Single()
                 </p>
             </div>
 
@@ -114,7 +112,7 @@
     </div>
 
     <div class="groups" id="groups">
-        <img src="~/images/Bloemenveld.jpg" alt="Tulp_image" style="width: 100%;"/>
+        <img src="~/images/Bloemenveld.jpg" alt="Tulp_image" style="width: 100%;" />
         <div class="download_button">
             <a class="plan_img" asp-action="Content">
                 <p class="ber_link_text">
@@ -126,6 +124,3 @@
     </div>
 
 </body>
-
-
-

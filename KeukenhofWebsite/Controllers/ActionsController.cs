@@ -6,31 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using KeukenhofWebsite.Models;
+using Action = KeukenhofWebsite.Models.Action;
 
 namespace KeukenhofWebsite.Controllers
 {
-    public class QenAController : Controller
+    public class ActionsController : Controller
     {
         private readonly KeukenhofWebsiteContext _context;
 
-        public QenAController(KeukenhofWebsiteContext context)
+        public ActionsController(KeukenhofWebsiteContext context)
         {
             _context = context;
         }
 
-
-        public IActionResult GoToMainIndex()
-        {
-            return RedirectToAction("Index", "Admin");
-        }
-
-        // GET: QenA
+        // GET: Actions
         public async Task<IActionResult> Index()
         {
-            return View(await _context.QenA.ToListAsync());
+            return View(await _context.Action.ToListAsync());
         }
 
-        // GET: QenA/Details/5
+        // GET: Actions/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,39 +33,39 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var qenA = await _context.QenA
-                .FirstOrDefaultAsync(m => m.AnswerId == id);
-            if (qenA == null)
+            var action = await _context.Action
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (action == null)
             {
                 return NotFound();
             }
 
-            return View(qenA);
+            return View(action);
         }
 
-        // GET: QenA/Create
+        // GET: Actions/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: QenA/Create
+        // POST: Actions/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AnswerId,Question,Answer")] QenA qenA)
+        public async Task<IActionResult> Create([Bind("Id,PagAction,pagTitle")] Action action)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(qenA);
+                _context.Add(action);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(qenA);
+            return View(action);
         }
 
-        // GET: QenA/Edit/5
+        // GET: Actions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -78,22 +73,22 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var qenA = await _context.QenA.FindAsync(id);
-            if (qenA == null)
+            var action = await _context.Action.FindAsync(id);
+            if (action == null)
             {
                 return NotFound();
             }
-            return View(qenA);
+            return View(action);
         }
 
-        // POST: QenA/Edit/5
+        // POST: Actions/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AnswerId,Question,Answer")] QenA qenA)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PagAction,pagTitle")] Action action)
         {
-            if (id != qenA.AnswerId)
+            if (id != action.Id)
             {
                 return NotFound();
             }
@@ -102,12 +97,12 @@ namespace KeukenhofWebsite.Controllers
             {
                 try
                 {
-                    _context.Update(qenA);
+                    _context.Update(action);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!QenAExists(qenA.AnswerId))
+                    if (!ActionExists(action.Id))
                     {
                         return NotFound();
                     }
@@ -118,10 +113,10 @@ namespace KeukenhofWebsite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(qenA);
+            return View(action);
         }
 
-        // GET: QenA/Delete/5
+        // GET: Actions/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,30 +124,30 @@ namespace KeukenhofWebsite.Controllers
                 return NotFound();
             }
 
-            var qenA = await _context.QenA
-                .FirstOrDefaultAsync(m => m.AnswerId == id);
-            if (qenA == null)
+            var action = await _context.Action
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (action == null)
             {
                 return NotFound();
             }
 
-            return View(qenA);
+            return View(action);
         }
 
-        // POST: QenA/Delete/5
+        // POST: Actions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var qenA = await _context.QenA.FindAsync(id);
-            _context.QenA.Remove(qenA);
+            var action = await _context.Action.FindAsync(id);
+            _context.Action.Remove(action);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool QenAExists(int id)
+        private bool ActionExists(int id)
         {
-            return _context.QenA.Any(e => e.AnswerId == id);
+            return _context.Action.Any(e => e.Id == id);
         }
     }
 }

@@ -20,12 +20,12 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult _Hoofdpagina()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult HetPark()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult _Contact()
@@ -35,7 +35,7 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult Privacy_statement()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult FAQ()
@@ -45,12 +45,12 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult Bereikbaarheid()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Content()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Evenementen()
@@ -58,6 +58,12 @@ namespace KeukenhofWebsite.Controllers
             return View();
         }
 
+        /**
+         * 
+         * Deze methode slaat de ingevoerder tekst op in een ViewBag. Deze wordt bij de zoekresultaten als tekst in de input gezet.
+         * Vervolgens wordt met een query in de database gezocht naar relevante pagina's. Ook wordt opgeslagen hoeveel zoekresultaten er zijn.
+         * 
+         * */
         public IActionResult Zoekresultaten(string query)
         {
             ViewBag.query = query;
@@ -75,109 +81,7 @@ namespace KeukenhofWebsite.Controllers
         
         public IActionResult PraktischeInformatie()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
-
-        /* GET: tests/Edit/5
-        // POST: Home/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] Home home)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(home);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(home);
-        }
-
-        // GET: Home/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var home = await _context.test.FindAsync(id);
-            if (home == null)
-            {
-                return NotFound();
-            }
-            return View(home);
-        }
-
-        // POST: Home/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] Home home)
-        {
-            if (id != home.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(home);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!HomeExists(home.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(home);
-        }
-
-        // GET: Home/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var home = await _context.test
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (home == null)
-            {
-                return NotFound();
-            }
-
-            return View(home);
-        }
-
-        // POST: Home/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var home = await _context.test.FindAsync(id);
-            _context.test.Remove(home);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool HomeExists(int id)
-        {
-            return _context.test.Any(e => e.Id == id);
-        }*/
-
     }
 }
