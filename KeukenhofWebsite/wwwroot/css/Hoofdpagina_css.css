@@ -74,7 +74,7 @@
 .scroll {
     position: absolute;
     left: 85%;
-    top:80%;
+    top:75%;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -87,7 +87,7 @@
 .scroll_down {
     position: absolute;
     left: 85.5%;
-    top: 83.3%;
+    top: 78.3%;
     filter:invert(100%);
 }
 
@@ -151,29 +151,38 @@
 .informatie_links {
     font-style: normal;
     position: absolute;
-    width: 18%;
+    width: 20%;
     height: 8.5%;
-    left: 3.5%;
+    left: 3%;
     top: 71.5%;
     background: white;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 5%;
 }
 
 .informatie_midden {
     position: absolute;
-    width: 18%;
+    width: 20%;
     height: 8.5%;
-    left: 20%;
+    left: 22%;
     top: 71.5%;
     background: #ea6025;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 5%;
 }
 
 .informatie_rechts {
     position: absolute;
-    width: 15%;
+    width: 17%;
     height: 8.5%;
-    left: 37%;
+    left: 42%;
     top: 71.5%;
     background: white;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 5%;
 }
 
 .zoek_titel {
