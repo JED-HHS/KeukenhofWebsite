@@ -18,7 +18,7 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
-        public HomeController() { }
+        //public HomeController() { }
 
         public IActionResult _Hoofdpagina()
         {
