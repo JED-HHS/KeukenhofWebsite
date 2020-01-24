@@ -1,11 +1,14 @@
-﻿.faq_image {
+﻿body{
+    font-family: sans-serif;
+}
+
+.faq_image {
     position: relative;
     width: 100%;
 }
 
 .faq_title {
     font-size: 48px;
-    font-family: sans-serif;
 }
 
 .faq_open{
@@ -69,8 +72,9 @@
 .coll_q, .coll_a{
     vertical-align: middle;
     display: inline-block;
+    float: left;
+    width: 90%;
     font-size: 17px;
-    font-family: sans-serif;
     padding-top: 11px;
     padding-left: 11px;
 }

@@ -18,30 +18,24 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
-        /* GET: tests
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.test.ToListAsync());
-        }*/
-
         public IActionResult _Hoofdpagina()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult HetPark()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
-        
+
         public IActionResult _Contact()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Privacy_statement()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult FAQ()
@@ -51,142 +45,43 @@ namespace KeukenhofWebsite.Controllers
 
         public IActionResult Bereikbaarheid()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
 
         public IActionResult Content()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
-        
+
         public IActionResult Evenementen()
         {
             return View();
         }
 
-        /* GET: tests/Details/5
-        public async Task<IActionResult> Details(int? id)
+        /**
+         * 
+         * Deze methode slaat de ingevoerder tekst op in een ViewBag. Deze wordt bij de zoekresultaten als tekst in de input gezet.
+         * Vervolgens wordt met een query in de database gezocht naar relevante pagina's. Ook wordt opgeslagen hoeveel zoekresultaten er zijn.
+         * 
+         * */
+        public IActionResult Zoekresultaten(string query)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            ViewBag.query = query;
 
-            var test = await _context.test
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (test == null)
-            {
-                return NotFound();
-            }
+            query = query.ToUpper();
+            var result = from zt in _context.Zoekterm
+                         join zta in _context.ZoektermAction on zt.Id equals zta.ZoektermId
+                         join action in _context.Action on zta.ActionId equals action.Id                         
+                         where zt.ZoektermString.ToUpper().Contains(query)
+                         select action;
 
-            return View(test);
+            ViewBag.count = result.Count();
+            return View(result.Distinct());
         }
-
-        // GET: tests/Create
-        public IActionResult Create()
+        
+        public IActionResult PraktischeInformatie()
         {
-            return View();
+            return View(_context.Content.ToList());
         }
-
-        // POST: tests/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] Home test)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(test);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(test);
-        }
-
-        // GET: tests/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var test = await _context.test.FindAsync(id);
-            if (test == null)
-            {
-                return NotFound();
-            }
-            return View(test);
-        }
-
-        // POST: tests/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] Home test)
-        {
-            if (id != test.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(test);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!testExists(test.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(test);
-        }
-
-        // GET: tests/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var test = await _context.test
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (test == null)
-            {
-                return NotFound();
-            }
-
-            return View(test);
-        }
-
-        // POST: tests/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var test = await _context.test.FindAsync(id);
-            _context.test.Remove(test);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool testExists(int id)
-        {
-            return _context.test.Any(e => e.Id == id);
-        }*/
     }
 }

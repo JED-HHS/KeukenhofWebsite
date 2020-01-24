@@ -1,0 +1,211 @@
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
+    ViewData["Title"] = "PraktischeInformatie";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+<head>
+    <link href="~/css/praktischeInformatie.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="POpening">
+        <img src="~/images/BloemenEnToeristen.png" alt="Bloemen met toeristen" style=" width:100%; height:auto;">
+        <div class="piTitel">
+            <h1>Praktische Informatie</h1>
+        </div>
+
+        <div class="PTekst">
+            <div class="PLinks">
+                <p>@Model.Where(m => m.ContentId == 30).Select(s => s.Tekst).Single()</p>
+            </div>
+            <div class="PRechts">
+                <p>@Model.Where(m => m.ContentId == 31).Select(s => s.Tekst).Single()</p>
+            </div>
+        </div>
+        <div class="PFilmpje">
+            <a href="https://www.youtube.com/watch?v=jgdtoEfQfZA">Bekijk Video</a>
+        </div>
+    </div>
+    <!---->
+    <div class="PScrollMenu">
+        <a href="#PPlattegrond" class="PMenuPlat">Plattegrond</a>
+        <a href="#PBereikbaarheid" class="PMenuBereik">Bereikbaarheid</a>
+        <a href="#PVoorziening" class="PMenuVoor">Voorziening</a>
+        <a href="#PGroepen" class="PMenuGroep">Groepen</a>
+    </div>
+    <!---->
+    <div id="PPlattegrond">
+        <p class="PPTitel">@Model.Where(m => m.ContentId == 32).Select(s => s.Titel).Single()</p>
+        <p class="PPOndertekst">@Model.Where(m => m.ContentId == 32).Select(s => s.Tekst).Single()</p>
+        <div class="PPDownloadKaart">
+            <a class="PPDownloadTekst" href="~/images/PLATTEGROND Keukenhof 2019.png" download="">
+                <img class="PPDownloadKnop" src="~/images/download.svg" alt="pijltje" />
+                <p class="PPDT" style="text-decoration:none;color:black;">Download de kaart</p>
+            </a>
+        </div>
+        <a class="PPLink" asp-action="FAQ">
+            Veelgestelde vragen
+            <img src="~/images/arrow-right.svg" alt="pijltje" />
+        </a>
+        <div class="row">
+            <div class="columnTekst">
+                <p class="oranjeTitel">@Model.Where(m => m.ContentId == 33).Select(s => s.Titel).Single()</p>
+                <p class="Otekst">
+                    @Model.Where(m => m.ContentId == 33).Select(s => s.Tekst).Single()
+                </p>
+            </div>
+            <div class="columnTekst">
+                <p class="oranjeTitel">@Model.Where(m => m.ContentId == 34).Select(s => s.Titel).Single()</p>
+                <p class="Otekst">
+                    @Model.Where(m => m.ContentId == 34).Select(s => s.Tekst).Single()
+                </p>
+            </div>
+            <div class="columnTekst">
+                <p class="oranjeTitel">@Model.Where(m => m.ContentId == 35).Select(s => s.Titel).Single()</p>
+                <p class="Otekst">
+                    @Model.Where(m => m.ContentId == 35).Select(s => s.Tekst).Single()
+                </p>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div id="PBereikbaarheid">
+        <p class="PBereikTitel">Hoe bent u van plan naar Keukenhof te reizen?</p>
+        <a class="PBereikOranje POranje1" asp-action="Bereikbaarheid">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP1"></div>
+            <p class="PBereikTekst">Openbaar vervoer</p>
+        </a>
+        <a class="PBereikOranje POranje2" asp-action="Content">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP2"></div>
+            <p class="PBereikTekst">Combitickets</p>
+        </a>
+        <a class="PBereikOranje POranje3" asp-action="Bereikbaarheid">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP3"></div>
+            <p class="PBereikTekst">Eigen vervoer</p>
+        </a>
+        <a class="PBereikOranje POranje4" asp-action="Content">
+            <div class="PBereikPijl">
+                <img src="~/images/arrow-right.svg" alt="pijltje" />
+            </div>
+            <div class="PBereikPlaatje PBereikP4"></div>
+            <p class="PBereikTekst">Groepen</p>
+        </a>
+    </div>
+    <!---->
+    <div id="PVoorziening">
+        <p class="PVoorTitel">Voorzieningen</p>
+        <div id="PVoorMenu">
+            <button type="button" onclick="javascript:wifi()" class="PVoorSelect PActive">
+                <img class="PVoorIcon" src="~/images/wifi.svg" alt="pijltje" />
+                <p>@Model.Where(m => m.ContentId == 36).Select(s => s.Titel).Single()</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </button>
+            <button type="button" onclick="javascript:locker()" class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/locker.svg" alt="pijltje" />
+                <p>@Model.Where(m => m.ContentId == 37).Select(s => s.Titel).Single()</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </button>
+            <button type="button" onclick="javascript:hond()" class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/dog 1.svg" alt="pijltje" />
+                <p>@Model.Where(m => m.ContentId == 38).Select(s => s.Titel).Single()</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </button>
+            <button type="button" onclick="javascript:scootmobiel()" class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/scootmobiel.svg" alt="pijltje" />
+                <p>@Model.Where(m => m.ContentId == 39).Select(s => s.Titel).Single()</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </button>
+            <button type="button" onclick="javascript:fiets()" class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/fiets.svg" alt="pijltje" />
+                <p>@Model.Where(m => m.ContentId == 40).Select(s => s.Titel).Single()</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </button>
+            <button type="button" onclick="javascript:lostandfound()" class="PVoorSelect">
+                <img class="PVoorIcon" src="~/images/lost and found.svg" alt="pijltje" />
+                <p>@Model.Where(m => m.ContentId == 41).Select(s => s.Titel).Single()</p>
+                <img class="PVoorPijl" src="~/images/arrow-right.svg" alt="pijltje" />
+            </button>
+        </div>
+        <div id="PVoorInfo">
+            <img class="PVoorP" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+            <p class="PVoorTekst" id="PVoorT">Klik op de knoppen hiernaast voor meer informatie</p>
+            <div id="PVoorPlaatje"></div>
+        </div>
+    </div>
+
+    <div id="PGroepen">
+        <a class="PGroepBeide" asp-action="Content">
+            <img class="PGroepPijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+            <p class="PGroepTekst">Groepen</p>
+            <div class="PGroepPlaatje"></div>
+        </a>
+    </div>
+    <script>
+        var header = document.getElementById("PVoorziening");
+        var btns = header.getElementsByClassName("PVoorSelect");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("PActive");
+                current[0].className = current[0].className.replace(" PActive", "");
+                this.className += " PActive";
+            });
+        }
+
+        function wifi() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190423LLU1188.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 36).Select(s=> s.Tekst).Single()";
+        }
+        function locker() {
+            document.getElementById("PVoorPlaatje").style.background = "##FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190422LLT7020.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 37).Select(s => s.Tekst).Single()";
+        }
+        function hond() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190422LLT8397.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 38).Select(s => s.Tekst).Single()";
+        }
+        function scootmobiel() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190407LLT5844.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 39).Select(s => s.Tekst).Single()";
+        }
+        function fiets() {
+            document.getElementById("PVoorPlaatje").style.background = "##FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190511LLU8603.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 40).Select(s => s.Tekst).Single()";
+        }
+        function lostandfound() {
+            document.getElementById("PVoorPlaatje").style.background = "#FFFFFF";
+            document.getElementById("PVoorPlaatje").style.backgroundImage = "url('/images/190405LLU1157.jpg')";
+            document.getElementById("PVoorPlaatje").style.backgroundPosition = "center";
+            document.getElementById("PVoorPlaatje").style.backgroundSize = "cover";
+            document.getElementById("PVoorT").innerHTML = "@Model.Where(m => m.ContentId == 41).Select(s => s.Tekst).Single()";
+        }
+    </script>
+</body>
+
+

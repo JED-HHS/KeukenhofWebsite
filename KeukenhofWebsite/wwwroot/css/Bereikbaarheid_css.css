@@ -1,11 +1,14 @@
-﻿.image{
+﻿body{
+    font-family: sans-serif;
+}
+
+.image{
     width: 100%;
     position: relative;
 }
 
 .ber_title {
     font-size: 48px;
-    font-family: sans-serif;
 }
 
 .top_info {
@@ -36,7 +39,6 @@
 }
 
 .navigation {
-    position: absolute;
     background-color: #36454e;
     bottom: 0;
     width: 100%;
@@ -46,19 +48,20 @@
 .ber_nav {
     display: inline-block;
     color: white;
-    padding-right: 10%;
+    margin-right: 10%;
     vertical-align: middle;
-    font-family: sans-serif;
     padding-top: 1%;
+    opacity: 0.64;
 }
 
 .ber_nav:hover{
     text-decoration: none;
+    color: white;
+    opacity: 1;
 }
 
 .ov{
     position:relative;
-    margin-top: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
     margin-left: 10%;
@@ -66,7 +69,6 @@
 
 .ov_info{
     width: 90%;
-    font-family: sans-serif;
     font-size: 18px;
 }
 
@@ -99,7 +101,6 @@
 }
 
 .ber_link_text{
-    font-family: sans-serif;
     vertical-align: middle;
     font-size: 18px;
 }
@@ -133,7 +134,7 @@
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 4%;
 }
 
 .coll {
@@ -174,7 +175,6 @@
 }
 
 .img_title{
-    font-family: sans-serif;
     font-size: 18px;
 }
 

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<KeukenhofWebsite.Models.Action>
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+<head>
+    <link href="~/css/zoekresultaten.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <div class="pagina">
+        <form asp-controller="Home" asp-action="Zoekresultaten">
+            <input type="text" name="query" value="@ViewBag.query" class="zoekbalk"/>
+            <input type="submit" name="submit" class="zoek" value="Zoeken"/>
+        </form>
+    </div>
+
+    <div class="results">
+        <h2 class="Zoekresultaten">Zoekresultaten</h2>
+
+        @if (ViewBag.count > 0)
+        {
+            @foreach (var Result in Model)
+            {
+                <a class="resultpage" asp-action="@Result.PagAction">
+                    <p class="pageTitle">
+                        <b>@Result.pagTitle</b>
+                    </p>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+            }
+            <a class="resultpage" asp-action="FAQ">
+                <p class="pageTitle">
+                    <b>Veelgestelde Vragen</b>
+                </p>
+                <i class="fas fa-arrow-right link-arrow"></i>
+            </a>
+        }
+        else
+        {
+            <p class="noResult">
+                Er zijn geen zoekresultaten gevonden. Misschien kunt u uw antwoord vinden bij de <a class="FAQ" asp-action="FAQ">veelgestelde vragen.</a>
+            </p>
+        }
+
+
+    </div>
+</body>
+
+

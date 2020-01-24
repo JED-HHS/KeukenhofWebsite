@@ -1,27 +1,29 @@
-﻿@{
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
     <link rel="stylesheet" href="~/css/Hoofdpagina_css.css" />
 </head>
-      
+
     <div class="key_visual">
         <p class="scroll">Scroll</p>
         <img class="scroll_down" src="~/images/arrow-down.svg" alt="Arrow-Down" />
         <div class="hoofd_plaatje"></div>
         <p class="hoofd_titel"> Het mooiste lentepark van de wereld</p>
         <div class="informatie">
-                <a class="informatie_links" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+                <a class="informatie_links" asp-action="HetPark">
                     <p class="informatie_text">Open 21 Maart - 10 Mei</p>
                     <p class="link_text">Ontdek het park</p>
                      <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 </a>
-            <a class="informatie_midden "href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+            <a class="informatie_midden" asp-action="HetPark">
                     <p class="informatie_text_midden">Kom vandaag nog langs</p>
                     <p class="link_text_midden">Bekijk het park</p>
                     <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
             </a>
-                <a class="informatie_rechts" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+                <a class="informatie_rechts" href="https://www.youtube.com/watch?v=jgdtoEfQfZA">
                     <p class="informatie_text">Wat is Keukenhof?</p>
                     <p class="link_text">Bekijk video</p>
                     <img class="informatie_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
@@ -31,54 +33,50 @@
 
     <div class="zoek_deel">
         <p class="zoek_titel">Waar bent u naar op zoek?</p>
-        <a class="zoek_vakjes"href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-action="Bereikbaarheid">
             <div class="zoek_vakje1">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje1"></div>
                 <p class="zoek_titels">Bereikbaarheid</p>
             </div>
         </a>
-        <a class="zoek_vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-action="Evenementen">
             <div class="zoek_vakje2">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje2"></div>
                 <p class="zoek_titels">Evenementen</p>
             </div>
         </a>
-        <a class="zoek_vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-action="Content">
             <div class="zoek_vakje3">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje3"></div>
                 <p class="zoek_titels">Faciliteiten</p>
             </div>
         </a>
-        <a class="zoek_vakjes" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <a class="zoek_vakjes" asp-action="Content">
             <div class="zoek_vakje4">
                 <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
                 <div class="zoek_plaatje4"></div>
                 <p class="zoek_titels">Bloemenshows</p>
             </div>
         </a>
-</div>
+    </div>
 
     <div class="praktisch_deel">
-        <div class="openingstijden">
+        <a asp-action="Content" class="openingstijden">
             <p class="praktisch_kopjes">Openingstijden</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-        </div>
-        <div class="toegankelijkheid">
+        </a>
+        <a asp-action="Content" class="toegankelijkheid">
             <p class="praktisch_kopjes">Toegankelijkheid</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-        </div>
-        <div class="parkeren">
+        </a>
+        <a asp-action="Bereikbaarheid" class="parkeren">
             <p class="praktisch_kopjes">Parkeren en openbaar vervoer</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-        </div>
-        <div class="groepen">
+        </a>
+        <a asp-action="Content" class="groepen">
             <p class="praktisch_kopjes">Groepen</p>
-            <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-        </div>
-        <a class="meer_info" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        </a>
+      <a class="meer_info" asp-action="PraktischeInformatie">
             <p class="meer_text">Meer praktische informatie</p>
             <img class="pijl_meer" src="~/images/arrow-right.svg" alt="Arrow-Right">
         </a>
@@ -92,14 +90,14 @@
             </a>
             <div class="map"></div>
         </div>
-    </div>
+</div>
 
     <div class="nieuws_deel">
-        <div class="bekijk">
+        <a class="bekijk" asp-action="Content">
             <p class="bekijk_alles">Bekijk alle</p>
             <img class="bekijk_alles_pijl" src="~/images/arrow-right.svg" alt="Arrow-Right" />
-        </div>
-        <div class="nieuws_artikel1">
+        </a>
+        <a class="nieuws_artikel1" asp-action="Content">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
@@ -109,8 +107,8 @@
                 <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws1"></div>
-        </div>
-        <div class="nieuws_artikel2">
+        </a>
+        <a class="nieuws_artikel2" asp-action="Content">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
@@ -120,8 +118,8 @@
                 <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws2"></div>
-        </div>
-        <div class="nieuws_artikel3">
+        </a>
+        <a class="nieuws_artikel3" asp-action="Content">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
@@ -131,8 +129,8 @@
                 <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws3"></div>
-        </div>
-        <div class="nieuws_artikel4">
+        </a>
+        <a class="nieuws_artikel4" asp-action="Content">
             <div class="leesmeer_button">
                 <p class="leesmeer_text">Lees meer</p>
             </div>
@@ -142,17 +140,16 @@
                 <p class="nieuwstag_text">Nieuws</p>
             </div>
             <div class="foto_nieuws4"></div>
-        </div>
+        </a>
         <p class="nieuws">Nieuws</p>
     </div>
-
-    <div class="deel5">
-        <a class="deel5_binnenkant" href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
-            <img class="pijl_deel5" src="~/images/arrow-right.svg" alt="Arrow-Right" />
-            <p class="deel5_text">Hier moet nog tekst in</p>
-            <div class="deel5_plaatje"></div>
-        </a>
-    </div>
+<div class="deel5">
+    <a class="deel5_binnenkant" asp-action="Content">
+        <img class="pijl_deel5" src="~/images/arrow-right.svg" alt="Arrow-Right" />
+        <p class="deel5_text">Groepen</p>
+        <div class="deel5_plaatje"></div>
+    </a>
+</div>
 
 <div class="insta6">
     <p class="insta_titel">Instagram #VisitKeukenhof</p>

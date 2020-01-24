@@ -1,0 +1,68 @@
+[
+  {
+    "outputFileName": "wwwroot/css/Bereikbaarheid_css.min.css",
+    "inputFiles": [
+      "wwwroot/css/Bereikbaarheid_css.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/contact.min.css",
+    "inputFiles": [
+      "wwwroot/css/contact.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Content_css.min.css",
+    "inputFiles": [
+      "wwwroot/css/Content_css.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Evenementen_css.min.css",
+    "inputFiles": [
+      "wwwroot/css/Evenementen_css.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/FAQ_css.min.css",
+    "inputFiles": [
+      "wwwroot/css/FAQ_css.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/footer.min.css",
+    "inputFiles": [
+      "wwwroot/css/footer.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/HetPark.min.css",
+    "inputFiles": [
+      "wwwroot/css/HetPark.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Hoofdpagina_css.min.css",
+    "inputFiles": [
+      "wwwroot/css/Hoofdpagina_css.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/layout_css.min.css",
+    "inputFiles": [
+      "wwwroot/css/layout_css.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Privacy_css.min.css",
+    "inputFiles": [
+      "wwwroot/css/Privacy_css.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/zoekresultaten.min.css",
+    "inputFiles": [
+      "wwwroot/css/zoekresultaten.css"
+    ]
+  }
+]
