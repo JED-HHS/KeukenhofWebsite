@@ -14,6 +14,7 @@ namespace KeukenhofWebsite.Data
         public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
         {
 
+
         }
     }
 }

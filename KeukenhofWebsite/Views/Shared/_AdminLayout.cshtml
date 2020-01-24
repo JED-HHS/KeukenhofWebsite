@@ -40,6 +40,15 @@
                     <li><a asp-area="" asp-controller="Zoekterms" asp-action="Index">Zoekterm</a></li>
                     <li><a asp-area="" asp-controller="ZoektermAction" asp-action="Index">ZoektermActions</a></li>
                     <li><a asp-area="" asp-controller="Actions" asp-action="Index">Actions</a></li>
+                    <li>@if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Inlog" asp-action="Logout">@User.Identity.Name, Logout</a>
+                    }
+                        else
+                        {
+                            <a asp-controller="Inlog" asp-action="Login"> Login</a>
+                        }
+                        </li>
                 </ul>
             </div>
         </div>
