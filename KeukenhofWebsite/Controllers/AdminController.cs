@@ -23,11 +23,13 @@ namespace KeukenhofWebsite.Controllers
             return RedirectToAction("Index", path);
         }
 
+        // GET: Admin
         public async Task<IActionResult> Index()
         {
             return View(await _context.Admin.ToListAsync());
         }
 
+        // GET: Admin/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -45,11 +47,15 @@ namespace KeukenhofWebsite.Controllers
             return View(admin);
         }
 
+        // GET: Admin/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Admin/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
@@ -79,6 +85,9 @@ namespace KeukenhofWebsite.Controllers
             return View(admin);
         }
 
+        // POST: Admin/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("AdminId,Username,FirstName,MiddleName,LastName")] Admin admin)
@@ -111,6 +120,7 @@ namespace KeukenhofWebsite.Controllers
             return View(admin);
         }
 
+        // GET: Admin/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -128,6 +138,7 @@ namespace KeukenhofWebsite.Controllers
             return View(admin);
         }
 
+        // POST: Admin/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

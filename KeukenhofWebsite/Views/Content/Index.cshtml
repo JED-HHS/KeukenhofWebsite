@@ -24,9 +24,7 @@
             @Html.DisplayNameFor(model => model.Tekst)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ContentId)
-     <th/>
-      <th>
+            
             @Html.DisplayNameFor(model => model.Pagina)
         </th>
         <th></th>
@@ -42,11 +40,7 @@
                 @Html.DisplayFor(modelItem => item.Tekst)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ContentId)
-              <td/>
-          <td>
                 @Html.DisplayFor(modelItem => item.PaginaId)
-
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ContentId">Edit</a> |

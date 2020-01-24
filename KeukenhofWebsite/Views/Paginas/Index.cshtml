@@ -20,9 +20,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Titel)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PaginaId)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -31,9 +28,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Titel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PaginaId)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PaginaId">Edit</a> |
