@@ -20,7 +20,7 @@
         <a asp-action="Content" class="rolstoel_buttonvak">
             <div class="rolstoel_button"></div>
             <p class="rolstoel_buttontext">Rolstoel reserveren</p>
-        </div>
+        </a>
         <p class="rolstoel_textonderbutton">@Model.Where(s => s.ContentId == 18).Select(s => s.Tekst).Single()</p>
         <p class="titel">Rolstoelen</p>
         <p class="text1">@Model.Where(s => s.ContentId == 16).Select(s => s.Tekst).Single()</p>
