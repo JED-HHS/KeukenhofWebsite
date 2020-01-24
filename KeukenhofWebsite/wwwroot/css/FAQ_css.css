@@ -72,6 +72,8 @@
 .coll_q, .coll_a{
     vertical-align: middle;
     display: inline-block;
+    float: left;
+    width: 90%;
     font-size: 17px;
     padding-top: 11px;
     padding-left: 11px;

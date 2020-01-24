@@ -62,29 +62,22 @@
     </div>
 </div>
 
-<div class="zoek_deel">
-    <p class="zoek_titel">Waar bent u naar op zoek?</p>
-    <a class="zoek_vakjes" asp-controller="Home" asp-action="Bereikbaarheid">
-        <div class="zoek_vakje1">
-            <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-            <div class="zoek_plaatje1"></div>
-            <p class="zoek_titels">Bereikbaarheid</p>
-        </div>
-    </a>
-    <a class="zoek_vakjes" asp-controller="Home" asp-action="Evenementen">
-        <div class="zoek_vakje2">
-            <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-            <div class="zoek_plaatje2"></div>
-            <p class="zoek_titels">Evenementen</p>
-        </div>
-    </a>
-    <a class="zoek_vakjes" asp-controller="Home" asp-action="Content">
-        <div class="zoek_vakje3">
-            <img class="zoek_pijlen" src="~/images/arrow-right.svg" alt="Arrow-Right">
-            <div class="zoek_plaatje3"></div>
-            <p class="zoek_titels">Faciliteiten</p>
-    </a>
-        <a class="meer_info" asp-action="PraktischeInformatie">
+
+    <div class="praktisch_deel">
+        <a asp-action="Content" class="openingstijden">
+            <p class="praktisch_kopjes">Openingstijden</p>
+        </a>
+        <a asp-action="Content" class="toegankelijkheid">
+            <p class="praktisch_kopjes">Toegankelijkheid</p>
+        </a>
+        <a asp-action="Bereikbaarheid" class="parkeren">
+            <p class="praktisch_kopjes">Parkeren en openbaar vervoer</p>
+        </a>
+        <a asp-action="Content" class="groepen">
+            <p class="praktisch_kopjes">Groepen</p>
+        </a>
+
+      <a class="meer_info" asp-action="PraktischeInformatie">
             <p class="meer_text">Meer praktische informatie</p>
             <img class="pijl_meer" src="~/images/arrow-right.svg" alt="Arrow-Right">
         </a>
@@ -100,38 +93,7 @@
         </div>
 </div>
 
-<div class="praktisch_deel">
-    <div class="openingstijden">
-        <p class="praktisch_kopjes">Openingstijden</p>
-        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-    </div>
-    <div class="toegankelijkheid">
-        <p class="praktisch_kopjes">Toegankelijkheid</p>
-        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-    </div>
-    <div class="parkeren">
-        <p class="praktisch_kopjes">Parkeren en openbaar vervoer</p>
-        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-    </div>
-    <div class="groepen">
-        <p class="praktisch_kopjes">Groepen</p>
-        <img class="praktische_chevrons" src="~/images/chevron-down.svg" alt="Chevron Down">
-    </div>
-    <a class="meer_info" asp-controller="Home" asp-action="PraktischeInformatie">
-        <p class="meer_text">Meer praktische informatie</p>
-        <img class="pijl_meer" src="~/images/arrow-right.svg" alt="Arrow-Right">
-    </a>
-    <p class="praktisch_titel">Praktische informatie</p>
-    <p class="praktisch_ondertitel">Download de kaart of krijg er een bij de informatiebalie</p>
-    <div class="map_deel">
-        <a class="download" href="~/images/PLATTEGROND Keukenhof 2019.pdf" download="">
-            <div class="button"></div>
-            <p class="download_text">Download de kaart</p>
-            <img class="download_icon" src="~/images/download.svg" alt="Download icon">
-            </a>
-            <div class="map"></div>
-        </div>
-    </div>
+
 
     <div class="nieuws_deel">
         <a class="bekijk" asp-action="Content">
