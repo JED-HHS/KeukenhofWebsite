@@ -18,8 +18,6 @@ namespace KeukenhofWebsite.Controllers
             _context = context;
         }
 
-        public HomeController() { }
-
         public IActionResult _Hoofdpagina()
         {
             return View();
