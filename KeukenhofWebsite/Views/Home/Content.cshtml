@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<KeukenhofWebsite.Models.Content>
+
+@{
     Layout = "~/Views/Shared/_Header.cshtml";
 }
 <head>
@@ -11,23 +13,23 @@
 
     <div class="toegankelijkheid_deel">
         <p class="titel">Toegankelijkheid</p>
-        <p class="toegankelijkheid_text">Ons park is goed toegankelijk voor rolstoelen en (eigen) scootmobielen en is ruim voorzien van aangepaste toiletten. Voor mensen met een beperking, hebben wij wel rolstoelen, maar geen scootmobielen beschikbaar.</p>
+        <p class="toegankelijkheid_text">@Model.Where(s => s.ContentId == 15).Select(s => s.Tekst).Single()</p>
     </div>
 
     <div class="rolstoel_deel">
         <a asp-action="Content" class="rolstoel_buttonvak">
             <div class="rolstoel_button"></div>
             <p class="rolstoel_buttontext">Rolstoel reserveren</p>
-        </a>
-        <p class="rolstoel_textonderbutton">Als er in de reservering geen optie "rolstoel" verschijnt, zijn ze helaas niet beshickbaar voor die dag.</p>
+        </div>
+        <p class="rolstoel_textonderbutton">@Model.Where(s => s.ContentId == 18).Select(s => s.Tekst).Single()</p>
         <p class="titel">Rolstoelen</p>
-        <p class="text1">Het gebruik van een rolstoel - voor mensen met een beperking - is gratis. Wel vragen wij een borg van €20,-, die contant voldaan moet worden en u weer terugkrijgt bij inlevering van de rolstoel.</p>
-        <p class="text2">U kunt een rolstoel tot 17:00 uur, de dag vóór bezoek reserveren. We hebben een beperkt aantal rolstoelen beschikbaar, dus adviseren zo spoedig mogelijk te reserveren.</p>
+        <p class="text1">@Model.Where(s => s.ContentId == 16).Select(s => s.Tekst).Single()</p>
+        <p class="text2">@Model.Where(s => s.ContentId == 17).Select(s => s.Tekst).Single()</p>
     </div>
 
     <div class="toegestaan_deel">
         <p class="titel">Toegestane voortbewegingsmiddelen</p>
-        <p class="toe_text1">Alleen rolstoelen, scootmobielen, rollators, kinderwagens of kinderbuggys zijn toegestaan in het park. Andere voortbewegingsmiddelen zijn niet toegestaan.</p>
-        <p class="toe_text2">U kunt alleen een rolstoel bij ons reserveren, alle andere voortbewegingsmiddelen dient u zelf mee te nemen.</p>
+        <p class="toe_text1">@Model.Where(s => s.ContentId == 19).Select(s => s.Tekst).Single()</p>
+        <p class="toe_text2">@Model.Where(s => s.ContentId == 20).Select(s => s.Tekst).Single()</p>
     </div>
 </body>
